@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doruk Kılıç — Home</title>
+  <meta name="description" content="Doruk Kılıç — 11th Grade AP CS A Student" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Different font than Ilgaz's (Inter): using Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f8fa; --card:#ffffff; --text:#0f172a; --muted:#64748b; --accent:#2563eb;
+      --radius:16px; --maxw:1100px; --shadow:0 8px 24px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+         background:var(--bg); color:var(--text); line-height:1.6}
+    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
+    nav{position:sticky; top:0; background:var(--bg); border-bottom:1px solid #e6e9ef; z-index:10}
+    .navwrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 24px; max-width:var(--maxw); margin:0 auto}
+    .brand{font-weight:700; letter-spacing:.3px}
+    .navlinks{display:flex; gap:10px; flex-wrap:wrap}
+    .navlinks a{padding:10px 14px; border-radius:12px; text-decoration:none; color:var(--text); font-weight:500}
+    .navlinks a:hover{background:#e9efff}
+    .navlinks a.active,[aria-current="page"]{background:var(--text); color:#fff}
+    header.hero{padding:56px 24px}
+    .hero-inner{max-width:var(--maxw); margin:0 auto; display:grid; gap:18px}
+    h1{font-size:clamp(28px,6vw,44px); line-height:1.15; margin:0}
+    p.lead{font-size:clamp(16px,2.4vw,20px); color:var(--muted); margin:0}
+    .cta{display:flex; gap:12px; margin-top:16px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:12px 16px; border-radius:14px; text-decoration:none; font-weight:600; box-shadow:var(--shadow)}
+    .btn.primary{background:var(--accent); color:#fff}
+    .btn.ghost{background:#ffffff; color:var(--text); border:1px solid #e6e9ef}
+    .card{background:var(--card); border:1px solid #e6e9ef; border-radius:var(--radius); box-shadow:var(--shadow); padding:20px}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    footer{padding:40px 24px; color:var(--muted); border-top:1px solid #e6e9ef; margin-top:32px}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; font-weight:600}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="navwrap">
+      <div class="brand">Doruk Kılıç</div>
+      <div class="navlinks">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="big-ideas.html">Big Idea Projects</a>
+        <a href="documentation.html">Documentation</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="tag">11th Grade — AP CS A Student</span>
+      <h1>Hi, I’m Doruk. I build small apps while mastering Java & algorithms.</h1>
+      <p class="lead">
+        This site collects my coursework, personal projects, and <em>Big Idea</em> explorations.
+        Check out the Projects page for hands-on code, or Documentation for notes & write-ups.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn ghost" href="documentation.html">Read Docs</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>What I’m learning</h3>
+        <p>Java OOP, data structures, complexity, and clean coding practices.</p>
+      </div>
+      <div class="card">
+        <h3>Tooling</h3>
+        <p>IntelliJ IDEA, GitHub, VS Code, and Java 21. I also prototype in Python.</p>
+      </div>
+      <div class="card">
+        <h3>Goals</h3>
+        <p>Strong AP CS A fundamentals and a polished portfolio for college apps.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Doruk Kılıç — Built with ❤️ on GitHub Pages</div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
