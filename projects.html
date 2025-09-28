@@ -10,11 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#f7f8fa; --card:#ffffff; --text:#0f172a; --muted:#64748b; --accent:#2563eb;
-          --radius:16px; --maxw:1100px; --shadow:0 8px 24px rgba(15,23,42,.08)}
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-         background:var(--bg); color:var(--text); line-height:1.6}
+    :root{
+      --bg:#f7f8fa; 
+      --card:#ffffff; 
+      --text:#0f172a; 
+      --muted:#64748b; 
+      --accent:#2563eb;
+      --radius:16px; 
+      --maxw:1100px; 
+      --shadow:0 8px 24px rgba(15,23,42,.08)
+    }
+    *{box-sizing:border-box} 
+    html,body{margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      background:var(--bg); 
+      color:var(--text); 
+      line-height:1.6
+    }
     .container{max-width:var(--maxw); margin:0 auto; padding:24px}
     nav{position:sticky; top:0; background:var(--bg); border-bottom:1px solid #e6e9ef; z-index:10}
     .navwrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 24px; max-width:var(--maxw); margin:0 auto}
@@ -28,10 +41,11 @@
     p.lead{color:var(--muted); margin:8px 0 0}
     .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); padding:24px}
     .card{background:var(--card); border:1px solid #e6e9ef; border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column}
-    .thumb{background:#eef2ff; aspect-ratio:16/9}
+    .thumb{background:#eef2ff; aspect-ratio:16/9; background-size:cover; background-position:center}
     .content{padding:16px}
     .meta{color:var(--muted); font-size:14px}
     .btn{align-self:flex-start; margin:12px 16px 16px; padding:10px 14px; border-radius:12px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; box-shadow:var(--shadow)}
+    .btn:hover{background:#1e40af; transform:translateY(-2px); transition:all 0.2s ease;}
   </style>
 </head>
 <body>
@@ -49,21 +63,22 @@
 
   <header class="container">
     <h1>Projects</h1>
-    <p class="lead">Coming soon! This page will showcase Doruk's latest coding projects and coursework.</p>
+    <p class="lead">Here are some of Doruk's coding projects and coursework.</p>
   </header>
 
   <main class="grid container">
-    <!-- Placeholder project cards -->
+    <!-- Problem Statement Q1 -->
     <article class="card">
-      <div class="thumb"></div>
+      <div class="thumb" style="background-image:url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
       <div class="content">
-        <h3>Project Title</h3>
-        <p class="meta">Tech Stack</p>
-        <p>Short description of the project will go here.</p>
+        <h3>Problem Statement Q1</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
       </div>
-      <a class="btn" href="#">View Repo</a>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
     </article>
 
+    <!-- Placeholder project cards -->
     <article class="card">
       <div class="thumb"></div>
       <div class="content">
