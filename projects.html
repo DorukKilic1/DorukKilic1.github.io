@@ -1,224 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Projects</title>
-  <meta name="description" content="Projects by Doruk Kılıç" />
-  <meta name="theme-color" content="#8B0000" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card-bg: #8B0000; /* red cube for entire project */
-      --text: #fff;
-      --muted: #fff;
-      --radius: 16px;
-      --maxw: 1100px;
-      --shadow: 0 8px 24px rgba(15,23,42,.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doruk Kılıç — Projects</title>
+<meta name="description" content="Projects by Doruk Kılıç" />
+<meta name="theme-color" content="#8B0000" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f8fa;
+  --card-bg: #8B0000;
+  --text: #fff;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(15,23,42,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: var(--card-bg);
-      z-index: 10;
-    }
-    .navwrap {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      padding: 16px 24px;
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-    .navlinks {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .navlinks a {
-      padding: 12px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    .navlinks a:hover { background: #a60000; }
-    .navlinks a.active, [aria-current="page"] { background: #5a0000; }
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+  z-index: 10;
+}
+.navwrap {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px 24px;
+}
+.navlinks a {
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.navlinks a:hover { background: #a60000; }
+.navlinks a.active, [aria-current="page"] { background: #5a0000; }
 
-    /* Header with long red cube */
-    header {
-      display: inline-block;
-      background: var(--card-bg);
-      color: var(--text);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 32px;
-      box-shadow: var(--shadow);
-      width: 100%;
-    }
-    header h1 {
-      font-size: clamp(26px, 5vw, 38px);
-      margin-bottom: 8px;
-      text-align: left;
-    }
-    header p.lead {
-      font-size: 18px;
-      text-align: left;
-      margin: 0;
-    }
+/* Header with long red cube and white space around */
+header {
+  background: var(--card-bg);
+  color: #fff;
+  border-radius: var(--radius);
+  margin: 0 12px 32px; /* white space around */
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+header h1 {
+  font-size: clamp(26px, 5vw, 38px);
+  margin-bottom: 8px;
+  text-align: left;
+}
+header p.lead {
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+}
 
-    /* Project Grid */
-    .grid {
-      display: grid;
-      gap: 24px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      padding: 0 24px 24px;
-    }
-    .card {
-      background: var(--card-bg); /* red cube background */
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      padding-bottom: 16px;
-    }
-    .thumb {
-      background: #eef2ff;
-      aspect-ratio: 16/9;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 16px;
-    }
-    .content {
-      padding: 0 16px;
-      text-align: left;
-    }
-    .content h3 {
-      margin-bottom: 8px;
-    }
-    .meta {
-      font-size: 14px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .btn {
-      align-self: flex-start;
-      margin: 12px 16px 16px;
-      padding: 10px 14px;
-      border-radius: 12px;
-      background: #fff; /* button contrast */
-      color: var(--card-bg);
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: var(--shadow);
-    }
-    .btn:hover {
-      background: #f2f2f2;
-      transform: translateY(-2px);
-      transition: all 0.2s ease;
-    }
+/* Project Grid */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 12px 24px; /* white space around */
+}
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+.thumb {
+  background: #eef2ff;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 16px;
+}
+.content {
+  padding: 0 16px;
+  text-align: left;
+}
+.content h3 {
+  margin-bottom: 8px;
+}
+.meta {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--card-bg);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  max-width: fit-content;
+}
+.btn:hover {
+  background: #f2f2f2;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
 
-    footer {
-      padding: 24px;
-      text-align: center;
-      color: #0f172a;
-    }
-  </style>
+/* Footer */
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #0f172a;
+}
+</style>
 </head>
 <body>
-  <nav>
-    <div class="navwrap">
-      <div class="navlinks">
-        <a href="index.html">HOME</a>
-        <a href="projects.html" class="active" aria-current="page">PROJECTS</a>
-        <a href="big-ideas.html">BIG IDEAS NOTES</a>
-        <a href="documentation.html">DOCUMENTATION</a>
-      </div>
+
+<nav>
+  <div class="navwrap">
+    <div class="navlinks">
+      <a href="index.html">HOME</a>
+      <a href="projects.html" class="active" aria-current="page">PROJECTS</a>
+      <a href="big-ideas.html">BIG IDEAS NOTES</a>
+      <a href="documentation.html">DOCUMENTATION</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Header with long red cube -->
-  <header class="container">
-    <h1>Projects</h1>
-    <p class="lead">Here are some of my coding projects and academic coursework.</p>
-  </header>
+<header>
+  <h1>Projects</h1>
+  <p class="lead">Here are some of my coding projects and academic coursework.</p>
+</header>
 
-  <main class="grid container">
-    <!-- Project 1 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
-      <div class="content">
-        <h3>Problem Statement Q1</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
-      </div>
-    </article>
+<main class="grid">
+  <!-- Project 1 -->
+  <article class="card">
+    <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
+    <div class="content">
+      <h3>Problem Statement Q1</h3>
+      <p class="meta">JavaScript, CodeHS Sandbox</p>
+      <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
+    </div>
+  </article>
 
-    <!-- Project 2 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
-      <div class="content">
-        <h3>Problem Sceneria Q2</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
-      </div>
-    </article>
+  <!-- Project 2 -->
+  <article class="card">
+    <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
+    <div class="content">
+      <h3>Problem Sceneria Q2</h3>
+      <p class="meta">JavaScript, CodeHS Sandbox</p>
+      <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
+    </div>
+  </article>
 
-    <!-- Project 3 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
-      <div class="content">
-        <h3>Q3</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
-      </div>
-    </article>
+  <!-- Project 3 -->
+  <article class="card">
+    <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
+    <div class="content">
+      <h3>Q3</h3>
+      <p class="meta">JavaScript, CodeHS Sandbox</p>
+      <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
+    </div>
+  </article>
 
-    <!-- Project 4 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
-      <div class="content">
-        <h3>19 Question 1</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
-      </div>
-    </article>
+  <!-- Project 4 -->
+  <article class="card">
+    <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
+    <div class="content">
+      <h3>19 Question 1</h3>
+      <p class="meta">JavaScript, CodeHS Sandbox</p>
+      <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
+    </div>
+  </article>
 
-    <!-- Project 5 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
-      <div class="content">
-        <h3>Triangle Checker</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
-      </div>
-    </article>
-  </main>
+  <!-- Project 5 -->
+  <article class="card">
+    <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
+    <div class="content">
+      <h3>Triangle Checker</h3>
+      <p class="meta">JavaScript, CodeHS Sandbox</p>
+      <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
+    </div>
+  </article>
+</main>
 
-  <footer>
-    <div class="container">© 2025 DoDo</div>
-  </footer>
+<footer>
+  <div class="container">© 2025 DoDo</div>
+</footer>
+
 </body>
 </html>
