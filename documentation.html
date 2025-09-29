@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documentation — Doruk Kılıç</title>
   <style>
+    :root{
+      --nav-bg:#8B0000; /* dark red nav background */
+      --text:#fff;
+      --shadow:0 8px 24px rgba(15,23,42,.08);
+    }
     body {
       font-family: Poppins, sans-serif;
       background: #f7f8fa;
@@ -14,6 +19,30 @@
       max-width: 900px;
       margin: 0 auto;
     }
+
+    /* Navigation */
+    nav {
+      background: var(--nav-bg);
+      padding: 16px 0;
+      margin-bottom: 32px;
+    }
+    .navlinks {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .navlinks a {
+      padding: 12px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    .navlinks a:hover, .navlinks a.active {
+      opacity: 0.8;
+    }
+
     h1 {
       font-size: clamp(26px,5vw,38px);
       margin-bottom: 16px;
@@ -29,6 +58,16 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <div class="navlinks">
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="big-ideas.html">BIG IDEA PROJECTS</a>
+      <a href="documentation.html" class="active">DOCUMENTATION</a>
+    </div>
+  </nav>
+
   <h1>Documentation</h1>
 
   <!-- Existing documentation content can go here -->
@@ -36,5 +75,6 @@
   <p class="credit">
     This website is made by Doruk Kılıç with assistance of ChatGPT. I designed the structure, chose the content and organized the ideas while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
   </p>
+
 </body>
 </html>
