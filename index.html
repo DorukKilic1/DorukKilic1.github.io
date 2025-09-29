@@ -11,19 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f7f8fa; --text:#0f172a; --accent:#2563eb;
+      --bg:#f7f8fa; --text:#0f172a; --accent:#2563eb; --button-bg:#8B0000;
       --radius:16px; --maxw:1100px; --shadow:0 8px 24px rgba(15,23,42,.08);
     }
     *{box-sizing:border-box} html,body{margin:0;padding:0}
     body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
          background:var(--bg); color:var(--text); line-height:1.6}
     .container{max-width:var(--maxw); margin:0 auto; padding:24px}
-    
+
     /* Navigation */
     nav {
       background: var(--bg);
-      border-bottom: 1px solid #e6e9ef;
       padding: 16px 0;
+      border-bottom: 1px solid #e6e9ef;
     }
     .navlinks {
       display: flex;
@@ -31,18 +31,31 @@
       gap: 20px;
     }
     .navlinks a {
+      position: relative;
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      background: #ffffff;
-      box-shadow: var(--shadow);
-      transition: background 0.2s;
-    }
-    .navlinks a:hover, .navlinks a.active {
-      background: var(--accent);
       color: #fff;
+      font-weight: 500;
+      overflow: hidden;
+      z-index: 1;
+    }
+    /* The dark red "cloth-like" background stripe */
+    .navlinks a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--button-bg);
+      opacity: 0.7;
+      transform: skew(-10deg);
+      z-index: -1;
+      transition: opacity 0.3s;
+    }
+    .navlinks a:hover::before, .navlinks a.active::before {
+      opacity: 1;
     }
 
     /* About Me section */
@@ -76,13 +89,15 @@
 <body>
   <nav>
     <div class="navlinks">
-      <a href="projects.html">Projects</a>
-      <a href="big-ideas.html">Big Idea Projects</a>
-      <a href="documentation.html">Documentation</a>
+      <a href="index.html" class="active">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="big-ideas.html">BIG IDEA PROJECTS</a>
+      <a href="documentation.html">DOCUMENTATION</a>
     </div>
   </nav>
 
   <main class="container">
+    <!-- About Me Section -->
     <section class="about-me">
       <h2>About Me</h2>
       <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a passion for coding and am studying AP CSA in 2025.</p>
@@ -96,8 +111,7 @@
   </main>
 
   <footer>
-    <div class="container">© <span id="y"></span></div>
+    <div class="container">© 2025 DoDo</div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
