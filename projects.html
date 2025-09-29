@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Projects</title>
-  <meta name="description" content="Projects by Doruk Kılıç" />
-  <meta name="theme-color" content="#8B0000" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — DoDo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f7f8fa;
-      --card: #ffffff;
       --text: #0f172a;
-      --muted: #64748b;
-      --accent: #8B0000; /* koyu kırmızı */
+      --nav-bg: #8B0000;
+      --accent: #8B0000;
       --radius: 16px;
       --maxw: 1100px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin:0; padding:0; }
     body {
       font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
       background: var(--bg);
@@ -29,49 +25,51 @@
       line-height: 1.6;
     }
     .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* Navigation */
     nav {
-      position: sticky;
-      top: 0;
-      background: var(--accent);
-      z-index: 10;
-    }
-    .navwrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      padding: 16px 24px;
-      max-width: var(--maxw);
-      margin: 0 auto;
+      background: var(--nav-bg);
+      padding: 16px 0;
+      margin-bottom: 32px;
     }
     .navlinks {
       display: flex;
+      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
     }
     .navlinks a {
-      padding: 10px 16px;
-      border-radius: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
       text-decoration: none;
       color: #fff;
-      font-weight: 600;
+      font-weight: 500;
+      transition: opacity 0.3s;
+      font-family: Poppins, sans-serif;
     }
-    .navlinks a:hover { background: #a60000; }
-    .navlinks a.active, [aria-current="page"] {
-      background: #5a0000;
+    .navlinks a:hover,
+    .navlinks a.active {
+      opacity: 0.8;
+    }
+
+    /* Page heading */
+    .page-heading {
+      background: var(--accent);
       color: #fff;
+      padding: 20px;
+      border-radius: var(--radius);
+      font-size: clamp(20px, 2.5vw, 28px);
+      margin-bottom: 24px;
     }
-    header { padding: 40px 24px 8px; text-align: center; }
-    h1 { font-size: clamp(26px, 5vw, 38px); margin: 0; color: var(--accent); }
-    p.lead { color: var(--muted); margin: 8px 0 0; }
+
+    /* Project grid */
     .grid {
       display: grid;
-      gap: 18px;
+      gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      padding: 24px;
     }
+
     .card {
-      background: var(--card);
+      background: #fff;
       border: 1px solid #e6e9ef;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -79,14 +77,17 @@
       display: flex;
       flex-direction: column;
     }
-    .thumb {
+    .card .thumb {
       background: #eef2ff;
       aspect-ratio: 16/9;
       background-size: cover;
       background-position: center;
     }
-    .content { padding: 16px; }
-    .meta { color: var(--muted); font-size: 14px; }
+    .card .content {
+      padding: 16px;
+      flex-grow: 1;
+    }
+    .card .meta { color: #64748b; font-size: 14px; margin-bottom: 8px; }
     .btn {
       align-self: flex-start;
       margin: 12px 16px 16px;
@@ -97,86 +98,64 @@
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
+      transition: all 0.2s ease;
     }
     .btn:hover {
-      background: #a60000;
+      background: #5a0000;
       transform: translateY(-2px);
-      transition: all 0.2s ease;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #0f172a;
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="navwrap">
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active" aria-current="page">Projects</a>
-        <a href="big-ideas.html">Big Ideas</a>
-        <a href="documentation.html">Documentation</a>
-      </div>
+    <div class="navlinks">
+      <a href="index.html">HOME</a>
+      <a href="projects.html" class="active">PROJECTS</a>
+      <a href="big-ideas.html">BIG IDEAS NOTES</a>
+      <a href="documentation.html">DOCUMENTATION</a>
     </div>
   </nav>
 
-  <header class="container">
-    <h1>Projects</h1>
-    <p class="lead">Here are some of my coding projects and academic coursework.</p>
-  </header>
+  <main class="container">
+    <div class="page-heading">
+      Here are some of my coding projects and academic coursework.
+    </div>
 
-  <main class="grid container">
-    <!-- Problem Statement Q1 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
-      <div class="content">
-        <h3>Problem Statement Q1</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+    <div class="grid">
+      <!-- Project Example 1 -->
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/400x225?text=Project+1');"></div>
+        <div class="content">
+          <h3>Project 1</h3>
+          <p class="meta">JavaScript, CodeHS</p>
+          <p>Visualizing the six-seven problem using JavaScript.</p>
+        </div>
+        <a href="#" class="btn" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
-    </article>
 
-    <!-- Problem Sceneria Q2 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
-      <div class="content">
-        <h3>Problem Sceneria Q2</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+      <!-- Project Example 2 -->
+      <div class="card">
+        <div class="thumb" style="background-image:url('https://via.placeholder.com/400x225?text=Project+2');"></div>
+        <div class="content">
+          <h3>Project 2</h3>
+          <p class="meta">JavaScript, CodeHS</p>
+          <p>First mission project using JavaScript in CodeHS.</p>
+        </div>
+        <a href="#" class="btn" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
-    </article>
 
-    <!-- Q3 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
-      <div class="content">
-        <h3>Q3</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
-    </article>
-
-    <!-- 19 Question 1 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
-      <div class="content">
-        <h3>19 Question 1</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
-    </article>
-
-    <!-- Triangle Checker -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
-      <div class="content">
-        <h3>Triangle Checker</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
-    </article>
+      <!-- Add more projects here in same format -->
+    </div>
   </main>
+
+  <footer>
+    <div class="container">© 2025 DoDo</div>
+  </footer>
 </body>
 </html>
