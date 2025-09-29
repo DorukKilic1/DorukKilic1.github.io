@@ -15,7 +15,7 @@
       --card: #ffffff;
       --text: #0f172a;
       --muted: #64748b;
-      --accent: #8B0000; /* koyu kırmızı */
+      --accent: #8B0000; /* dark red */
       --radius: 16px;
       --maxw: 1100px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
@@ -29,6 +29,8 @@
       line-height: 1.6;
     }
     .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
+    /* Navigation */
     nav {
       position: sticky;
       top: 0;
@@ -55,29 +57,34 @@
       text-decoration: none;
       color: #fff;
       font-weight: 600;
+      font-family: Poppins, sans-serif;
+      text-transform: uppercase; /* all caps */
     }
     .navlinks a:hover { background: #a60000; }
     .navlinks a.active, [aria-current="page"] {
       background: #5a0000;
       color: #fff;
     }
+
     header { padding: 40px 24px 8px; text-align: center; }
     h1 { font-size: clamp(26px, 5vw, 38px); margin: 0; color: var(--accent); }
     p.lead { color: var(--muted); margin: 8px 0 0; }
+
     .grid {
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       padding: 24px;
     }
+
     .card {
-      background: var(--card);
-      border: 1px solid #e6e9ef;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      background: var(--accent); /* red background */
+      color: #fff; /* white text */
     }
     .thumb {
       background: #eef2ff;
@@ -85,23 +92,34 @@
       background-size: cover;
       background-position: center;
     }
-    .content { padding: 16px; }
-    .meta { color: var(--muted); font-size: 14px; }
+    .content {
+      padding: 16px;
+    }
+    .content h3 { margin-top: 0; color: #fff; }
+    .content p { margin: 6px 0; color: #fff; text-align: left; }
+    .meta { font-size: 14px; color: #fff; }
+
     .btn {
       align-self: flex-start;
       margin: 12px 16px 16px;
       padding: 10px 14px;
       border-radius: 12px;
-      background: var(--accent);
-      color: #fff;
+      background: #fff;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
     }
     .btn:hover {
-      background: #a60000;
+      background: #f1f1f1;
       transform: translateY(-2px);
       transition: all 0.2s ease;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: var(--text);
     }
   </style>
 </head>
@@ -109,10 +127,10 @@
   <nav>
     <div class="navwrap">
       <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active" aria-current="page">Projects</a>
-        <a href="big-ideas.html">Big Ideas</a>
-        <a href="documentation.html">Documentation</a>
+        <a href="index.html">HOME</a>
+        <a href="projects.html" class="active" aria-current="page">PROJECTS</a>
+        <a href="big-ideas.html">BIG IDEAS NOTES</a>
+        <a href="documentation.html">DOCUMENTATION</a>
       </div>
     </div>
   </nav>
@@ -123,7 +141,7 @@
   </header>
 
   <main class="grid container">
-    <!-- Problem Statement Q1 -->
+    <!-- Project cards -->
     <article class="card">
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
       <div class="content">
@@ -131,10 +149,9 @@
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">SEE PROJECT</a>
     </article>
 
-    <!-- Problem Sceneria Q2 -->
     <article class="card">
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
       <div class="content">
@@ -142,41 +159,15 @@
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">SEE PROJECT</a>
     </article>
 
-    <!-- Q3 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
-      <div class="content">
-        <h3>Q3</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
-    </article>
+    <!-- Add more cards similarly -->
 
-    <!-- 19 Question 1 -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
-      <div class="content">
-        <h3>19 Question 1</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
-    </article>
-
-    <!-- Triangle Checker -->
-    <article class="card">
-      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
-      <div class="content">
-        <h3>Triangle Checker</h3>
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
-      </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
-    </article>
   </main>
+
+  <footer>
+    <div class="container">© 2025 DoDo</div>
+  </footer>
 </body>
 </html>
