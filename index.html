@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#2563eb" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Different font than Ilgaz's (Inter): using Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -38,6 +37,27 @@
     .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     footer{padding:40px 24px; color:var(--muted); border-top:1px solid #e6e9ef; margin-top:32px}
     .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:12px; font-weight:600}
+
+    /* New About Me section */
+    .about-me {
+      margin-top:40px;
+      background: #ffffff;
+      border:1px solid #e6e9ef;
+      border-radius:16px;
+      padding:24px;
+      box-shadow: var(--shadow);
+    }
+    .about-me h2 {
+      margin-top:0;
+      color: var(--accent);
+    }
+    .about-me ul {
+      list-style:none;
+      padding-left:0;
+    }
+    .about-me ul li {
+      margin-bottom:8px;
+    }
   </style>
 </head>
 <body>
@@ -83,6 +103,18 @@
         <p>Strong AP CS A fundamentals and a polished portfolio for college apps.</p>
       </div>
     </div>
+
+    <!-- About Me Section -->
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a passion for coding and am studying AP CSA in 2025.</p>
+      <h3>Hobbies</h3>
+      <ul>
+        <li>💪🏼 Bodybuilding</li>
+        <li>🥁 Playing Drums</li>
+        <li>♪ Listening to Music</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
