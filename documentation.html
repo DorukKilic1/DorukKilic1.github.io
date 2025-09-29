@@ -12,8 +12,8 @@
   <style>
     :root {
       --bg: #f7f8fa;
-      --text: #0f172a;
-      --nav-bg: #8B0000; /* same dark red */
+      --text: #fff;
+      --nav-bg: #8B0000; /* dark red */
       --radius: 16px;
       --maxw: 900px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
@@ -22,7 +22,7 @@
     body {
       font-family: Poppins, sans-serif;
       background: var(--bg);
-      color: var(--text);
+      color: #0f172a;
       line-height: 1.6;
     }
     .container {
@@ -59,23 +59,25 @@
     h1 {
       font-size: clamp(26px, 5vw, 38px);
       margin-bottom: 16px;
-      color: var(--nav-bg);
-      text-align: left; /* left aligned like the others */
+      background: var(--nav-bg);
+      color: #fff;
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: left; 
     }
     .credit {
       margin-top: 32px;
       padding: 16px;
-      background: #fef2f2; /* light background */
-      border-left: 4px solid var(--nav-bg); /* dark red bar on left */
-      border-radius: 8px;
+      background: var(--nav-bg); /* dark red background */
+      border-radius: var(--radius);
       font-style: italic;
-      color: var(--text);
+      color: #fff; /* white text */
     }
 
     footer {
       padding: 24px;
       text-align: center;
-      color: var(--text);
+      color: #0f172a;
     }
   </style>
 </head>
