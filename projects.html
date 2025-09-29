@@ -66,28 +66,29 @@
 
     /* Header with shared red cube */
     header {
-      padding: 24px 0 8px;
+      margin-bottom: 32px;
+    }
+    .header-cube {
       background: var(--accent);
       border-radius: 12px;
       color: #fff;
+      padding: 16px 24px;
+      display: inline-block;
       text-align: left;
     }
-    header h1, header p.lead {
-      margin: 0;
-      padding: 12px 16px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: inline-block;
-      color: #fff;
+    .header-cube h1 {
+      margin: 0 0 8px 0;
+      font-size: clamp(26px, 5vw, 38px);
     }
-    header h1 { margin-bottom: 12px; }
+    .header-cube p {
+      margin: 0;
+    }
 
     /* Grid for project cards */
     .grid {
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      padding: 24px 0;
     }
     .card {
       background: var(--card);
@@ -143,8 +144,10 @@
   </nav>
 
   <header class="container">
-    <h1>Projects</h1>
-    <p class="lead">Here are some of my coding projects and academic coursework.</p>
+    <div class="header-cube">
+      <h1>Projects</h1>
+      <p>Here are some of my coding projects and academic coursework.</p>
+    </div>
   </header>
 
   <main class="grid container">
