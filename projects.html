@@ -20,7 +20,7 @@
       --maxw: 1100px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
     }
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { margin: 0; padding: 0; }
     body {
       font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
@@ -39,7 +39,6 @@
     }
     .navwrap {
       display: flex;
-      align-items: center;
       justify-content: center;
       gap: 24px;
       padding: 16px 24px;
@@ -52,52 +51,55 @@
       flex-wrap: wrap;
     }
     .navlinks a {
-      padding: 10px 16px;
-      border-radius: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
       text-decoration: none;
       color: #fff;
       font-weight: 600;
     }
     .navlinks a:hover { background: #a60000; }
-    .navlinks a.active, [aria-current="page"] {
-      background: #5a0000;
-      color: #fff;
-    }
+    .navlinks a.active, [aria-current="page"] { background: #5a0000; }
 
-    /* Header with shared red cube */
+    /* Header with long red cube */
     header {
-      margin-bottom: 32px;
-    }
-    .header-cube {
-      background: var(--accent);
-      border-radius: 12px;
-      color: #fff;
-      padding: 16px 24px;
-      display: inline-block;
+      padding: 40px 24px 8px;
       text-align: left;
+      background: var(--accent);
+      border-radius: var(--radius);
+      color: #fff;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
     }
-    .header-cube h1 {
-      margin: 0 0 8px 0;
+    header h1 {
       font-size: clamp(26px, 5vw, 38px);
+      margin-bottom: 8px;
     }
-    .header-cube p {
-      margin: 0;
+    header p.lead {
+      font-size: 18px;
     }
 
-    /* Grid for project cards */
+    /* Project Grid */
     .grid {
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      padding: 0 24px 24px;
     }
     .card {
       background: var(--card);
-      border: 1px solid #e6e9ef;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      position: relative;
+    }
+    .card-header {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 16px;
     }
     .thumb {
       background: #eef2ff;
@@ -105,8 +107,13 @@
       background-size: cover;
       background-position: center;
     }
-    .content { padding: 16px; }
-    .meta { color: var(--muted); font-size: 14px; }
+    .content {
+      padding: 16px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
     .btn {
       align-self: flex-start;
       margin: 12px 16px 16px;
@@ -143,63 +150,62 @@
     </div>
   </nav>
 
+  <!-- Header with long red cube -->
   <header class="container">
-    <div class="header-cube">
-      <h1>Projects</h1>
-      <p>Here are some of my coding projects and academic coursework.</p>
-    </div>
+    <h1>Projects</h1>
+    <p class="lead">Here are some of my coding projects and academic coursework.</p>
   </header>
 
   <main class="grid container">
-    <!-- Problem Statement Q1 -->
+    <!-- Project 1 -->
     <article class="card">
+      <div class="card-header">Problem Statement Q1</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
       <div class="content">
-        <h3>Problem Statement Q1</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
       </div>
       <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
     </article>
 
-    <!-- Problem Sceneria Q2 -->
+    <!-- Project 2 -->
     <article class="card">
+      <div class="card-header">Problem Sceneria Q2</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
       <div class="content">
-        <h3>Problem Sceneria Q2</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
       </div>
       <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
     </article>
 
-    <!-- Q3 -->
+    <!-- Project 3 -->
     <article class="card">
+      <div class="card-header">Q3</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
       <div class="content">
-        <h3>Q3</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
       </div>
       <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
     </article>
 
-    <!-- 19 Question 1 -->
+    <!-- Project 4 -->
     <article class="card">
+      <div class="card-header">19 Question 1</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
       <div class="content">
-        <h3>19 Question 1</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
       </div>
       <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
     </article>
 
-    <!-- Triangle Checker -->
+    <!-- Project 5 -->
     <article class="card">
+      <div class="card-header">Triangle Checker</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
       <div class="content">
-        <h3>Triangle Checker</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
       </div>
