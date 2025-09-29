@@ -1,84 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Big Idea Projects</title>
-  <meta name="description" content="Big Idea Projects by Doruk Kılıç" />
-  <meta name="theme-color" content="#2563eb" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Ideas — Doruk Kılıç</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Optional CSS link -->
   <style>
-    :root{--bg:#f7f8fa; --card:#ffffff; --text:#0f172a; --muted:#64748b; --accent:#2563eb;
-          --radius:16px; --maxw:1100px; --shadow:0 8px 24px rgba(15,23,42,.08)}
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-         background:var(--bg); color:var(--text); line-height:1.6}
-    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
-    nav{position:sticky; top:0; background:var(--bg); border-bottom:1px solid #e6e9ef; z-index:10}
-    .navwrap{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 24px; max-width:var(--maxw); margin:0 auto}
-    .brand{font-weight:700}
-    .navlinks{display:flex; gap:10px; flex-wrap:wrap}
-    .navlinks a{padding:10px 14px; border-radius:12px; text-decoration:none; color:var(--text); font-weight:500}
-    .navlinks a:hover{background:#e9efff}
-    .navlinks a.active,[aria-current="page"]{background:var(--text); color:#fff}
-    header{padding:40px 24px 8px}
-    h1{font-size:clamp(26px,5vw,38px); margin:0}
-    p.lead{color:var(--muted); margin:8px 0 0}
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); padding:24px}
-    .card{background:var(--card); border:1px solid #e6e9ef; border-radius:var(--radius); box-shadow:var(--shadow); padding:18px}
-    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:#ecfeff; color:#155e75; font-size:12px; font-weight:700}
-    h3{margin:12px 0 6px}
-    .meta{color:var(--muted); font-size:14px}
+    body {
+      font-family: Poppins, sans-serif;
+      background: #f7f8fa;
+      color: #0f172a;
+      line-height: 1.6;
+      padding: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: clamp(26px,5vw,38px);
+      margin-bottom: 16px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      background: #eef2ff;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="navwrap">
-      <div class="brand">Doruk Kılıç</div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="big-ideas.html" class="active" aria-current="page">Big Idea Projects</a>
-        <a href="documentation.html">Documentation</a>
-      </div>
-    </div>
-  </nav>
 
-  <header class="container">
-    <h1>Big Idea Projects</h1>
-    <p class="lead">Concept-driven mini projects connecting theory to practice.</p>
-  </header>
+  <h1>Big Ideas Notes</h1>
 
-  <main class="grid container">
-    <section class="card">
-      <span class="pill">Big Idea 1</span>
-      <h3>Program Design & Algorithms</h3>
-      <p class="meta">Decomposition • Pseudocode • Testing</p>
-      <p>Designed a small library-catalog app; applied decomposition and test-driven development.</p>
-    </section>
+  <ul>
+    <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
+    <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
+    <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
+    <li><strong>Logic errors:</strong> Most likely math errors.</li>
+    <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
+    <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
 
-    <section class="card">
-      <span class="pill">Big Idea 2</span>
-      <h3>Data & Abstraction</h3>
-      <p class="meta">Arrays • ArrayList • Encapsulation</p>
-      <p>Built a gradebook with summaries (mean/median) and an abstraction layer for exports.</p>
-    </section>
+    <li><strong>Code examples:</strong>
+      <ul>
+        <li><code>System.out.println()</code></li>
+        <li>Double example: 6.353535</li>
+        <li>Int example: 4</li>
+        <li>Boolean: true or false</li>
+        <li>String: Words</li>
+      </ul>
+    </li>
 
-    <section class="card">
-      <span class="pill">Big Idea 3</span>
-      <h3>Control & Complexity</h3>
-      <p class="meta">Loops • Recursion • Big-O</p>
-      <p>Implemented search/sort variants and benchmarked their run-time on random datasets.</p>
-    </section>
+    <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>. Must be 1 word.</li>
 
-    <section class="card">
-      <span class="pill">Big Idea 4</span>
-      <h3>Objects & Modular Design</h3>
-      <p class="meta">Classes • Inheritance • Interfaces</p>
-      <p>Created a shapes toolkit with polymorphism and interface-based area/perimeter contracts.</p>
-    </section>
-  </main>
+    <li><strong>Printing:</strong> 
+      <ul>
+        <li><code>System.out.println(value)</code> prints value + new line</li>
+        <li><code>System.out.print(value)</code> prints value without new line</li>
+      </ul>
+    </li>
+
+    <li><strong>Data Types:</strong> Integers, doubles, booleans. Integers are whole numbers, doubles are real numbers, booleans are true/false.</li>
+
+    <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
+
+    <li><strong>Java Keywords:</strong>
+      <ul>
+        <li>public → accessible anywhere</li>
+        <li>class → blueprint for objects</li>
+        <li>static → belongs to class, not object</li>
+        <li>void → method that doesn’t return a value</li>
+        <li>main → starting point of program</li>
+      </ul>
+    </li>
+
+    <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
+
+    <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
+
+    <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
+  </ul>
+
 </body>
 </html>
