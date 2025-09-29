@@ -3,144 +3,180 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Big Ideas</title>
-  <meta name="description" content="Big Ideas Notes by Doruk Kılıç" />
+  <title>Doruk Kılıç — Projects</title>
+  <meta name="description" content="Projects by Doruk Kılıç" />
   <meta name="theme-color" content="#8B0000" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7f8fa; 
-      --text:#fff; 
-      --nav-bg:#8B0000; 
-      --radius:16px; 
-      --maxw:1100px; 
-      --shadow:0 8px 24px rgba(15,23,42,.08);
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #8B0000; /* koyu kırmızı */
+      --radius: 16px;
+      --maxw: 1100px;
+      --shadow: 0 8px 24px rgba(15,23,42,.08);
     }
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
-    body{
-      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      background:var(--bg); 
-      color:#0f172a; 
-      line-height:1.6;
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
-
-    /* Navigation */
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
     nav {
-      background: var(--nav-bg);
-      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      background: var(--accent);
+      z-index: 10;
+    }
+    .navwrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 16px 24px;
+      max-width: var(--maxw);
+      margin: 0 auto;
     }
     .navlinks {
       display: flex;
-      justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
     .navlinks a {
-      padding: 12px 20px;
-      border-radius: 12px;
+      padding: 10px 16px;
+      border-radius: 8px;
       text-decoration: none;
       color: #fff;
-      font-weight: 500;
-      transition: opacity 0.3s;
+      font-weight: 600;
     }
-    .navlinks a:hover, .navlinks a.active {
-      opacity: 0.8;
-    }
-
-    /* Big Ideas Section */
-    .ideas {
-      margin-top:40px;
-      background: var(--nav-bg);
-      border-radius:16px;
-      padding:24px;
+    .navlinks a:hover { background: #a60000; }
+    .navlinks a.active, [aria-current="page"] {
+      background: #5a0000;
       color: #fff;
+    }
+    header { padding: 40px 24px 8px; text-align: center; }
+    h1 { font-size: clamp(26px, 5vw, 38px); margin: 0; color: var(--accent); }
+    p.lead { color: var(--muted); margin: 8px 0 0; }
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      padding: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #e6e9ef;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .thumb {
+      background: #eef2ff;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+    }
+    .content { padding: 16px; }
+    .meta { color: var(--muted); font-size: 14px; }
+    .btn {
+      align-self: flex-start;
+      margin: 12px 16px 16px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
       box-shadow: var(--shadow);
     }
-    .ideas h1 {
-      margin-top:0;
-      color: #fff;
-      text-align: center;
-    }
-    .ideas ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .ideas li {
-      margin-bottom: 8px;
-    }
-    .ideas code {
-      background: rgba(255,255,255,0.15);
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-      color: #fff;
-    }
-
-    footer {
-      padding: 24px;
-      text-align: center;
-      color: #0f172a;
+    .btn:hover {
+      background: #a60000;
+      transform: translateY(-2px);
+      transition: all 0.2s ease;
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="navlinks">
-      <a href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="big-ideas.html" class="active">BIG IDEAS</a>
-      <a href="documentation.html">DOCUMENTATION</a>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
+        <a href="big-ideas.html">Big Ideas</a>
+        <a href="documentation.html">Documentation</a>
+      </div>
     </div>
   </nav>
 
-  <main class="container">
-    <section class="ideas">
-      <h1>Big Ideas Notes</h1>
-      <ul>
-        <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
-        <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
-        <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
-        <li><strong>Logic errors:</strong> Most likely math errors.</li>
-        <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
-        <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
-        <li><strong>Code examples:</strong>
-          <ul>
-            <li><code>System.out.println()</code></li>
-            <li>Double example: 6.353535</li>
-            <li>Int example: 4</li>
-            <li>Boolean: true or false</li>
-            <li>String: Words</li>
-          </ul>
-        </li>
-        <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>. Must be 1 word.</li>
-        <li><strong>Printing:</strong> 
-          <ul>
-            <li><code>System.out.println(value)</code> prints value + new line</li>
-            <li><code>System.out.print(value)</code> prints value without new line</li>
-          </ul>
-        </li>
-        <li><strong>Data Types:</strong> Integers, doubles, booleans. Integers are whole numbers, doubles are real numbers, booleans are true/false.</li>
-        <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
-        <li><strong>Java Keywords:</strong>
-          <ul>
-            <li>public → accessible anywhere</li>
-            <li>class → blueprint for objects</li>
-            <li>static → belongs to class, not object</li>
-            <li>void → method that doesn’t return a value</li>
-            <li>main → starting point of program</li>
-          </ul>
-        </li>
-        <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
-        <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
-        <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
-      </ul>
-    </section>
-  </main>
+  <header class="container">
+    <h1>Projects</h1>
+    <p class="lead">Here are some of my coding projects and academic coursework.</p>
+  </header>
 
-  <footer>
-    <div class="container">© 2025 DoDo</div>
-  </footer>
+  <main class="grid container">
+    <!-- Problem Statement Q1 -->
+    <article class="card">
+      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
+      <div class="content">
+        <h3>Problem Statement Q1</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+      </div>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
+    </article>
+
+    <!-- Problem Sceneria Q2 -->
+    <article class="card">
+      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
+      <div class="content">
+        <h3>Problem Sceneria Q2</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+      </div>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
+    </article>
+
+    <!-- Q3 -->
+    <article class="card">
+      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
+      <div class="content">
+        <h3>Q3</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
+      </div>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
+    </article>
+
+    <!-- 19 Question 1 -->
+    <article class="card">
+      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
+      <div class="content">
+        <h3>19 Question 1</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
+      </div>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
+    </article>
+
+    <!-- Triangle Checker -->
+    <article class="card">
+      <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
+      <div class="content">
+        <h3>Triangle Checker</h3>
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
+      </div>
+      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
+    </article>
+  </main>
 </body>
 </html>
