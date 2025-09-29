@@ -4,25 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doruk Kılıç — Projects</title>
+  <meta name="description" content="Projects by Doruk Kılıç" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --nav-bg:#8B0000; /* dark red nav background */
-      --btn-bg:#8B0000; /* dark red buttons */
-      --btn-hover:#6b0000; /* darker red on hover */
-      --text:#fff;
-      --shadow:0 8px 24px rgba(15,23,42,.08);
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #8B0000; /* dark red */
+      --radius: 16px;
+      --maxw: 1100px;
+      --shadow: 0 8px 24px rgba(15,23,42,.08);
     }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
     body {
       font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
-      background: #f7f8fa;
-      color: #0f172a;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      margin: 0;
     }
-
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    
     /* Navigation */
     nav {
-      background: var(--nav-bg);
+      background: var(--accent);
       padding: 16px 0;
       margin-bottom: 32px;
     }
@@ -35,7 +44,7 @@
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
-      color: var(--text);
+      color: #fff;
       font-weight: 500;
       transition: opacity 0.3s;
     }
@@ -43,31 +52,20 @@
       opacity: 0.8;
     }
 
-    header {
-      padding: 0 24px 16px;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(26px, 5vw, 38px);
-      margin-bottom: 8px;
-    }
-    p.lead {
-      color: #64748b;
-      margin: 0;
-    }
+    header { padding: 40px 24px 8px; text-align: center; }
+    h1 { font-size: clamp(26px, 5vw, 38px); margin: 0; }
+    p.lead { color: var(--muted); margin: 8px 0 0; }
 
     .grid {
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       padding: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
     }
     .card {
-      background: #ffffff;
+      background: var(--card);
       border: 1px solid #e6e9ef;
-      border-radius: 16px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
       display: flex;
@@ -79,48 +77,42 @@
       background-size: cover;
       background-position: center;
     }
-    .content {
-      padding: 16px;
-    }
-    .meta {
-      color: #64748b;
-      font-size: 14px;
-    }
+    .content { padding: 16px; }
+    .meta { color: var(--muted); font-size: 14px; }
     .btn {
       align-self: flex-start;
       margin: 12px 16px 16px;
       padding: 10px 14px;
       border-radius: 12px;
-      background: var(--btn-bg);
-      color: var(--text);
+      background: var(--accent);
+      color: #fff;
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
       transition: all 0.2s ease;
     }
     .btn:hover {
-      background: var(--btn-hover);
+      background: #a31212;
       transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
-
   <nav>
     <div class="navlinks">
       <a href="index.html">HOME</a>
-      <a href="projects.html" class="active">PROJECTS</a>
+      <a href="projects.html" class="active" aria-current="page">PROJECTS</a>
       <a href="big-ideas.html">BIG IDEA PROJECTS</a>
       <a href="documentation.html">DOCUMENTATION</a>
     </div>
   </nav>
 
-  <header>
+  <header class="container">
     <h1>Projects</h1>
-    <p class="lead">Here are some of Doruk's coding projects and coursework.</p>
+    <p class="lead">Here are some of my coding projects and academic coursework.</p>
   </header>
 
-  <main class="grid">
+  <main class="grid container">
     <!-- Problem Statement Q1 -->
     <article class="card">
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
@@ -176,6 +168,5 @@
       <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
     </article>
   </main>
-
 </body>
 </html>
