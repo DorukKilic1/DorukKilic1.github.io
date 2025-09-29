@@ -7,8 +7,9 @@
   <style>
     :root{
       --nav-bg:#8B0000; /* dark red nav background */
+      --btn-bg:#8B0000; /* dark red buttons */
+      --btn-hover:#6b0000; /* darker red on hover */
       --text:#fff;
-      --accent:#2563eb;
       --shadow:0 8px 24px rgba(15,23,42,.08);
     }
     body {
@@ -90,15 +91,15 @@
       margin: 12px 16px 16px;
       padding: 10px 14px;
       border-radius: 12px;
-      background: var(--accent);
-      color: #fff;
+      background: var(--btn-bg);
+      color: var(--text);
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
       transition: all 0.2s ease;
     }
     .btn:hover {
-      background: #1e40af;
+      background: var(--btn-hover);
       transform: translateY(-2px);
     }
   </style>
