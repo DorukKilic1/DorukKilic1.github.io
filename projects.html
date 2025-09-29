@@ -64,28 +64,25 @@
       color: #fff;
     }
 
-    /* Header with red box */
+    /* Header with shared red cube */
     header {
       padding: 24px 0 8px;
-    }
-    header h1 {
       background: var(--accent);
+      border-radius: 12px;
       color: #fff;
-      display: inline-block;
-      padding: 12px 16px;
-      border-radius: 8px;
       text-align: left;
-      margin: 0 0 16px 0;
     }
-    header p.lead {
-      background: var(--accent);
-      color: #fff;
-      padding: 16px;
-      border-radius: 8px;
-      text-align: left;
+    header h1, header p.lead {
       margin: 0;
+      padding: 12px 16px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: inline-block;
+      color: #fff;
     }
+    header h1 { margin-bottom: 12px; }
 
+    /* Grid for project cards */
     .grid {
       display: grid;
       gap: 18px;
