@@ -12,10 +12,9 @@
   <style>
     :root {
       --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --accent: #8B0000; /* dark red */
+      --card-bg: #8B0000; /* red cube for entire project */
+      --text: #fff;
+      --muted: #fff;
       --radius: 16px;
       --maxw: 1100px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
@@ -34,7 +33,7 @@
     nav {
       position: sticky;
       top: 0;
-      background: var(--accent);
+      background: var(--card-bg);
       z-index: 10;
     }
     .navwrap {
@@ -64,12 +63,13 @@
     /* Header with long red cube */
     header {
       display: inline-block;
-      background: var(--accent);
-      color: #fff;
+      background: var(--card-bg);
+      color: var(--text);
       border-radius: var(--radius);
       padding: 24px;
       margin-bottom: 32px;
       box-shadow: var(--shadow);
+      width: 100%;
     }
     header h1 {
       font-size: clamp(26px, 5vw, 38px);
@@ -85,53 +85,52 @@
     /* Project Grid */
     .grid {
       display: grid;
-      gap: 18px;
+      gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       padding: 0 24px 24px;
     }
     .card {
-      background: var(--card);
+      background: var(--card-bg); /* red cube background */
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      overflow: hidden;
+      color: #fff;
       display: flex;
       flex-direction: column;
-    }
-    /* Single red cube for each project */
-    .card-header {
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 16px;
-      font-weight: 600;
-      font-size: 16px;
-      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
+      padding-bottom: 16px;
     }
     .thumb {
       background: #eef2ff;
       aspect-ratio: 16/9;
       background-size: cover;
       background-position: center;
+      margin-bottom: 16px;
     }
     .content {
-      padding: 16px;
+      padding: 0 16px;
+      text-align: left;
+    }
+    .content h3 {
+      margin-bottom: 8px;
     }
     .meta {
-      color: var(--muted);
       font-size: 14px;
+      margin-bottom: 8px;
+      color: #fff;
     }
     .btn {
       align-self: flex-start;
       margin: 12px 16px 16px;
       padding: 10px 14px;
       border-radius: 12px;
-      background: var(--accent);
-      color: #fff;
+      background: #fff; /* button contrast */
+      color: var(--card-bg);
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
     }
     .btn:hover {
-      background: #a60000;
+      background: #f2f2f2;
       transform: translateY(-2px);
       transition: all 0.2s ease;
     }
@@ -164,57 +163,57 @@
   <main class="grid container">
     <!-- Project 1 -->
     <article class="card">
-      <div class="card-header">Problem Statement Q1</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Statement+Q1');"></div>
       <div class="content">
+        <h3>Problem Statement Q1</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
     </article>
 
     <!-- Project 2 -->
     <article class="card">
-      <div class="card-header">Problem Sceneria Q2</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Problem+Sceneria+Q2');"></div>
       <div class="content">
+        <h3>Problem Sceneria Q2</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
     </article>
 
     <!-- Project 3 -->
     <article class="card">
-      <div class="card-header">Q3</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Q3');"></div>
       <div class="content">
+        <h3>Q3</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
     </article>
 
     <!-- Project 4 -->
     <article class="card">
-      <div class="card-header">19 Question 1</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=19+Question+1');"></div>
       <div class="content">
+        <h3>19 Question 1</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
     </article>
 
     <!-- Project 5 -->
     <article class="card">
-      <div class="card-header">Triangle Checker</div>
       <div class="thumb" style="background-image: url('https://via.placeholder.com/400x225?text=Triangle+Checker');"></div>
       <div class="content">
+        <h3>Triangle Checker</h3>
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
       </div>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
     </article>
   </main>
 
