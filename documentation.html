@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation — Doruk Kılıç</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doruk Kılıç — Documentation</title>
+  <meta name="description" content="Documentation — Doruk Kılıç" />
+  <meta name="theme-color" content="#8B0000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --nav-bg:#8B0000; /* dark red nav background */
-      --text:#fff;
+      --bg:#f7f8fa; 
+      --text:#fff; 
+      --nav-bg:#8B0000; 
+      --radius:16px; 
+      --maxw:1100px; 
       --shadow:0 8px 24px rgba(15,23,42,.08);
     }
-    body {
-      font-family: Poppins, sans-serif;
-      background: #f7f8fa;
-      color: #0f172a;
-      line-height: 1.6;
-      padding: 24px;
-      max-width: 900px;
-      margin: 0 auto;
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      background:var(--bg); 
+      color: #0f172a; 
+      line-height:1.6;
     }
+    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
 
     /* Navigation */
     nav {
       background: var(--nav-bg);
       padding: 16px 0;
-      margin-bottom: 32px;
     }
     .navlinks {
       display: flex;
@@ -35,7 +41,7 @@
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
-      color: var(--text);
+      color: #fff;
       font-weight: 500;
       transition: opacity 0.3s;
     }
@@ -43,38 +49,59 @@
       opacity: 0.8;
     }
 
-    h1 {
-      font-size: clamp(26px,5vw,38px);
-      margin-bottom: 16px;
+    /* Documentation Section */
+    .docs {
+      margin-top:40px;
+      background: var(--nav-bg);
+      border-radius:16px;
+      padding:24px;
+      color: #fff;
+      box-shadow: var(--shadow);
     }
-    p.credit {
-      margin-top: 32px;
+    .docs h1 {
+      margin-top:0;
+      color: #fff;
+      text-align: center;
+    }
+    .credit {
+      margin-top: 24px;
       padding: 16px;
-      background: #eef2ff;
-      border-left: 4px solid #8B0000; /* changed to dark red */
+      background: rgba(255,255,255,0.15);
       border-radius: 8px;
       font-style: italic;
+      color: #fff;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #0f172a;
     }
   </style>
 </head>
 <body>
-
   <nav>
     <div class="navlinks">
       <a href="index.html">HOME</a>
       <a href="projects.html">PROJECTS</a>
-      <a href="big-ideas.html">Big Ideas Notes</a>
+      <a href="big-ideas.html">BIG IDEAS</a>
       <a href="documentation.html" class="active">DOCUMENTATION</a>
     </div>
   </nav>
 
-  <h1>Documentation</h1>
+  <main class="container">
+    <section class="docs">
+      <h1>Documentation</h1>
+      <p class="credit">
+        This website is made by Doruk Kılıç with assistance of ChatGPT.  
+        I designed the structure, chose the content and organized the ideas,  
+        while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
+      </p>
+    </section>
+  </main>
 
-  <!-- Existing documentation content can go here -->
-
-  <p class="credit">
-    This website is made by Doruk Kılıç with assistance of ChatGPT. I designed the structure, chose the content and organized the ideas while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
-  </p>
-
+  <footer>
+    <div class="container">© 2025 DoDo</div>
+  </footer>
 </body>
 </html>
