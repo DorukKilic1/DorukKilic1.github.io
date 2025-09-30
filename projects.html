@@ -1,311 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Doruk Kılıç — Projects</title>
-<meta name="theme-color" content="#8B0000" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #000; /* black wallpaper */
-  --card: #fff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --accent: #8B0000;
-  --radius: 16px;
-  --maxw: 1100px;
-  --shadow: 0 8px 24px rgba(15,23,42,.08);
-}
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; }
-body {
-  font-family: Poppins, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height:1.6;
-}
-.container { max-width: var(--maxw); margin:0 auto; padding:24px; position: relative; z-index:2; }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doruk Kılıç — Projects</title>
+  <meta name="theme-color" content="#8B0000" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000; /* black wallpaper */
+      --card: #fff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #8B0000;
+      --radius: 16px;
+      --maxw: 1100px;
+      --shadow: 0 8px 24px rgba(15,23,42,.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body {
+      font-family: Poppins, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+    .container { max-width: var(--maxw); margin:0 auto; padding:24px; position: relative; z-index:2; }
 
-/* Navigation */
-nav {
-  background: var(--accent);
-  padding: 16px 0;
-  margin-bottom: 24px;
-}
-.navwrap {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 0 24px;
-}
-.navlinks a {
-  padding: 12px 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-}
-.navlinks a:hover { background:#a60000; }
-.navlinks a.active { background:#5a0000; }
+    /* Navigation */
+    nav {
+      background: var(--accent);
+      padding: 16px 0;
+      margin-bottom: 24px;
+    }
+    .navwrap {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 24px;
+    }
+    .navlinks a {
+      padding: 12px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+    .navlinks a:hover { background:#a60000; }
+    .navlinks a.active { background:#5a0000; }
 
-/* Header cube */
-.header-cube {
-  background: var(--accent);
-  color: #fff;
-  padding: 24px;
-  border-radius: var(--radius);
-  margin-bottom: 24px;
-  text-align: left;
-  box-shadow: var(--shadow);
-}
-.header-cube h1 { margin:0; font-size: clamp(26px,5vw,38px); }
-.header-cube p { margin:8px 0 0; }
+    /* Header cube */
+    .header-cube {
+      background: var(--accent);
+      color: #fff;
+      padding: 24px;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      text-align: left;
+      box-shadow: var(--shadow);
+    }
+    .header-cube h1 { margin:0; font-size: clamp(26px,5vw,38px); }
+    .header-cube p { margin:8px 0 0; }
 
-/* Projects grid */
-.grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-}
+    /* Projects grid */
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    }
 
-/* Project card */
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+    /* Project card */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
 
-/* Card header */
-.card-header {
-  background: var(--accent);
-  color: #fff;
-  padding: 12px 16px;
-  font-weight: 600;
-  font-size: 18px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  margin-bottom: 0;
-  text-align: left;
-}
+    /* Card header */
+    .card-header {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      margin-bottom: 0;
+      text-align: left;
+    }
 
-/* Project content */
-.card .content {
-  padding: 16px;
-  color: var(--text);
-}
-.card .meta {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
+    /* Project content */
+    .card .content {
+      padding: 16px;
+      color: var(--text);
+    }
+    .card .meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
 
-/* Button */
-.btn {
-  align-self: flex-start;
-  margin-top: 12px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: var(--shadow);
-}
-.btn:hover {
-  background:#a60000;
-  transform: translateY(-2px);
-  transition: all 0.2s ease;
-}
+    /* Button */
+    .btn {
+      align-self: flex-start;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover {
+      background:#a60000;
+      transform: translateY(-2px);
+      transition: all 0.2s ease;
+    }
 
-/* Footer fixed bottom with fade-in */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-  font-size: 14px;
-  z-index: 3;
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+    /* Footer fixed bottom with fade-in */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      background: transparent;
+      color: #fff;
+      font-size: 14px;
+      z-index: 3;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-/* Falling cans */
-#falling-items {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: visible;
-  z-index: 0; /* stays behind content */
-}
-.falling-can {
-  position: absolute;
-  width: 44px;
-  height: auto;
-  transform-origin: center;
-  will-change: transform, opacity, left, top;
-  opacity: 0.95;
-  animation-name: fall;
-  animation-timing-function: linear;
-  user-select: none;
-  pointer-events: none;
-  display: block;
-}
-@keyframes fall {
-  0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
-}
-</style>
+    /* Falling cans */
+    #falling-items {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 0; /* behind content */
+    }
+    .falling-can {
+      position: absolute;
+      width: 44px;
+      height: auto;
+      transform-origin: center;
+      will-change: transform, opacity, left, top;
+      opacity: 0.95;
+      animation-name: fall;
+      animation-timing-function: linear;
+      user-select: none;
+      pointer-events: none;
+      display: block;
+    }
+    @keyframes fall {
+      0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Falling cans container -->
-<div id="falling-items" aria-hidden="true"></div>
+  <!-- Falling cans container -->
+  <div id="falling-items" aria-hidden="true"></div>
 
-<nav>
-  <div class="navwrap">
-    <div class="navlinks">
-      <a href="index.html">HOME</a>
-      <a href="projects.html" class="active">PROJECTS</a>
-      <a href="big-ideas.html">BIG IDEAS NOTES</a>
-      <a href="documentation.html">DOCUMENTATION</a>
+  <nav>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="index.html">HOME</a>
+        <a href="projects.html" class="active">PROJECTS</a>
+        <a href="big-ideas.html">BIG IDEAS NOTES</a>
+        <a href="documentation.html">DOCUMENTATION</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<header class="header-cube container">
-  <h1>Projects</h1>
-  <p>Here are some of my coding projects and academic coursework.</p>
-</header>
+  <header class="header-cube container">
+    <h1>Projects</h1>
+    <p>Here are some of my coding projects and academic coursework.</p>
+  </header>
 
-<main class="grid container">
-  <!-- Project 1 -->
-  <article class="card">
-    <div class="card-header">Problem Statement Q1</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
-    </div>
-  </article>
+  <main class="grid container">
+    <article class="card">
+      <div class="card-header">Problem Statement Q1</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
+      </div>
+    </article>
 
-  <!-- Project 2 -->
-  <article class="card">
-    <div class="card-header">Problem Sceneria Q2</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
-    </div>
-  </article>
+    <article class="card">
+      <div class="card-header">Problem Sceneria Q2</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
+      </div>
+    </article>
 
-  <!-- Project 3 -->
-  <article class="card">
-    <div class="card-header">Q3</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
-    </div>
-  </article>
+    <article class="card">
+      <div class="card-header">Q3</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
+      </div>
+    </article>
 
-  <!-- Project 4 -->
-  <article class="card">
-    <div class="card-header">19 Question 1</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
-    </div>
-  </article>
+    <article class="card">
+      <div class="card-header">19 Question 1</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
+      </div>
+    </article>
 
-  <!-- Project 5 -->
-  <article class="card">
-    <div class="card-header">Triangle Checker</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
-    </div>
-  </article>
-</main>
+    <article class="card">
+      <div class="card-header">Triangle Checker</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
+      </div>
+    </article>
+  </main>
 
-<footer>
-  © 2025 DoDo
-</footer>
+  <footer>
+    © 2025 DoDo
+  </footer>
 
-<!-- Falling-can JS -->
-<script>
-const spawnIntervalMs = 700;
-const minDuration = 8.0;
-const maxDuration = 14.0;
-const baseWidth = 44;
-const minScale = 0.65;
-const maxScale = 0.90;
+  <!-- Falling-can JS -->
+  <script>
+    const spawnIntervalMs = 700;
+    const minDuration = 8.0;
+    const maxDuration = 14.0;
+    const baseWidth = 44;
+    const minScale = 0.65;
+    const maxScale = 0.90;
 
-const container = document.getElementById('falling-items');
+    const container = document.getElementById('falling-items');
 
-function makeCanSVG() {
-  return `
-  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-    <!-- Can body -->
-    <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <!-- DoDo text rotated like PRIME logo -->
-    <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
-      transform="rotate(-90 20,50)">
-      DoDo
-    </text>
-  </svg>`;
-}
+    function makeCanSVG() {
+      return `
+      <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Can body -->
+        <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+        <!-- DoDo text rotated like PRIME logo -->
+        <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
+          transform="rotate(-90 20,50)">
+          DoDo
+        </text>
+      </svg>`;
+    }
 
-function spawnCan(){
-  const wrapper = document.createElement('div');
-  wrapper.className = 'falling-can';
-  wrapper.innerHTML = makeCanSVG();
+    function spawnCan(){
+      const wrapper = document.createElement('div');
+      wrapper.className = 'falling-can';
+      wrapper.innerHTML = makeCanSVG();
 
-  const startX = Math.random() * window.innerWidth;
-  wrapper.style.left = `${startX}px`;
+      const startX = Math.random() * window.innerWidth;
+      wrapper.style.left = `${startX}px`;
 
-  const scale = minScale + Math.random() * (maxScale - minScale);
-  wrapper.style.width = Math.round(baseWidth * scale) + 'px';
+      const scale = minScale + Math.random() * (maxScale - minScale);
+      wrapper.style.width = Math.round(baseWidth * scale) + 'px';
 
-  const startRot = Math.random() * 30 - 15;
-  wrapper.style.transform = `rotate(${startRot}deg)`;
+      const startRot = Math.random() * 30 - 15;
+      wrapper.style.transform = `rotate(${startRot}deg)`;
 
-  const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
-  wrapper.style.animationDuration = dur + 's';
+      const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
+      wrapper.style.animationDuration = dur + 's';
 
-  container.appendChild(wrapper);
+      container.appendChild(wrapper);
 
-  const drift = Math.random() * 120 - 60;
-  requestAnimationFrame(() => {
-    wrapper.style.transition = `left ${dur}s linear`;
-    wrapper.style.left = (startX + drift) + 'px';
-  });
+      const drift = Math.random() * 120 - 60;
+      requestAnimationFrame(() => {
+        wrapper.style.transition = `left ${dur}s linear`;
+        wrapper.style.left = (startX + drift) + 'px';
+      });
 
-  wrapper.addEventListener('animationend', () => wrapper.remove());
-  setTimeout(() => { if (wrapper.parentNode) wrapper.remove(); }, (parseFloat(dur)+0.5)*1000);
-}
+      wrapper.addEventListener('animationend', () => wrapper.remove());
+      setTimeout(() => { if (wrapper.parentNode) wrapper.remove(); }, (parseFloat(dur)+0.5)*1000);
+    }
 
-let spawner = setInterval(spawnCan, spawnIntervalMs);
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { clearInterval(spawner); spawner = null; }
-  else if (!spawner) { spawner = setInterval(spawnCan, spawnIntervalMs); }
-});
-</script>
+    let spawner = setInterval(spawnCan, spawnIntervalMs);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) { clearInterval(spawner); spawner = null; }
+      else if (!spawner) { spawner = setInterval(spawnCan, spawnIntervalMs); }
+    });
+  </script>
 
 </body>
 </html>
