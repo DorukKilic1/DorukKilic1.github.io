@@ -49,7 +49,7 @@ nav {
 .navlinks a:hover { background:#a60000; }
 .navlinks a.active { background:#5a0000; }
 
-/* Header cube (big cube for page header) */
+/* Header cube */
 .header-cube {
   background: var(--accent);
   color: #fff;
@@ -79,7 +79,7 @@ nav {
   position: relative;
 }
 
-/* Cube behind project title */
+/* Card header */
 .card-header {
   background: var(--accent);
   color: #fff;
@@ -135,9 +135,8 @@ footer {
   height: 100vh;
   pointer-events: none;
   overflow: visible;
-  z-index: 0;
+  z-index: 0; /* stays behind content */
 }
-
 .falling-can {
   position: absolute;
   width: 44px;
@@ -151,7 +150,6 @@ footer {
   pointer-events: none;
   display: block;
 }
-
 @keyframes fall {
   0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
   100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
@@ -267,4 +265,33 @@ function spawnCan(){
   const startX = Math.random() * window.innerWidth;
   wrapper.style.left = `${startX}px`;
 
-  const
+  const scale = minScale + Math.random() * (maxScale - minScale);
+  wrapper.style.width = Math.round(baseWidth * scale) + 'px';
+
+  const startRot = Math.random() * 30 - 15;
+  wrapper.style.transform = `rotate(${startRot}deg)`;
+
+  const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
+  wrapper.style.animationDuration = dur + 's';
+
+  container.appendChild(wrapper);
+
+  const drift = Math.random() * 120 - 60;
+  requestAnimationFrame(() => {
+    wrapper.style.transition = `left ${dur}s linear`;
+    wrapper.style.left = (startX + drift) + 'px';
+  });
+
+  wrapper.addEventListener('animationend', () => wrapper.remove());
+  setTimeout(() => { if (wrapper.parentNode) wrapper.remove(); }, (parseFloat(dur)+0.5)*1000);
+}
+
+let spawner = setInterval(spawnCan, spawnIntervalMs);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { clearInterval(spawner); spawner = null; }
+  else if (!spawner) { spawner = setInterval(spawnCan, spawnIntervalMs); }
+});
+</script>
+
+</body>
+</html>
