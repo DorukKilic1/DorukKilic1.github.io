@@ -1,144 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Big Ideas</title>
-  <meta name="description" content="Big Ideas Notes — Doruk Kılıç" />
-  <meta name="theme-color" content="#8B0000" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --text: #fff;
-      --accent: #8B0000;
-      --radius: 16px;
-      --maxw: 1100px;
-      --shadow: 0 8px 24px rgba(0,0,0,.2);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Poppins, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doruk Kılıç — Big Ideas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f8fa;
+  --accent: #8B0000;
+  --text: #fff;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.3);
+  --maxw: 1100px;
+}
 
-    /* Navigation */
-    nav {
-      background: var(--accent);
-      padding: 16px 0;
-      margin-bottom: 32px;
-    }
-    .navwrap {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      padding: 0 24px;
-    }
-    .navlinks a {
-      padding: 12px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-    }
-    .navlinks a:hover { background: #a60000; }
-    .navlinks a.active { background: #5a0000; }
+body {
+  margin:0;
+  font-family: Poppins, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-    /* Notes Section */
-    .notes { display: grid; gap: 24px; margin-top: 40px; }
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px;
+}
 
-    .cube {
-      background: var(--accent);
-      padding: 24px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .cube h1, .cube h2, .cube h3, .cube p, .cube ul li { margin: 0 0 12px 0; }
-    .cube ul { padding-left: 20px; }
-    .cube ul li { margin-bottom: 8px; }
-    .cube code {
-      background: #5a0000;
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
+/* Navigation */
+nav {
+  background: var(--accent);
+  padding: 16px 0;
+  margin-bottom: 32px;
+}
+.navwrap {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.navlinks a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.navlinks a:hover { background: #a60000; }
+.navlinks a.active { background: #5a0000; }
 
-    footer {
-      padding: 24px;
-      text-align: center;
-      color: #0f172a;
-    }
-  </style>
+/* Notes section with cubes */
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Individual cubes */
+.cube {
+  background: var(--accent);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+}
+
+/* Lists inside cubes */
+.cube ul {
+  padding-left: 20px;
+}
+.cube li {
+  margin-bottom: 8px;
+}
+.cube code {
+  background: #5a0000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #0f172a;
+}
+</style>
 </head>
 <body>
-  <nav>
-    <div class="navwrap">
-      <div class="navlinks">
-        <a href="index.html">HOME</a>
-        <a href="projects.html">PROJECTS</a>
-        <a href="big-ideas.html" class="active">BIG IDEAS NOTES</a>
-        <a href="documentation.html">DOCUMENTATION</a>
-      </div>
+<nav>
+  <div class="navwrap">
+    <div class="navlinks">
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="big-ideas.html" class="active">BIG IDEAS NOTES</a>
+      <a href="documentation.html">DOCUMENTATION</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main class="container">
-    <!-- Big Ideas Section -->
-    <section class="notes">
-      <div class="cube">
-        <h1>Big Ideas Notes</h1>
-        <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
-      </div>
+<main class="container">
+  <section class="notes">
+    <!-- Cube 1: Title / Intro -->
+    <div class="cube">
+      <h1>Big Ideas Notes</h1>
+      <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
+    </div>
 
-      <div class="cube">
-        <ul>
-          <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
-          <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
-          <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
-          <li><strong>Logic errors:</strong> Most likely math errors.</li>
-          <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
-          <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
-          <li><strong>Code examples:</strong>
-            <ul>
-              <li><code>System.out.println()</code></li>
-              <li>Double example: <code>6.353535</code></li>
-              <li>Int example: <code>4</code></li>
-              <li>Boolean: <code>true</code> or <code>false</code></li>
-              <li>String: Words</li>
-            </ul>
-          </li>
-          <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
-          <li><strong>Printing:</strong>
-            <ul>
-              <li><code>System.out.println(value)</code> prints value + new line</li>
-              <li><code>System.out.print(value)</code> prints value without new line</li>
-            </ul>
-          </li>
-          <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
-          <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
-          <li><strong>Java Keywords:</strong>
-            <ul>
-              <li>public → accessible anywhere</li>
-              <li>class → blueprint for objects</li>
-              <li>static → belongs to class, not object</li>
-              <li>void → method that doesn’t return a value</li>
-              <li>main → starting point of program</li>
-            </ul>
-          </li>
-          <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
-          <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
-          <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+    <!-- Cube 2: Detailed notes -->
+    <div class="cube">
+      <ul>
+        <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
+        <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
+        <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
+        <li><strong>Logic errors:</strong> Most likely math errors.</li>
+        <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
+        <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
+        <li><strong>Code examples:</strong>
+          <ul>
+            <li><code>System.out.println()</code></li>
+            <li>Double example: <code>6.353535</code></li>
+            <li>Int example: <code>4</code></li>
+            <li>Boolean: <code>true</code> or <code>false</code></li>
+            <li>String: Words</li>
+          </ul>
+        </li>
+        <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
+        <li><strong>Printing:</strong>
+          <ul>
+            <li><code>System.out.println(value)</code> prints value + new line</li>
+            <li><code>System.out.print(value)</code> prints value without new line</li>
+          </ul>
+        </li>
+        <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
+        <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
+        <li><strong>Java Keywords:</strong>
+          <ul>
+            <li>public → accessible anywhere</li>
+            <li>class → blueprint for objects</li>
+            <li>static → belongs to class, not object</li>
+            <li>void → method that doesn’t return a value</li>
+            <li>main → starting point of program</li>
+          </ul>
+        </li>
+        <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
+        <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
+        <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
+      </ul>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <div class="container">© 2025 DoDo</div>
-  </footer>
+<footer>
+  <div class="container">© 2025 DoDo</div>
+</footer>
 </body>
 </html>
