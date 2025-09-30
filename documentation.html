@@ -12,7 +12,7 @@
   <style>
     :root {
       --bg: #f7f8fa;
-      --text: #fff;
+      --text: #0f172a;
       --nav-bg: #8B0000; /* dark red */
       --radius: 16px;
       --maxw: 900px;
@@ -22,7 +22,7 @@
     body {
       font-family: Poppins, sans-serif;
       background: var(--bg);
-      color: #0f172a;
+      color: var(--text);
       line-height: 1.6;
     }
     .container {
@@ -31,7 +31,7 @@
       padding: 24px;
     }
 
-    /* Navigation */
+    /* Navigation (same as projects.html / big-ideas.html) */
     nav {
       background: var(--nav-bg);
       padding: 16px 0;
@@ -48,6 +48,7 @@
       text-decoration: none;
       color: #fff;
       font-weight: 500;
+      font-family: Poppins, sans-serif;
       transition: opacity 0.3s;
     }
     .navlinks a:hover,
@@ -68,20 +69,22 @@
     .credit {
       margin-top: 32px;
       padding: 16px;
-      background: var(--nav-bg); /* dark red background */
+      background: var(--nav-bg);
       border-radius: var(--radius);
       font-style: italic;
-      color: #fff; /* white text */
+      color: #fff;
     }
 
+    /* Footer */
     footer {
       padding: 24px;
       text-align: center;
-      color: #0f172a;
+      color: var(--text);
     }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <div class="navlinks">
       <a href="index.html">HOME</a>
