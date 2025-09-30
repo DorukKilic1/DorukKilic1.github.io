@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f7f8fa;
+  --bg: #000; /* black wallpaper */
   --card: #fff;
   --text: #0f172a;
   --muted: #64748b;
@@ -25,7 +25,7 @@ body {
   color: var(--text);
   line-height:1.6;
 }
-.container { max-width: var(--maxw); margin:0 auto; padding:24px; }
+.container { max-width: var(--maxw); margin:0 auto; padding:24px; position: relative; z-index:2; }
 
 /* Navigation */
 nav {
@@ -125,9 +125,44 @@ footer {
   text-align: center;
   color: var(--text);
 }
+
+/* Falling cans */
+#falling-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.falling-can {
+  position: absolute;
+  width: 44px;
+  height: auto;
+  transform-origin: center;
+  will-change: transform, opacity, left, top;
+  opacity: 0.95;
+  animation-name: fall;
+  animation-timing-function: linear;
+  user-select: none;
+  pointer-events: none;
+  display: block;
+}
+
+@keyframes fall {
+  0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
+}
 </style>
 </head>
 <body>
+
+<!-- Falling cans container -->
+<div id="falling-items" aria-hidden="true"></div>
+
 <nav>
   <div class="navwrap">
     <div class="navlinks">
@@ -199,5 +234,37 @@ footer {
 <footer>
   © 2025 DoDo
 </footer>
-</body>
-</html>
+
+<!-- Falling-can JS -->
+<script>
+const spawnIntervalMs = 700;
+const minDuration = 8.0;
+const maxDuration = 14.0;
+const baseWidth = 44;
+const minScale = 0.65;
+const maxScale = 0.90;
+
+const container = document.getElementById('falling-items');
+
+function makeCanSVG() {
+  return `
+  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Can body -->
+    <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+    <!-- DoDo text rotated like PRIME logo -->
+    <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
+      transform="rotate(-90 20,50)">
+      DoDo
+    </text>
+  </svg>`;
+}
+
+function spawnCan(){
+  const wrapper = document.createElement('div');
+  wrapper.className = 'falling-can';
+  wrapper.innerHTML = makeCanSVG();
+
+  const startX = Math.random() * window.innerWidth;
+  wrapper.style.left = `${startX}px`;
+
+  const
