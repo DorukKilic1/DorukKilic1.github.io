@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Doruk Kılıç — Home</title>
+<title>Doruk Kılıç — Projects</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -51,8 +51,8 @@ nav {
 .navlinks a:hover { background: #a60000; }
 .navlinks a.active { background: #5a0000; }
 
-/* About Me section */
-.about-me {
+/* Projects section */
+.projects {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -121,8 +121,8 @@ footer {
 <nav>
   <div class="navwrap">
     <div class="navlinks">
-      <a href="index.html" class="active">HOME</a>
-      <a href="projects.html">PROJECTS</a>
+      <a href="index.html">HOME</a>
+      <a href="projects.html" class="active">PROJECTS</a>
       <a href="big-ideas.html">BIG IDEAS NOTES</a>
       <a href="documentation.html">DOCUMENTATION</a>
     </div>
@@ -130,19 +130,15 @@ footer {
 </nav>
 
 <main class="container">
-  <section class="about-me">
+  <section class="projects">
+    <!-- Example project cube -->
     <div class="cube">
-      <h2>About Me</h2>
-      <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a desire for coding and I am studying AP CSA in 2025.</p>
+      <h2>Project 1</h2>
+      <p>Description of project 1 goes here.</p>
     </div>
-
     <div class="cube">
-      <h3>Hobbies</h3>
-      <ul>
-        <li>💪🏼 Bodybuilding</li>
-        <li>🥁 Playing Drums</li>
-        <li>♪ Listening to Music</li>
-      </ul>
+      <h2>Project 2</h2>
+      <p>Description of project 2 goes here.</p>
     </div>
   </section>
 </main>
@@ -164,9 +160,9 @@ const container = document.getElementById('falling-items');
 
 function makeCanSVG() {
   return `
-  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
     <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff"/>
-    <!-- DoDo in PRIME text position -->
+    <!-- DoDo horizontal text in PRIME logo position -->
     <text x="20" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">
       DoDo
     </text>
