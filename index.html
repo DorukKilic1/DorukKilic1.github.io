@@ -9,13 +9,11 @@
 <style>
 :root {
   --bg: #f7f8fa;
-  --card: #fff;
-  --text: #0f172a;
-  --muted: #64748b;
+  --text: #fff;
   --accent: #8B0000;
   --radius: 16px;
   --maxw: 1100px;
-  --shadow: 0 8px 24px rgba(15,23,42,.08);
+  --shadow: 0 8px 24px rgba(0,0,0,.2);
 }
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; }
@@ -52,20 +50,32 @@ nav {
 /* About Me section */
 .about-me {
   margin-top: 40px;
+  display: grid;
+  gap: 24px;
+}
+
+/* Sub-blocks (all same red) */
+.cube {
   background: var(--accent);
-  border-radius: var(--radius);
   padding: 24px;
-  color: #fff;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-.about-me h2 { margin-top: 0; }
-.about-me ul { list-style: none; padding-left: 0; }
-.about-me ul li { margin-bottom: 8px; }
+.cube h2, .cube h3, .cube p, .cube ul li { margin: 0 0 12px 0; }
+
+/* Hobbies list */
+.cube ul {
+  list-style: none;
+  padding-left: 0;
+}
+.cube ul li {
+  margin-bottom: 8px;
+}
 
 footer {
   padding: 24px;
   text-align: center;
-  color: var(--text);
+  color: #0f172a;
 }
 </style>
 </head>
@@ -84,14 +94,19 @@ footer {
 <main class="container">
   <!-- About Me Section -->
   <section class="about-me">
-    <h2>About Me</h2>
-    <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a desire for coding and I am studying AP CSA in 2025.</p>
-    <h3>Hobbies</h3>
-    <ul>
-      <li>💪🏼 Bodybuilding</li>
-      <li>🥁 Playing Drums</li>
-      <li>♪ Listening to Music</li>
-    </ul>
+    <div class="cube">
+      <h2>About Me</h2>
+      <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a desire for coding and I am studying AP CSA in 2025.</p>
+    </div>
+
+    <div class="cube">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>💪🏼 Bodybuilding</li>
+        <li>🥁 Playing Drums</li>
+        <li>♪ Listening to Music</li>
+      </ul>
+    </div>
   </section>
 </main>
 
