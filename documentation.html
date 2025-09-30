@@ -1,103 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Doruk Kılıç — Documentation</title>
-  <meta name="description" content="Documentation — Doruk Kılıç" />
-  <meta name="theme-color" content="#8B0000" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #fff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --accent: #8B0000;
-      --radius: 16px;
-      --maxw: 1100px;
-      --shadow: 0 8px 24px rgba(15,23,42,.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Poppins, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doruk Kılıç — Documentation</title>
+<meta name="theme-color" content="#8B0000" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f8fa;
+  --card: #fff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #8B0000;
+  --radius: 16px;
+  --maxw: 1100px;
+  --shadow: 0 8px 24px rgba(15,23,42,.08);
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+}
+.container { max-width: var(--maxw); margin:0 auto; padding:24px; }
 
-    /* Navigation (unified) */
-    nav {
-      background: var(--accent);
-      padding: 16px 0;
-      margin-bottom: 24px;
-    }
-    .navwrap {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      padding: 0 24px;
-    }
-    .navlinks a {
-      padding: 12px 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-    }
-    .navlinks a:hover { background: #a60000; }
-    .navlinks a.active { background: #5a0000; }
+/* Navigation */
+nav {
+  background: var(--accent);
+  padding: 16px 0;
+  margin-bottom: 24px;
+}
+.navwrap {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 24px;
+}
+.navlinks a {
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.navlinks a:hover { background:#a60000; }
+.navlinks a.active { background:#5a0000; }
 
-    /* Documentation Section */
-    h1 {
-      font-size: clamp(26px, 5vw, 38px);
-      margin-bottom: 16px;
-      background: var(--accent);
-      color: #fff;
-      padding: 16px;
-      border-radius: var(--radius);
-      text-align: left;
-    }
-    .credit {
-      margin-top: 32px;
-      padding: 16px;
-      background: var(--accent);
-      border-radius: var(--radius);
-      font-style: italic;
-      color: #fff;
-    }
+/* Documentation Section */
+h1 {
+  font-size: clamp(26px, 5vw, 38px);
+  margin-bottom: 16px;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px;
+  border-radius: var(--radius);
+  text-align: left;
+}
+.credit {
+  margin-top: 32px;
+  padding: 16px;
+  background: var(--accent);
+  border-radius: var(--radius);
+  font-style: italic;
+  color: #fff;
+}
 
-    footer {
-      padding: 24px;
-      text-align: center;
-      color: var(--text);
-    }
-  </style>
+footer {
+  padding: 24px;
+  text-align: center;
+  color: var(--text);
+}
+</style>
 </head>
 <body>
-  <nav>
-    <div class="navwrap">
-      <div class="navlinks">
-        <a href="index.html">HOME</a>
-        <a href="projects.html">PROJECTS</a>
-        <a href="big-ideas.html">BIG IDEAS NOTES</a>
-        <a href="documentation.html" class="active">DOCUMENTATION</a>
-      </div>
+<nav>
+  <div class="navwrap">
+    <div class="navlinks">
+      <a href="index.html">HOME</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="big-ideas.html">BIG IDEAS NOTES</a>
+      <a href="documentation.html" class="active">DOCUMENTATION</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main class="container">
-    <h1>Documentation</h1>
-    <p class="credit">
-      This website is made by Doruk Kılıç with assistance of ChatGPT.<br>
-      I designed the structure, chose the content and organized the ideas,<br>
-      while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
-    </p>
-  </main>
+<main class="container">
+  <h1>Documentation</h1>
+  <p class="credit">
+    This website is made by Doruk Kılıç with assistance of ChatGPT.<br>
+    I designed the structure, chose the content and organized the ideas,<br>
+    while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
+  </p>
+</main>
 
-  <footer>
-    <div class="container">© 2025 DoDo</div>
-  </footer>
+<footer>
+  <div class="container">© 2025 DoDo</div>
+</footer>
 </body>
 </html>
