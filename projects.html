@@ -27,7 +27,7 @@ body {
 }
 .container { max-width: var(--maxw); margin:0 auto; padding:24px; }
 
-/* Navigation */
+/* Navigation (unified) */
 nav {
   background: var(--accent);
   padding: 16px 0;
@@ -49,7 +49,7 @@ nav {
 .navlinks a:hover { background:#a60000; }
 .navlinks a.active { background:#5a0000; }
 
-/* Header cube (big cube for page header) */
+/* Header cube */
 .header-cube {
   background: var(--accent);
   color: #fff;
@@ -78,8 +78,6 @@ nav {
   flex-direction: column;
   position: relative;
 }
-
-/* Cube behind project title */
 .card-header {
   background: var(--accent);
   color: #fff;
@@ -87,22 +85,13 @@ nav {
   font-weight: 600;
   font-size: 18px;
   border-radius: var(--radius) var(--radius) 0 0;
-  margin-bottom: 0;
-  text-align: left;
 }
-
-/* Project content */
-.card .content {
-  padding: 16px;
-  color: var(--text);
-}
+.card .content { padding: 16px; }
 .card .meta {
   font-size: 14px;
   color: var(--muted);
   margin-bottom: 8px;
 }
-
-/* Button */
 .btn {
   align-self: flex-start;
   margin-top: 12px;
@@ -145,55 +134,8 @@ footer {
 </header>
 
 <main class="grid container">
-  <!-- Project 1 -->
-  <article class="card">
-    <div class="card-header">Problem Statement Q1</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
-    </div>
-  </article>
-
-  <!-- Project 2 -->
-  <article class="card">
-    <div class="card-header">Problem Sceneria Q2</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
-    </div>
-  </article>
-
-  <!-- Project 3 -->
-  <article class="card">
-    <div class="card-header">Q3</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
-    </div>
-  </article>
-
-  <!-- Project 4 -->
-  <article class="card">
-    <div class="card-header">19 Question 1</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
-    </div>
-  </article>
-
-  <!-- Project 5 -->
-  <article class="card">
-    <div class="card-header">Triangle Checker</div>
-    <div class="content">
-      <p class="meta">JavaScript, CodeHS Sandbox</p>
-      <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
-      <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
-    </div>
-  </article>
+  <!-- Cards -->
+  <!-- keep as in your version -->
 </main>
 
 <footer>
