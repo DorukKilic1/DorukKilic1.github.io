@@ -5,87 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doruk Kılıç — Home</title>
   <meta name="description" content="Doruk Kılıç — 11th Grade AP CS A Student" />
-  <meta name="theme-color" content="#2563eb" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#8B0000" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f7f8fa; 
-      --text:#0f172a; 
-      --nav-bg:#8B0000; /* dark red background for nav bar and About Me */
-      --radius:16px; 
-      --maxw:1100px; 
-      --shadow:0 8px 24px rgba(15,23,42,.08);
+    :root {
+      --bg: #f7f8fa;
+      --card: #fff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #8B0000;
+      --radius: 16px;
+      --maxw: 1100px;
+      --shadow: 0 8px 24px rgba(15,23,42,.08);
     }
-    *{box-sizing:border-box} 
-    html,body{margin:0;padding:0}
-    body{
-      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
-      background:var(--bg); 
-      color: var(--text); 
-      line-height:1.6;
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Poppins, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
-    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
     /* Navigation */
     nav {
-      background: var(--nav-bg);
+      background: var(--accent);
       padding: 16px 0;
-      margin-bottom: 24px; /* space between nav and the first cube */
+      margin-bottom: 24px;
     }
-    .navlinks {
+    .navwrap {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
+      padding: 0 24px;
     }
     .navlinks a {
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
       color: #fff;
-      font-weight: 500;
-      transition: opacity 0.3s;
+      font-weight: 600;
     }
-    .navlinks a:hover, .navlinks a.active {
-      opacity: 0.8; /* subtle hover effect */
-    }
+    .navlinks a:hover { background: #a60000; }
+    .navlinks a.active { background: #5a0000; }
 
     /* About Me section */
     .about-me {
-      margin-top:40px;
-      background: var(--nav-bg); /* same as nav */
-      border-radius:16px;
-      padding:24px;
+      margin-top: 40px;
+      background: var(--accent);
+      border-radius: var(--radius);
+      padding: 24px;
       color: #fff;
       box-shadow: var(--shadow);
     }
-    .about-me h2 {
-      margin-top:0;
-      color: #fff;
-    }
-    .about-me ul {
-      list-style:none;
-      padding-left:0;
-    }
-    .about-me ul li {
-      margin-bottom:8px;
-    }
+    .about-me h2 { margin-top: 0; }
+    .about-me ul { list-style: none; padding-left: 0; }
+    .about-me ul li { margin-bottom: 8px; }
 
     footer {
       padding: 24px;
       text-align: center;
-      color: #0f172a;
+      color: var(--text);
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="navlinks">
-      <a href="index.html" class="active">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="big-ideas.html">BIG IDEAS NOTES</a>
-      <a href="documentation.html">DOCUMENTATION</a>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="index.html" class="active">HOME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="big-ideas.html">BIG IDEAS NOTES</a>
+        <a href="documentation.html">DOCUMENTATION</a>
+      </div>
     </div>
   </nav>
 
