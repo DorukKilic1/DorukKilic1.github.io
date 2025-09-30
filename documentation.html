@@ -6,14 +6,14 @@
   <title>Doruk Kılıç — Documentation</title>
   <meta name="description" content="Documentation — Doruk Kılıç" />
   <meta name="theme-color" content="#8B0000" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f7f8fa;
+      --card: #fff;
       --text: #0f172a;
-      --nav-bg: #8B0000; /* dark red */
+      --muted: #64748b;
+      --accent: #8B0000;
       --radius: 16px;
       --maxw: 900px;
       --shadow: 0 8px 24px rgba(15,23,42,.08);
@@ -25,57 +25,49 @@
       color: var(--text);
       line-height: 1.6;
     }
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 24px;
-    }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
 
-    /* Navigation (same as projects.html / big-ideas.html) */
+    /* Navigation */
     nav {
-      background: var(--nav-bg);
+      background: var(--accent);
       padding: 16px 0;
       margin-bottom: 32px;
     }
-    .navlinks {
+    .navwrap {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
+      padding: 0 24px;
     }
     .navlinks a {
       padding: 12px 20px;
       border-radius: 12px;
       text-decoration: none;
       color: #fff;
-      font-weight: 500;
-      font-family: Poppins, sans-serif;
-      transition: opacity 0.3s;
+      font-weight: 600;
     }
-    .navlinks a:hover,
-    .navlinks a.active {
-      opacity: 0.8;
-    }
+    .navlinks a:hover { background: #a60000; }
+    .navlinks a.active { background: #5a0000; }
 
     /* Documentation Section */
     h1 {
       font-size: clamp(26px, 5vw, 38px);
       margin-bottom: 16px;
-      background: var(--nav-bg);
+      background: var(--accent);
       color: #fff;
       padding: 16px;
       border-radius: var(--radius);
-      text-align: left; 
+      text-align: left;
     }
     .credit {
       margin-top: 32px;
       padding: 16px;
-      background: var(--nav-bg);
+      background: var(--accent);
       border-radius: var(--radius);
       font-style: italic;
       color: #fff;
     }
 
-    /* Footer */
     footer {
       padding: 24px;
       text-align: center;
@@ -84,21 +76,22 @@
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
-    <div class="navlinks">
-      <a href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="big-ideas.html">BIG IDEAS NOTES</a>
-      <a href="documentation.html" class="active">DOCUMENTATION</a>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="index.html">HOME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="big-ideas.html">BIG IDEAS NOTES</a>
+        <a href="documentation.html" class="active">DOCUMENTATION</a>
+      </div>
     </div>
   </nav>
 
   <main class="container">
     <h1>Documentation</h1>
     <p class="credit">
-      This website is made by Doruk Kılıç with assistance of ChatGPT.  
-      I designed the structure, chose the content and organized the ideas,  
+      This website is made by Doruk Kılıç with assistance of ChatGPT.<br>
+      I designed the structure, chose the content and organized the ideas,<br>
       while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
     </p>
   </main>
