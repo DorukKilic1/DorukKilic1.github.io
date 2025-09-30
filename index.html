@@ -162,15 +162,13 @@ const maxScale = 0.90;
 
 const container = document.getElementById('falling-items');
 
-function makeCanSVG(){
+function makeCanSVG() {
   return `
   <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff"/>
-    <text x="50%" y="15" text-anchor="middle" font-size="12" font-weight="bold" fill="#000000">
-      <tspan x="50%" dy="0">D</tspan>
-      <tspan x="50%" dy="14">o</tspan>
-      <tspan x="50%" dy="14">D</tspan>
-      <tspan x="50%" dy="14">o</tspan>
+    <!-- DoDo in PRIME text position -->
+    <text x="20" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000">
+      DoDo
     </text>
   </svg>`;
 }
