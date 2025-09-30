@@ -8,37 +8,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #000; /* black background */
+  --bg: #000; /* black wallpaper */
   --card: #fff;
-  --text: #0f172a;
+  --text: #fff;
   --muted: #64748b;
   --accent: #8B0000;
   --radius: 16px;
   --maxw: 1100px;
   --shadow: 0 8px 24px rgba(15,23,42,.08);
 }
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; }
+
+/* Strong overrides so background + stacking works even if something else interferes */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 body {
   font-family: Poppins, sans-serif;
-  background: var(--bg);
+  background: #000 !important;     /* force black background */
   color: var(--text);
-  line-height:1.6;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.container { max-width: var(--maxw); margin:0 auto; padding:24px; position: relative; z-index:2; }
 
-/* Navigation */
+/* make sure main page elements are above the cans */
+nav, main, footer, .container, .credit, h1 {
+  position: relative;
+  z-index: 2;
+}
+
+/* page layout */
+.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+
 nav {
   background: var(--accent);
   padding: 16px 0;
   margin-bottom: 24px;
 }
-.navwrap {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 0 24px;
-}
+.navwrap{ display:flex; justify-content:center; gap:24px; padding:0 24px; }
 .navlinks a {
   padding: 12px 20px;
   border-radius: 12px;
@@ -71,31 +80,36 @@ h1 {
 footer {
   padding: 24px;
   text-align: center;
-  color: var(--text);
+  color: #fff;
+  margin-top: 12px;
 }
 
-/* Falling cans */
+/* Falling cans (kept simple & robust) */
 #falling-items {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
   overflow: visible;
-  z-index: 0;
+  z-index: 0; /* behind content */
 }
+
 .falling-can {
   position: absolute;
+  top: -200px; /* start offscreen */
   width: 44px;
   height: auto;
   transform-origin: center;
-  will-change: transform, opacity, left, top;
+  will-change: transform, left, top, opacity;
   opacity: 0.95;
-  animation-name: fall;
-  animation-timing-function: linear;
   user-select: none;
   pointer-events: none;
   display: block;
+  /* animation will be assigned inline so each can has its own duration */
 }
+
 @keyframes fall {
   0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
   100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
@@ -131,8 +145,9 @@ footer {
   <div class="container">© 2025 DoDo</div>
 </footer>
 
-<!-- Falling-can JS -->
+<!-- Falling-can JS (robust) -->
 <script>
+/* Constants */
 const spawnIntervalMs = 700;
 const minDuration = 8.0;
 const maxDuration = 14.0;
@@ -144,42 +159,76 @@ const container = document.getElementById('falling-items');
 
 function makeCanSVG() {
   return `
-  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-    <!-- Can body -->
+  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <!-- DoDo text rotated like PRIME logo -->
     <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
-      transform="rotate(-90 20,50)">
-      DoDo
-    </text>
+      transform="rotate(-90 20,50)">DoDo</text>
   </svg>`;
 }
 
 function spawnCan(){
+  if (!container) return;
   const wrapper = document.createElement('div');
   wrapper.className = 'falling-can';
   wrapper.innerHTML = makeCanSVG();
 
-  const startX = Math.random() * window.innerWidth;
-  wrapper.style.left = `${startX}px`;
-
   const scale = minScale + Math.random() * (maxScale - minScale);
-  wrapper.style.width = Math.round(baseWidth * scale) + 'px';
+  const width = Math.round(baseWidth * scale);
+  wrapper.style.width = width + 'px';
 
+  // ensure we spawn fully inside viewport horizontally
+  const startX = Math.random() * Math.max(1, (window.innerWidth - width));
+  wrapper.style.left = `${startX}px`;
+  wrapper.style.top = `-220px`;
+
+  // give random start rotation (this will be baseline until animation starts)
+  const startRot = Math.random() * 60 - 30; // -30deg .. +30deg
+  wrapper.style.transform = `rotate(${startRot}deg)`;
+
+  // animation duration
   const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
-  wrapper.style.animationDuration = dur + 's';
+  wrapper.style.animation = `fall ${dur}s linear forwards`;
 
   container.appendChild(wrapper);
 
-  wrapper.addEventListener('animationend', () => wrapper.remove());
-  setTimeout(() => { if (wrapper.parentNode) wrapper.remove(); }, (parseFloat(dur)+0.5)*1000);
+  // horizontal drift using CSS transition so the can moves sideways as it falls
+  const drift = Math.random() * 120 - 60; // -60 .. +60 px
+  // wait a frame then set transition + final left
+  requestAnimationFrame(() => {
+    wrapper.style.transition = `left ${dur}s linear`;
+    wrapper.style.left = (startX + drift) + 'px';
+  });
+
+  // cleanup when animation ends (some browsers fire animationend with prefixed names; this is generic)
+  wrapper.addEventListener('animationend', () => {
+    if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper);
+  });
+
+  // as a fallback, ensure removal after duration + 1s
+  setTimeout(() => { if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper); }, (parseFloat(dur) + 1) * 1000);
 }
 
-let spawner = setInterval(spawnCan, spawnIntervalMs);
+let spawner = null;
+function startSpawner() {
+  if (spawner) return;
+  spawnCan(); // spawn one immediately so you see it fast
+  spawner = setInterval(spawnCan, spawnIntervalMs);
+}
+function stopSpawner() {
+  if (!spawner) return;
+  clearInterval(spawner);
+  spawner = null;
+}
+
+/* Start on load, respect tab visibility */
+window.addEventListener('load', startSpawner);
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { clearInterval(spawner); spawner = null; }
-  else if (!spawner) { spawner = setInterval(spawnCan, spawnIntervalMs); }
+  if (document.hidden) stopSpawner();
+  else startSpawner();
 });
+
+/* also restart spawner on resize to avoid offscreen spawn issues */
+window.addEventListener('resize', () => { /* no-op but keeps things stable if you want to extend */ });
 </script>
 
 </body>
