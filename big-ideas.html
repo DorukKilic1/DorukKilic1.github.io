@@ -81,10 +81,18 @@ nav {
   font-family: monospace;
 }
 
+/* Footer always visible */
 footer {
-  padding: 24px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
   text-align: center;
-  color: #0f172a;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  z-index: 3;
 }
 
 /* Falling cans */
@@ -186,7 +194,7 @@ footer {
 </main>
 
 <footer>
-  <div class="container">© 2025 DoDo</div>
+  © 2025 DoDo
 </footer>
 
 <!-- Falling-can JS -->
