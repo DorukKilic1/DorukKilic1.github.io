@@ -4,69 +4,70 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Doruk Kılıç — Home</title>
-<meta name="theme-color" content="#8B0000" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #f7f8fa;
-  --text: #fff;
   --accent: #8B0000;
+  --text: #fff;
   --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.3);
   --maxw: 1100px;
-  --shadow: 0 8px 24px rgba(0,0,0,.2);
 }
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; }
+
 body {
+  margin:0;
   font-family: Poppins, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height:1.6;
 }
-.container { max-width: var(--maxw); margin:0 auto; padding:24px; }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px;
+}
 
 /* Navigation */
 nav {
   background: var(--accent);
   padding: 16px 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .navwrap {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding: 0 24px;
 }
 .navlinks a {
+  color: #fff;
+  text-decoration: none;
   padding: 12px 20px;
   border-radius: 12px;
-  text-decoration: none;
-  color: #fff;
   font-weight: 600;
 }
-.navlinks a:hover { background:#a60000; }
-.navlinks a.active { background:#5a0000; }
+.navlinks a:hover { background: #a60000; }
+.navlinks a.active { background: #5a0000; }
 
 /* About Me section */
 .about-me {
-  margin-top: 40px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
-/* Sub-blocks (all same red) */
+/* Individual cubes */
 .cube {
   background: var(--accent);
   padding: 24px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  width: 100%;
 }
-.cube h2, .cube h3, .cube p, .cube ul li { margin: 0 0 12px 0; }
 
-/* Hobbies list */
+.cube h2, .cube h3, .cube p, .cube ul li { margin: 0 0 12px 0; }
 .cube ul {
-  list-style: none;
-  padding-left: 0;
+  padding-left: 20px;
 }
 .cube ul li {
   margin-bottom: 8px;
@@ -94,11 +95,13 @@ footer {
 <main class="container">
   <!-- About Me Section -->
   <section class="about-me">
+    <!-- Cube 1: Intro -->
     <div class="cube">
       <h2>About Me</h2>
       <p>Hello, My name is DoDo and I am a student at the Hisar School located in Türkiye/İstanbul. I have a desire for coding and I am studying AP CSA in 2025.</p>
     </div>
 
+    <!-- Cube 2: Hobbies -->
     <div class="cube">
       <h3>Hobbies</h3>
       <ul>
