@@ -2,350 +2,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Doruk Kılıç — Documentation</title>
-<meta name="theme-color" content="#8B0000" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #000; /* black wallpaper */
-  --card: #fff;
-  --text: #fff;
-  --muted: #64748b;
-  --accent: #8B0000;
-  --radius: 16px;
-  --maxw: 1100px;
-  --shadow: 0 8px 24px rgba(15,23,42,.08);
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doruk Kılıç — Documentation</title>
+  <meta name="theme-color" content="#8B0000" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* Strong overrides */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-body {
-  font-family: Poppins, sans-serif;
-  background: #000 !important;
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  <style>
+    :root {
+      --bg: #000;
+      --card: #fff;
+      --text: #fff;
+      --muted: #64748b;
+      --accent: #8B0000;
+      --radius: 16px;
+      --maxw: 1100px;
+      --shadow: 0 8px 24px rgba(15,23,42,.08);
+    }
 
-/* keep main content above cans */
-nav, main, footer, .container, .credit, h1 {
-  position: relative;
-  z-index: 2;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-/* layout */
-.container { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    body {
+      font-family: Poppins, sans-serif;
+      background: #000 !important;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-nav {
-  background: var(--accent);
-  padding: 16px 0;
-  margin-bottom: 24px;
-}
-.navwrap{ display:flex; justify-content:center; gap:24px; padding:0 24px; }
-.navlinks a {
-  padding: 12px 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-}
-.navlinks a:hover { background:#a60000; }
-.navlinks a.active { background:#5a0000; }
+    nav, main, footer, .container, .credit, h1 {
+      position: relative;
+      z-index: 2;
+    }
 
-/* Documentation Section */
-h1 {
-  font-size: clamp(26px, 5vw, 38px);
-  margin-bottom: 16px;
-  background: var(--accent);
-  color: #fff;
-  padding: 16px;
-  border-radius: var(--radius);
-  text-align: left;
-}
-h2 {
-  font-size: clamp(22px, 4vw, 30px);
-  margin-top: 32px;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
-}
-.credit {
-  margin-top: 32px;
-  padding: 16px;
-  background: var(--accent);
-  border-radius: var(--radius);
-  font-style: italic;
-  color: #fff;
-}
-.credit a {
-  color: #fff;
-  text-decoration: underline;
-}
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-/* Sticky footer */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px;
-  text-align: center;
-  color: #fff;
-  font-size: 14px;
-  z-index: 3; /* stays above cans */
-  background: transparent;
-}
+    nav {
+      background: var(--accent);
+      padding: 16px 0;
+      margin-bottom: 24px;
+    }
 
-/* Falling cans */
-#falling-items {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: visible;
-  z-index: 0; /* behind content */
-}
-.falling-can {
-  position: absolute;
-  top: -200px;
-  width: 44px;
-  height: auto;
-  transform-origin: center;
-  will-change: transform, left, top, opacity;
-  opacity: 0.95;
-  user-select: none;
-  pointer-events: none;
-  display: block;
-}
-@keyframes fall {
-  0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
-}
-</style>
+    .navwrap {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 24px;
+    }
+
+    .navlinks a {
+      padding: 12px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .navlinks a:hover {
+      background: #a60000;
+    }
+
+    .navlinks a.active {
+      background: #5a0000;
+    }
+
+    h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      margin-bottom: 16px;
+      background: var(--accent);
+      color: #fff;
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: left;
+    }
+
+    .credit {
+      margin-top: 32px;
+      padding: 16px;
+      background: var(--accent);
+      border-radius: var(--radius);
+      font-style: italic;
+      color: #fff;
+    }
+
+    .credit a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      z-index: 3;
+      background: transparent;
+    }
+
+    #falling-items {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: visible;
+      z-index: 0;
+    }
+
+    .falling-can {
+      position: absolute;
+      top: -200px;
+      width: 44px;
+      height: auto;
+      transform-origin: center;
+      will-change: transform, left, top, opacity;
+      opacity: 0.95;
+      user-select: none;
+      pointer-events: none;
+      display: block;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-140px) rotate(0deg);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.95;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Falling cans container -->
+  <div id="falling-items" aria-hidden="true"></div>
 
-<!-- Falling cans container -->
-<div id="falling-items" aria-hidden="true"></div>
-
-<nav>
-  <div class="navwrap">
-    <div class="navlinks">
-      <a href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="big-ideas.html">BIG IDEAS NOTES</a>
-      <a href="documentation.html" class="active">DOCUMENTATION</a>
+  <nav>
+    <div class="navwrap">
+      <div class="navlinks">
+        <a href="index.html">HOME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="big-ideas.html">BIG IDEAS NOTES</a>
+        <a href="documentation.html" class="active">DOCUMENTATION</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container">
-  <h1>Documentation</h1>
-  <p class="credit">
-    This website is made by Doruk Kılıç with assistance of 
-    <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.<br>
-    I designed the structure, chose the content and organized the ideas,<br>
-    while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
-  </p>
+  <main class="container">
+    <h1>Documentation</h1>
+    <p class="credit">
+      This website is made by Doruk Kılıç with assistance of
+      <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.<br>
+      I designed the structure, chose the content and organized the ideas,<br>
+      while ChatGPT helped with writing the code, formatting, styling the HTML and CSS.
+    </p>
+  </main>
 
-  <h2>CSAwesome Notes</h2>
-  <div class="notes">
-<pre>
-**1.1 Programs and Errors**
-* Algorithm = Steps to solve.
-* Sequence = Order of steps.
-* System.out.println() = Prints text.
-* ; = Ends a line of code.
-* Compiler = Finds syntax mistakes.
-* Logic error = Wrong result.
-* Runtime error = Error while running.
+  <footer>
+    © 2025 DoDo
+  </footer>
 
-**1.2 Variables and Types**
-* Variable = Memory storage.
-* Primitive = int, double, boolean, etc.
-* Reference = Objects (like String).
-* String = Text.
+  <!-- Falling-can JS -->
+  <script>
+    const spawnIntervalMs = 700;
+    const minDuration = 8.0;
+    const maxDuration = 14.0;
+    const baseWidth = 44;
+    const minScale = 0.65;
+    const maxScale = 0.90;
+    const container = document.getElementById('falling-items');
 
-**1.3 Printing and Expressions**
-* println = Prints on new line.
-* Literal = Fixed value.
-* \n = New line, \" = Quote, \\ = Backslash.
-* Operators = +, -, *, /.
-* int ÷ int = int result unless double involved.
-* % = Remainder.
-* Order → *, /, % before +, -.
-* Divide by 0 = Error.
+    function makeCanSVG() {
+      return `<svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+        <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000" transform="rotate(-90 20,50)">DoDo</text>
+      </svg>`;
+    }
 
-**1.4 Assignment and Input**
-* = = Puts value into variable.
-* Scanner in = new Scanner(System.in); → Reads user input.
+    function spawnCan() {
+      if (!container) return;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'falling-can';
+      wrapper.innerHTML = makeCanSVG();
 
-**1.5 Casting and Limits**
-* (int), (double) = Convert types.
-* double → int = Cuts decimals.
-* int in double math = Becomes double.
-* Round = (int)(x + 0.5).
-* Integer.MAX/MIN = Biggest, smallest int.
-* Overflow = Wraps around.
+      const scale = minScale + Math.random() * (maxScale - minScale);
+      const width = Math.round(baseWidth * scale);
+      wrapper.style.width = width + 'px';
 
-**1.6 Shortcuts**
-* x++ = Add 1.
-* x *= y = Same as x = x * y.
+      const startX = Math.random() * Math.max(1, (window.innerWidth - width));
+      wrapper.style.left = `${startX}px`;
+      wrapper.style.top = '-220px';
 
-**1.7 Libraries**
-* Library = Prebuilt classes.
-* API = Methods and fields.
-* Package = Class group.
+      const startRot = Math.random() * 60 - 30;
+      wrapper.style.transform = `rotate(${startRot}deg)`;
 
-**1.8 Docs and Conditions**
-* Comments = // or /* */.
-* Precondition = Must be true before.
-* Postcondition = True after.
+      const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
+      wrapper.style.animation = `fall ${dur}s linear forwards`;
 
-**1.9 Methods**
-* Method = Named code block.
-* Parameters = In header.
-* Arguments = Values passed.
-* Call by value = Copy sent.
-* Overload = Same name, different params.
+      container.appendChild(wrapper);
 
-**1.10 Static Methods**
-* Static = Class level.
-* Syntax = ClassName.method().
-* Void = No return.
+      const drift = Math.random() * 120 - 60;
+      requestAnimationFrame(() => {
+        wrapper.style.transition = `left ${dur}s linear`;
+        wrapper.style.left = (startX + drift) + 'px';
+      });
 
-**1.11 Math Class**
-* Math.abs() = Absolute value.
-* Math.pow(x, y) = Power.
-* Math.sqrt() = Square root.
-* Math.random() = 0.0–1.0 random.
+      wrapper.addEventListener('animationend', () => {
+        if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper);
+      });
 
-**1.12 Objects**
-* Class = Template.
-* Object = Instance.
-* Attributes = Vars + methods.
-* All classes extend Object.
+      setTimeout(() => {
+        if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper);
+      }, (parseFloat(dur) + 1) * 1000);
+    }
 
-**1.13 Constructors**
-* new = Makes object.
-* Constructor = Same as class name.
-* Overload = Different params.
+    let spawner = null;
+    function startSpawner() {
+      if (spawner) return;
+      spawnCan();
+      spawner = setInterval(spawnCan, spawnIntervalMs);
+    }
+    function stopSpawner() {
+      if (!spawner) return;
+      clearInterval(spawner);
+      spawner = null;
+    }
 
-**1.14 Instance Methods**
-* Syntax = obj.method().
-* Null object → NullPointerException.
-
-**1.15 Strings**
-* String = Object, immutable.
-* +, += = Concatenate.
-* Methods = length(), substring(), indexOf(), equals(), compareTo().
-* Index starts at 0.
-
-**1.16 Summary A**
-* Algorithms, IDE, errors.
-* int, double, boolean.
-* Assignment, printing, operator order.
-* Casting, overflow, rounding.
-* Shortcut ops.
-
-**1.20 Summary B**
-* Objects + classes.
-* Static vs instance methods.
-* Constructors.
-* Math methods.
-* Strings.
-* Wrapper classes.
-</pre>
-  </div>
-</main>
-
-<footer>
-  © 2025 DoDo
-</footer>
-
-<!-- Falling-can JS -->
-<script>
-const spawnIntervalMs = 700;
-const minDuration = 8.0;
-const maxDuration = 14.0;
-const baseWidth = 44;
-const minScale = 0.65;
-const maxScale = 0.90;
-
-const container = document.getElementById('falling-items');
-
-function makeCanSVG() {
-  return `
-  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
-      transform="rotate(-90 20,50)">DoDo</text>
-  </svg>`;
-}
-
-function spawnCan(){
-  if (!container) return;
-  const wrapper = document.createElement('div');
-  wrapper.className = 'falling-can';
-  wrapper.innerHTML = makeCanSVG();
-
-  const scale = minScale + Math.random() * (maxScale - minScale);
-  const width = Math.round(baseWidth * scale);
-  wrapper.style.width = width + 'px';
-
-  const startX = Math.random() * Math.max(1, (window.innerWidth - width));
-  wrapper.style.left = `${startX}px`;
-  wrapper.style.top = `-220px`;
-
-  const startRot = Math.random() * 60 - 30;
-  wrapper.style.transform = `rotate(${startRot}deg)`;
-
-  const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
-  wrapper.style.animation = `fall ${dur}s linear forwards`;
-
-  container.appendChild(wrapper);
-
-  const drift = Math.random() * 120 - 60;
-  requestAnimationFrame(() => {
-    wrapper.style.transition = `left ${dur}s linear`;
-    wrapper.style.left = (startX + drift) + 'px';
-  });
-
-  wrapper.addEventListener('animationend', () => {
-    if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper);
-  });
-
-  setTimeout(() => { if (wrapper.parentNode) wrapper.parentNode.removeChild(wrapper); }, (parseFloat(dur) + 1) * 1000);
-}
-
-let spawner = null;
-function startSpawner() {
-  if (spawner) return;
-  spawnCan();
-  spawner = setInterval(spawnCan, spawnIntervalMs);
-}
-function stopSpawner() {
-  if (!spawner) return;
-  clearInterval(spawner);
-  spawner = null;
-}
-
-window.addEventListener('load', startSpawner);
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) stopSpawner();
-  else startSpawner();
-});
-</script>
-
+    window.addEventListener('load', startSpawner);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stopSpawner();
+      else startSpawner();
+    });
+  </script>
 </body>
 </html>
 ```
