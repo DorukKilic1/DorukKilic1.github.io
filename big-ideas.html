@@ -56,8 +56,11 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       width: 100%;
+    }
+    .cube pre {
       white-space: pre-wrap;
       font-family: monospace;
+      line-height: 1.5;
     }
     /* Footer always visible */
     footer {
@@ -117,10 +120,10 @@
   </nav>
   <main class="container">
     <section class="notes">
+      <!-- Cube 1: Big Ideas Notes -->
       <div class="cube">
-Big Ideas Notes
-These notes summarize key Java programming concepts and coding fundamentals.
-
+        <h1>Big Ideas Notes</h1>
+        <pre>
 Java: A programming language used worldwide to create software.
 Algorithms: Step-by-step processes to complete tasks or solve problems.
 Compiler: Error checker. Syntax errors are reported when found.
@@ -148,8 +151,12 @@ main → starting point of program
 API: Documentation that explains what a library can do and how to use it.
 Incrementing a variable: a = a + 1;, a += 1;, a++;
 User input: Scanner in = new Scanner(System.in);
-
-CSAwesome Notes
+        </pre>
+      </div>
+      <!-- Cube 2: CSAwesome Notes -->
+      <div class="cube">
+        <h2>CSAwesome Notes</h2>
+        <pre>
 1.1 Programs and Errors
 Algorithm = Steps to solve.
 Sequence = Order of steps.
@@ -237,6 +244,7 @@ Constructors.
 Math methods.
 Strings.
 Wrapper classes.
+        </pre>
       </div>
     </section>
   </main>
