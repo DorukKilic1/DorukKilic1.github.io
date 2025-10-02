@@ -25,9 +25,8 @@
       margin: 0 auto;
       padding: 24px;
       position: relative;
-      z-index: 2; /* keep content above cans */
+      z-index: 2;
     }
-    /* Navigation */
     nav {
       background: var(--accent);
       padding: 16px 0;
@@ -47,9 +46,7 @@
     }
     .navlinks a:hover { background: #a60000; }
     .navlinks a.active { background: #5a0000; }
-    /* Notes section with cubes */
     .notes { display: flex; flex-direction: column; gap: 24px; }
-    /* Individual cubes */
     .cube {
       background: var(--accent);
       padding: 24px;
@@ -57,12 +54,14 @@
       box-shadow: var(--shadow);
       width: 100%;
     }
-    .cube pre {
-      white-space: pre-wrap;
+    .cube ul { padding-left: 20px; }
+    .cube li { margin-bottom: 8px; }
+    .cube code {
+      background: #5a0000;
+      padding: 2px 6px;
+      border-radius: 4px;
       font-family: monospace;
-      line-height: 1.5;
     }
-    /* Footer always visible */
     footer {
       position: fixed;
       bottom: 0;
@@ -75,7 +74,6 @@
       font-size: 14px;
       z-index: 3;
     }
-    /* Falling cans */
     #falling-items {
       position: fixed;
       top: 0;
@@ -84,7 +82,7 @@
       height: 100vh;
       pointer-events: none;
       overflow: visible;
-      z-index: 0; /* behind cubes/nav */
+      z-index: 0;
     }
     .falling-can {
       position: absolute;
@@ -106,7 +104,6 @@
   </style>
 </head>
 <body>
-  <!-- Falling cans container -->
   <div id="falling-items" aria-hidden="true"></div>
   <nav>
     <div class="navwrap">
@@ -120,136 +117,193 @@
   </nav>
   <main class="container">
     <section class="notes">
-      <!-- Cube 1: Big Ideas Notes -->
       <div class="cube">
         <h1>Big Ideas Notes</h1>
-        <pre>
-Java: A programming language used worldwide to create software.
-Algorithms: Step-by-step processes to complete tasks or solve problems.
-Compiler: Error checker. Syntax errors are reported when found.
-Logic errors: Most likely math errors.
-Comments: // for single-line, /* */ for multi-line.
-Variable: Memory location storing a value that can change during runtime.
-Code examples:
-System.out.println()
-Double example: 6.353535
-Int example: 4
-Boolean: true or false
-String: Words
-To declare a variable: specify type, a space, the name, and end with ;.
-Printing:
-System.out.println(value) prints value + new line
-System.out.print(value) prints value without new line
-Data Types: Integers, doubles, booleans.
-Documentation: Important to make code clear. Example: instruction manual, API.
-Java Keywords:
-public → accessible anywhere
-class → blueprint for objects
-static → belongs to class, not object
-void → method that doesn’t return a value
-main → starting point of program
-API: Documentation that explains what a library can do and how to use it.
-Incrementing a variable: a = a + 1;, a += 1;, a++;
-User input: Scanner in = new Scanner(System.in);
-        </pre>
+        <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
+        <ul>
+          <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
+          <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
+          <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
+          <li><strong>Logic errors:</strong> Most likely math errors.</li>
+          <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
+          <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
+          <li><strong>Code examples:</strong>
+            <ul>
+              <li><code>System.out.println()</code></li>
+              <li>Double example: <code>6.353535</code></li>
+              <li>Int example: <code>4</code></li>
+              <li>Boolean: <code>true</code> or <code>false</code></li>
+              <li>String: Words</li>
+            </ul>
+          </li>
+          <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
+          <li><strong>Printing:</strong>
+            <ul>
+              <li><code>System.out.println(value)</code> prints value + new line</li>
+              <li><code>System.out.print(value)</code> prints value without new line</li>
+            </ul>
+          </li>
+          <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
+          <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
+          <li><strong>Java Keywords:</strong>
+            <ul>
+              <li>public → accessible anywhere</li>
+              <li>class → blueprint for objects</li>
+              <li>static → belongs to class, not object</li>
+              <li>void → method that doesn’t return a value</li>
+              <li>main → starting point of program</li>
+            </ul>
+          </li>
+          <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
+          <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
+          <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
+        </ul>
       </div>
-      <!-- Cube 2: CSAwesome Notes -->
+
       <div class="cube">
         <h2>CSAwesome Notes</h2>
-        <pre>
-1.1 Programs and Errors
-Algorithm = Steps to solve.
-Sequence = Order of steps.
-System.out.println() = Prints text.
-; = Ends a line of code.
-Compiler = Finds syntax mistakes.
-Logic error = Wrong result.
-Runtime error = Error while running.
-1.2 Variables and Types
-Variable = Memory storage.
-Primitive = int, double, boolean, etc.
-Reference = Objects (like String).
-String = Text.
-1.3 Printing and Expressions
-println = Prints on new line.
-Literal = Fixed value.
-\n = New line, \" = Quote, \\ = Backslash.
-Operators = +, -, *, /.
-int ÷ int = int result unless double involved.
-% = Remainder.
-Order → *, /, % before +, -.
-Divide by 0 = Error.
-1.4 Assignment and Input
-Scanner = Reads user input.
-1.5 Casting and Limits
-(int), (double) = Convert types.
-double → int = Cuts decimals.
-int in double math = Becomes double.
-Round = (int)(x + 0.5).
-Integer.MAX/MIN = Biggest, smallest int.
-Overflow = Wraps around.
-1.6 Shortcuts
-x++ = Add 1.
-x *= y = Same as x = x * y.
-1.7 Libraries
-Library = Prebuilt classes.
-API = Methods and fields.
-Package = Class group.
-1.8 Docs and Conditions
-Comments = // or /* */.
-Precondition = Must be true before.
-Postcondition = True after.
-1.9 Methods
-Method = Named code block.
-Parameters = In header.
-Arguments = Values passed.
-Call by value = Copy sent.
-Overload = Same name, different params.
-1.10 Static Methods
-Static = Class level.
-Syntax = ClassName.method().
-Void = No return.
-1.11 Math Class
-Math.abs() = Absolute value.
-Math.pow(x, y) = Power.
-Math.sqrt() = Square root.
-Math.random() = 0.0–1.0 random.
-1.12 Objects
-Class = Template.
-Object = Instance.
-Attributes = Vars + methods.
-All classes extend Object.
-1.13 Constructors
-new = Makes object.
-Constructor = Same as class name.
-Overload = Different params.
-1.14 Instance Methods
-Syntax = obj.method().
-Null object → NullPointerException.
-1.15 Strings
-String = Object, immutable.
-+, += = Concatenate.
-Methods = length(), substring(), indexOf(), equals(), compareTo().
-Index starts at 0.
-1.16 Summary A
-Algorithms, IDE, errors.
-int, double, boolean.
-Assignment, printing, operator order.
-Casting, overflow, rounding.
-Shortcut ops.
-1.20 Summary B
-Objects + classes.
-Static vs instance methods.
-Constructors.
-Math methods.
-Strings.
-Wrapper classes.
-        </pre>
+        <ul>
+          <li><strong>1.1 Programs and Errors</strong>
+            <ul>
+              <li>Algorithm = Steps to solve.</li>
+              <li>Sequence = Order of steps.</li>
+              <li><code>System.out.println()</code> = Prints text.</li>
+              <li><code>;</code> = Ends a line of code.</li>
+              <li>Compiler = Finds syntax mistakes.</li>
+              <li>Logic error = Wrong result.</li>
+              <li>Runtime error = Error while running.</li>
+            </ul>
+          </li>
+          <li><strong>1.2 Variables and Types</strong>
+            <ul>
+              <li>Variable = Memory storage.</li>
+              <li>Primitive = int, double, boolean, etc.</li>
+              <li>Reference = Objects (like String).</li>
+              <li>String = Text.</li>
+            </ul>
+          </li>
+          <li><strong>1.3 Printing and Expressions</strong>
+            <ul>
+              <li><code>println</code> = Prints on new line.</li>
+              <li>Literal = Fixed value.</li>
+              <li><code>\n</code> = New line, <code>\"</code> = Quote, <code>\\</code> = Backslash.</li>
+              <li>Operators = +, -, *, /.</li>
+              <li>int ÷ int = int result unless double involved.</li>
+              <li>% = Remainder.</li>
+              <li>Order → *, /, % before +, -.</li>
+              <li>Divide by 0 = Error.</li>
+            </ul>
+          </li>
+          <li><strong>1.4 Assignment and Input</strong>
+            <ul><li><code>Scanner</code> = Reads user input.</li></ul>
+          </li>
+          <li><strong>1.5 Casting and Limits</strong>
+            <ul>
+              <li>(int), (double) = Convert types.</li>
+              <li>double → int = Cuts decimals.</li>
+              <li>int in double math = Becomes double.</li>
+              <li>Round = (int)(x + 0.5).</li>
+              <li>Integer.MAX/MIN = Biggest, smallest int.</li>
+              <li>Overflow = Wraps around.</li>
+            </ul>
+          </li>
+          <li><strong>1.6 Shortcuts</strong>
+            <ul>
+              <li>x++ = Add 1.</li>
+              <li>x *= y = Same as x = x * y.</li>
+            </ul>
+          </li>
+          <li><strong>1.7 Libraries</strong>
+            <ul>
+              <li>Library = Prebuilt classes.</li>
+              <li>API = Methods and fields.</li>
+              <li>Package = Class group.</li>
+            </ul>
+          </li>
+          <li><strong>1.8 Docs and Conditions</strong>
+            <ul>
+              <li>Comments = // or /* */.</li>
+              <li>Precondition = Must be true before.</li>
+              <li>Postcondition = True after.</li>
+            </ul>
+          </li>
+          <li><strong>1.9 Methods</strong>
+            <ul>
+              <li>Method = Named code block.</li>
+              <li>Parameters = In header.</li>
+              <li>Arguments = Values passed.</li>
+              <li>Call by value = Copy sent.</li>
+              <li>Overload = Same name, different params.</li>
+            </ul>
+          </li>
+          <li><strong>1.10 Static Methods</strong>
+            <ul>
+              <li>Static = Class level.</li>
+              <li>Syntax = ClassName.method().</li>
+              <li>Void = No return.</li>
+            </ul>
+          </li>
+          <li><strong>1.11 Math Class</strong>
+            <ul>
+              <li>Math.abs() = Absolute value.</li>
+              <li>Math.pow(x, y) = Power.</li>
+              <li>Math.sqrt() = Square root.</li>
+              <li>Math.random() = 0.0–1.0 random.</li>
+            </ul>
+          </li>
+          <li><strong>1.12 Objects</strong>
+            <ul>
+              <li>Class = Template.</li>
+              <li>Object = Instance.</li>
+              <li>Attributes = Vars + methods.</li>
+              <li>All classes extend Object.</li>
+            </ul>
+          </li>
+          <li><strong>1.13 Constructors</strong>
+            <ul>
+              <li>new = Makes object.</li>
+              <li>Constructor = Same as class name.</li>
+              <li>Overload = Different params.</li>
+            </ul>
+          </li>
+          <li><strong>1.14 Instance Methods</strong>
+            <ul>
+              <li>Syntax = obj.method().</li>
+              <li>Null object → NullPointerException.</li>
+            </ul>
+          </li>
+          <li><strong>1.15 Strings</strong>
+            <ul>
+              <li>String = Object, immutable.</li>
+              <li>+, += = Concatenate.</li>
+              <li>Methods = length(), substring(), indexOf(), equals(), compareTo().</li>
+              <li>Index starts at 0.</li>
+            </ul>
+          </li>
+          <li><strong>1.16 Summary A</strong>
+            <ul>
+              <li>Algorithms, IDE, errors.</li>
+              <li>int, double, boolean.</li>
+              <li>Assignment, printing, operator order.</li>
+              <li>Casting, overflow, rounding.</li>
+              <li>Shortcut ops.</li>
+            </ul>
+          </li>
+          <li><strong>1.20 Summary B</strong>
+            <ul>
+              <li>Objects + classes.</li>
+              <li>Static vs instance methods.</li>
+              <li>Constructors.</li>
+              <li>Math methods.</li>
+              <li>Strings.</li>
+              <li>Wrapper classes.</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
   <footer> © 2025 DoDo </footer>
-  <!-- Falling-can JS -->
   <script>
     const spawnIntervalMs = 700;
     const minDuration = 8.0;
