@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,30 +7,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #000; /* black wallpaper */
+  --bg: #000;
   --accent: #8B0000;
   --text: #fff;
   --radius: 16px;
   --shadow: 0 8px 24px rgba(0,0,0,.3);
   --maxw: 1100px;
 }
-
 body {
   margin:0;
   font-family: Poppins, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
-
 .container {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 24px;
   position: relative;
-  z-index: 2; /* keep content above cans */
+  z-index: 2;
 }
-
-/* Navigation */
 nav {
   background: var(--accent);
   padding: 16px 0;
@@ -51,38 +46,21 @@ nav {
 }
 .navlinks a:hover { background: #a60000; }
 .navlinks a.active { background: #5a0000; }
-
-/* Notes section with cubes */
-.notes {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Individual cubes */
+.notes { display: flex; flex-direction: column; gap: 24px; }
 .cube {
   background: var(--accent);
   padding: 24px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  width: 100%;
 }
-
-/* Lists inside cubes */
-.cube ul {
-  padding-left: 20px;
-}
-.cube li {
-  margin-bottom: 8px;
-}
+.cube ul { padding-left: 20px; }
+.cube li { margin-bottom: 6px; }
 .cube code {
   background: #5a0000;
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;
 }
-
-/* Footer always visible */
 footer {
   position: fixed;
   bottom: 0;
@@ -95,8 +73,6 @@ footer {
   font-size: 14px;
   z-index: 3;
 }
-
-/* Falling cans */
 #falling-items {
   position: fixed;
   top: 0;
@@ -104,21 +80,12 @@ footer {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  overflow: visible;
-  z-index: 0; /* behind cubes/nav */
+  z-index: 0;
 }
 .falling-can {
   position: absolute;
   width: 44px;
-  height: auto;
-  transform-origin: center;
-  will-change: transform, opacity, left, top;
-  opacity: 0.95;
-  animation-name: fall;
-  animation-timing-function: linear;
-  user-select: none;
-  pointer-events: none;
-  display: block;
+  animation: fall linear forwards;
 }
 @keyframes fall {
   0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
@@ -128,7 +95,6 @@ footer {
 </head>
 <body>
 
-<!-- Falling cans container -->
 <div id="falling-items" aria-hidden="true"></div>
 
 <nav>
@@ -144,93 +110,42 @@ footer {
 
 <main class="container">
   <section class="notes">
-    <!-- Cube 1: Title / Intro -->
+
     <div class="cube">
-      <h1>Big Ideas Notes</h1>
-      <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
+      <h1>CSAwesome Notes (Rephrased)</h1>
+      <p>Simplified notes from Unit 1 of CSAwesome.</p>
     </div>
 
-    <!-- Cube 2: Original notes -->
+    <!-- Your CSAwesome Notes 1.1 - 1.20 -->
     <div class="cube">
+      <h2>Unit 1</h2>
       <ul>
-        <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
-        <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
-        <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
-        <li><strong>Logic errors:</strong> Most likely math errors.</li>
-        <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
-        <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
-        <li><strong>Code examples:</strong>
-          <ul>
-            <li><code>System.out.println()</code></li>
-            <li>Double example: <code>6.353535</code></li>
-            <li>Int example: <code>4</code></li>
-            <li>Boolean: <code>true</code> or <code>false</code></li>
-            <li>String: Words</li>
-          </ul>
-        </li>
-        <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
-        <li><strong>Printing:</strong>
-          <ul>
-            <li><code>System.out.println(value)</code> prints value + new line</li>
-            <li><code>System.out.print(value)</code> prints value without new line</li>
-          </ul>
-        </li>
-        <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
-        <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
-        <li><strong>Java Keywords:</strong>
-          <ul>
-            <li>public → accessible anywhere</li>
-            <li>class → blueprint for objects</li>
-            <li>static → belongs to class, not object</li>
-            <li>void → method that doesn’t return a value</li>
-            <li>main → starting point of program</li>
-          </ul>
-        </li>
-        <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
-        <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
-        <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
-      </ul>
-    </div>
-
-    <!-- Cube 3: CSAwesome Notes -->
-    <div class="cube">
-      <h2>CSAwesome Notes</h2>
-      <ul>
-        <li><strong>1.1:</strong> Introduction to Java programming.</li>
-        <li><strong>1.2:</strong> Understanding classes and objects.</li>
-        <li><strong>1.3:</strong> Writing your first Java program.</li>
-        <li><strong>1.4:</strong> The role of the <code>main</code> method.</li>
-        <li><strong>1.5:</strong> How to use <code>System.out.print</code> and <code>System.out.println</code>.</li>
-        <li><strong>1.6:</strong> Variables and data types.</li>
-        <li><strong>1.7:</strong> String concatenation with <code>+</code>.</li>
-        <li><strong>1.8:</strong> Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>.</li>
-        <li><strong>1.9:</strong> Operator precedence (order of operations).</li>
-        <li><strong>1.10:</strong> Integer vs. double division.</li>
-        <li><strong>1.11:</strong> Modulus operator <code>%</code>.</li>
-        <li><strong>1.12:</strong> Increment <code>++</code> and decrement <code>--</code>.</li>
-        <li><strong>1.13:</strong> Compound assignment operators (e.g., <code>+=</code>, <code>-=</code>).</li>
-        <li><strong>1.14:</strong> Creating and using <code>Scanner</code> for input.</li>
-        <li><strong>1.15:</strong> Using <code>import java.util.Scanner;</code>.</li>
-        <li><strong>1.16:</strong> Reading strings and numbers from user input.</li>
-        <li><strong>1.17:</strong> Debugging common errors.</li>
-        <li><strong>1.18:</strong> Syntax vs. logic errors.</li>
-        <li><strong>1.19:</strong> Importance of comments for readability.</li>
-        <li><strong>1.20:</strong> Writing clean, readable code.</li>
+        <li><strong>1.1 Introduction:</strong> Algorithm = Steps, Sequence = Order, <code>System.out.println()</code> prints, <code>;</code> ends, Compiler = syntax check, Logic error = wrong output, Runtime error = execution error.</li>
+        <li><strong>1.2 Variables:</strong> Variable = memory, Primitive = int/double/boolean, Reference = objects, String = words.</li>
+        <li><strong>1.3 Expressions:</strong> <code>println</code> new line, Literals = fixed, <code>\n</code>, <code>\"</code>, <code>\\</code>, Ops = + - * /, int ÷ int = int, % = remainder, Order = * / % before + -, ÷0 = error.</li>
+        <li><strong>1.4 Assignment:</strong> <code>=</code> assigns, Scanner = input.</li>
+        <li><strong>1.5 Casting:</strong> (int)/(double) convert, double→int cuts decimals, int in double widened, Rounding = (int)(x+0.5), Integer.MAX/MIN, Overflow = wrap.</li>
+        <li><strong>1.6 Compound Ops:</strong> x++ add 1, x*=y = x=x*y.</li>
+        <li><strong>1.7 APIs:</strong> Library = premade classes, API = methods/fields, Package = grouped classes.</li>
+        <li><strong>1.8 Docs:</strong> Comments // or /* */, Precondition = true before, Postcondition = true after.</li>
+        <li><strong>1.9 Methods:</strong> Method = named block, Params = header vars, Args = actual values, Call by value = copy, Overload = same name diff params.</li>
+        <li><strong>1.10 Class Methods:</strong> Static = class-level, Syntax Class.method(), Void = no return.</li>
+        <li><strong>1.11 Math:</strong> <code>Math.abs()</code>, <code>Math.pow()</code>, <code>Math.sqrt()</code>, <code>Math.random()</code>.</li>
+        <li><strong>1.12 Objects:</strong> Class = template, Object = instance, Attributes = vars/methods, All extend Object.</li>
+        <li><strong>1.13 Constructors:</strong> new = create, Constructor = same name, Overload = multiple versions.</li>
+        <li><strong>1.14 Instance Methods:</strong> obj.method(), Null → NullPointerException.</li>
+        <li><strong>1.15 Strings:</strong> String = immutable object, + or += concat, Methods length(), substring(), indexOf(), equals(), compareTo(), Index starts 0.</li>
+        <li><strong>1.16 Summary A:</strong> Algorithms, IDE, errors, int/double/boolean, assignment, printing, precedence, casting, overflow, round-off, compound ops.</li>
+        <li><strong>1.20 Summary B:</strong> Objects/classes, methods, constructors, Math, Strings, Wrapper classes.</li>
       </ul>
     </div>
   </section>
 </main>
 
-<footer>
-  © 2025 DoDo
-</footer>
+<footer>© 2025 DoDo</footer>
 
-<!-- Falling-can JS -->
 <script>
 const spawnIntervalMs = 700;
-const minDuration = 8.0;
-const maxDuration = 14.0;
-const baseWidth = 44;
-const minScale = 0.65;
-const maxScale = 0.90;
-```
+</script>
+</body>
+</html>
