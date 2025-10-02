@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,7 +150,7 @@ footer {
       <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
     </div>
 
-    <!-- Cube 2: Detailed notes -->
+    <!-- Cube 2: Original notes -->
     <div class="cube">
       <ul>
         <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
@@ -190,6 +191,33 @@ footer {
         <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
       </ul>
     </div>
+
+    <!-- Cube 3: CSAwesome Notes -->
+    <div class="cube">
+      <h2>CSAwesome Notes</h2>
+      <ul>
+        <li><strong>1.1:</strong> Introduction to Java programming.</li>
+        <li><strong>1.2:</strong> Understanding classes and objects.</li>
+        <li><strong>1.3:</strong> Writing your first Java program.</li>
+        <li><strong>1.4:</strong> The role of the <code>main</code> method.</li>
+        <li><strong>1.5:</strong> How to use <code>System.out.print</code> and <code>System.out.println</code>.</li>
+        <li><strong>1.6:</strong> Variables and data types.</li>
+        <li><strong>1.7:</strong> String concatenation with <code>+</code>.</li>
+        <li><strong>1.8:</strong> Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>.</li>
+        <li><strong>1.9:</strong> Operator precedence (order of operations).</li>
+        <li><strong>1.10:</strong> Integer vs. double division.</li>
+        <li><strong>1.11:</strong> Modulus operator <code>%</code>.</li>
+        <li><strong>1.12:</strong> Increment <code>++</code> and decrement <code>--</code>.</li>
+        <li><strong>1.13:</strong> Compound assignment operators (e.g., <code>+=</code>, <code>-=</code>).</li>
+        <li><strong>1.14:</strong> Creating and using <code>Scanner</code> for input.</li>
+        <li><strong>1.15:</strong> Using <code>import java.util.Scanner;</code>.</li>
+        <li><strong>1.16:</strong> Reading strings and numbers from user input.</li>
+        <li><strong>1.17:</strong> Debugging common errors.</li>
+        <li><strong>1.18:</strong> Syntax vs. logic errors.</li>
+        <li><strong>1.19:</strong> Importance of comments for readability.</li>
+        <li><strong>1.20:</strong> Writing clean, readable code.</li>
+      </ul>
+    </div>
   </section>
 </main>
 
@@ -205,57 +233,4 @@ const maxDuration = 14.0;
 const baseWidth = 44;
 const minScale = 0.65;
 const maxScale = 0.90;
-
-const container = document.getElementById('falling-items');
-
-function makeCanSVG() {
-  return `
-  <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-    <!-- Can body -->
-    <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-    <!-- DoDo text rotated like PRIME logo -->
-    <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
-      transform="rotate(-90 20,50)">
-      DoDo
-    </text>
-  </svg>`;
-}
-
-function spawnCan(){
-  const wrapper = document.createElement('div');
-  wrapper.className = 'falling-can';
-  wrapper.innerHTML = makeCanSVG();
-
-  const startX = Math.random() * window.innerWidth;
-  wrapper.style.left = `${startX}px`;
-
-  const scale = minScale + Math.random() * (maxScale - minScale);
-  wrapper.style.width = Math.round(baseWidth * scale) + 'px';
-
-  const startRot = Math.random() * 30 - 15;
-  wrapper.style.transform = `rotate(${startRot}deg)`;
-
-  const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
-  wrapper.style.animationDuration = dur + 's';
-
-  container.appendChild(wrapper);
-
-  const drift = Math.random() * 120 - 60;
-  requestAnimationFrame(() => {
-    wrapper.style.transition = `left ${dur}s linear`;
-    wrapper.style.left = (startX + drift) + 'px';
-  });
-
-  wrapper.addEventListener('animationend', () => wrapper.remove());
-  setTimeout(() => { if (wrapper.parentNode) wrapper.remove(); }, (parseFloat(dur)+0.5)*1000);
-}
-
-let spawner = setInterval(spawnCan, spawnIntervalMs);
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { clearInterval(spawner); spawner = null; }
-  else if (!spawner) { spawner = setInterval(spawnCan, spawnIntervalMs); }
-});
-</script>
-
-</body>
-</html>
+```
