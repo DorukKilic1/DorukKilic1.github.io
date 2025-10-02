@@ -56,14 +56,7 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       width: 100%;
-    }
-    /* Lists inside cubes */
-    .cube ul { padding-left: 20px; }
-    .cube li { margin-bottom: 8px; }
-    .cube code {
-      background: #5a0000;
-      padding: 2px 6px;
-      border-radius: 4px;
+      white-space: pre-wrap;
       font-family: monospace;
     }
     /* Footer always visible */
@@ -124,77 +117,126 @@
   </nav>
   <main class="container">
     <section class="notes">
-      <!-- Cube 1: Title / Intro -->
       <div class="cube">
-        <h1>Big Ideas Notes</h1>
-        <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
-      </div>
-      <!-- Cube 2: Original notes -->
-      <div class="cube">
-        <ul>
-          <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
-          <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
-          <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
-          <li><strong>Logic errors:</strong> Most likely math errors.</li>
-          <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
-          <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
-          <li><strong>Code examples:</strong>
-            <ul>
-              <li><code>System.out.println()</code></li>
-              <li>Double example: <code>6.353535</code></li>
-              <li>Int example: <code>4</code></li>
-              <li>Boolean: <code>true</code> or <code>false</code></li>
-              <li>String: Words</li>
-            </ul>
-          </li>
-          <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
-          <li><strong>Printing:</strong>
-            <ul>
-              <li><code>System.out.println(value)</code> prints value + new line</li>
-              <li><code>System.out.print(value)</code> prints value without new line</li>
-            </ul>
-          </li>
-          <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
-          <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
-          <li><strong>Java Keywords:</strong>
-            <ul>
-              <li>public → accessible anywhere</li>
-              <li>class → blueprint for objects</li>
-              <li>static → belongs to class, not object</li>
-              <li>void → method that doesn’t return a value</li>
-              <li>main → starting point of program</li>
-            </ul>
-          </li>
-          <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
-          <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
-          <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
-        </ul>
-      </div>
-      <!-- Cube 3: CSAwesome Notes -->
-      <div class="cube">
-        <h2>CSAwesome Notes</h2>
-        <ul>
-          <li><strong>1.1:</strong> Introduction to Java programming.</li>
-          <li><strong>1.2:</strong> Understanding classes and objects.</li>
-          <li><strong>1.3:</strong> Writing your first Java program.</li>
-          <li><strong>1.4:</strong> The role of the <code>main</code> method.</li>
-          <li><strong>1.5:</strong> How to use <code>System.out.print</code> and <code>System.out.println</code>.</li>
-          <li><strong>1.6:</strong> Variables and data types.</li>
-          <li><strong>1.7:</strong> String concatenation with <code>+</code>.</li>
-          <li><strong>1.8:</strong> Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>.</li>
-          <li><strong>1.9:</strong> Operator precedence (order of operations).</li>
-          <li><strong>1.10:</strong> Integer vs. double division.</li>
-          <li><strong>1.11:</strong> Modulus operator <code>%</code>.</li>
-          <li><strong>1.12:</strong> Increment <code>++</code> and decrement <code>--</code>.</li>
-          <li><strong>1.13:</strong> Compound assignment operators (e.g., <code>+=</code>, <code>-=</code>).</li>
-          <li><strong>1.14:</strong> Creating and using <code>Scanner</code> for input.</li>
-          <li><strong>1.15:</strong> Using <code>import java.util.Scanner;</code>.</li>
-          <li><strong>1.16:</strong> Reading strings and numbers from user input.</li>
-          <li><strong>1.17:</strong> Debugging common errors.</li>
-          <li><strong>1.18:</strong> Syntax vs. logic errors.</li>
-          <li><strong>1.19:</strong> Importance of comments for readability.</li>
-          <li><strong>1.20:</strong> Writing clean, readable code.</li>
-        </ul>
+Big Ideas Notes
+These notes summarize key Java programming concepts and coding fundamentals.
+
+Java: A programming language used worldwide to create software.
+Algorithms: Step-by-step processes to complete tasks or solve problems.
+Compiler: Error checker. Syntax errors are reported when found.
+Logic errors: Most likely math errors.
+Comments: // for single-line, /* */ for multi-line.
+Variable: Memory location storing a value that can change during runtime.
+Code examples:
+System.out.println()
+Double example: 6.353535
+Int example: 4
+Boolean: true or false
+String: Words
+To declare a variable: specify type, a space, the name, and end with ;.
+Printing:
+System.out.println(value) prints value + new line
+System.out.print(value) prints value without new line
+Data Types: Integers, doubles, booleans.
+Documentation: Important to make code clear. Example: instruction manual, API.
+Java Keywords:
+public → accessible anywhere
+class → blueprint for objects
+static → belongs to class, not object
+void → method that doesn’t return a value
+main → starting point of program
+API: Documentation that explains what a library can do and how to use it.
+Incrementing a variable: a = a + 1;, a += 1;, a++;
+User input: Scanner in = new Scanner(System.in);
+
+CSAwesome Notes
+1.1 Programs and Errors
+Algorithm = Steps to solve.
+Sequence = Order of steps.
+System.out.println() = Prints text.
+; = Ends a line of code.
+Compiler = Finds syntax mistakes.
+Logic error = Wrong result.
+Runtime error = Error while running.
+1.2 Variables and Types
+Variable = Memory storage.
+Primitive = int, double, boolean, etc.
+Reference = Objects (like String).
+String = Text.
+1.3 Printing and Expressions
+println = Prints on new line.
+Literal = Fixed value.
+\n = New line, \" = Quote, \\ = Backslash.
+Operators = +, -, *, /.
+int ÷ int = int result unless double involved.
+% = Remainder.
+Order → *, /, % before +, -.
+Divide by 0 = Error.
+1.4 Assignment and Input
+Scanner = Reads user input.
+1.5 Casting and Limits
+(int), (double) = Convert types.
+double → int = Cuts decimals.
+int in double math = Becomes double.
+Round = (int)(x + 0.5).
+Integer.MAX/MIN = Biggest, smallest int.
+Overflow = Wraps around.
+1.6 Shortcuts
+x++ = Add 1.
+x *= y = Same as x = x * y.
+1.7 Libraries
+Library = Prebuilt classes.
+API = Methods and fields.
+Package = Class group.
+1.8 Docs and Conditions
+Comments = // or /* */.
+Precondition = Must be true before.
+Postcondition = True after.
+1.9 Methods
+Method = Named code block.
+Parameters = In header.
+Arguments = Values passed.
+Call by value = Copy sent.
+Overload = Same name, different params.
+1.10 Static Methods
+Static = Class level.
+Syntax = ClassName.method().
+Void = No return.
+1.11 Math Class
+Math.abs() = Absolute value.
+Math.pow(x, y) = Power.
+Math.sqrt() = Square root.
+Math.random() = 0.0–1.0 random.
+1.12 Objects
+Class = Template.
+Object = Instance.
+Attributes = Vars + methods.
+All classes extend Object.
+1.13 Constructors
+new = Makes object.
+Constructor = Same as class name.
+Overload = Different params.
+1.14 Instance Methods
+Syntax = obj.method().
+Null object → NullPointerException.
+1.15 Strings
+String = Object, immutable.
++, += = Concatenate.
+Methods = length(), substring(), indexOf(), equals(), compareTo().
+Index starts at 0.
+1.16 Summary A
+Algorithms, IDE, errors.
+int, double, boolean.
+Assignment, printing, operator order.
+Casting, overflow, rounding.
+Shortcut ops.
+1.20 Summary B
+Objects + classes.
+Static vs instance methods.
+Constructors.
+Math methods.
+Strings.
+Wrapper classes.
       </div>
     </section>
   </main>
