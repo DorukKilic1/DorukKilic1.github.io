@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #000;
+      --bg: #000; /* black wallpaper */
       --card: #fff;
       --text: #0f172a;
       --muted: #64748b;
@@ -26,6 +26,8 @@
       line-height:1.6;
     }
     .container { max-width: var(--maxw); margin:0 auto; padding:24px; position: relative; z-index:2; }
+
+    /* Navigation */
     nav {
       background: var(--accent);
       padding: 16px 0;
@@ -46,6 +48,8 @@
     }
     .navlinks a:hover { background:#a60000; }
     .navlinks a.active { background:#5a0000; }
+
+    /* Header cube */
     .header-cube {
       background: var(--accent);
       color: #fff;
@@ -57,11 +61,15 @@
     }
     .header-cube h1 { margin:0; font-size: clamp(26px,5vw,38px); }
     .header-cube p { margin:8px 0 0; }
+
+    /* Projects grid */
     .grid {
       display: grid;
       gap: 18px;
       grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
     }
+
+    /* Project card */
     .card {
       background: var(--card);
       border-radius: var(--radius);
@@ -70,6 +78,8 @@
       flex-direction: column;
       position: relative;
     }
+
+    /* Card header */
     .card-header {
       background: var(--accent);
       color: #fff;
@@ -80,6 +90,8 @@
       margin-bottom: 0;
       text-align: left;
     }
+
+    /* Project content */
     .card .content {
       padding: 16px;
       color: var(--text);
@@ -89,6 +101,8 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
+
+    /* Button */
     .btn {
       align-self: flex-start;
       margin-top: 12px;
@@ -105,6 +119,8 @@
       transform: translateY(-2px);
       transition: all 0.2s ease;
     }
+
+    /* Footer fixed bottom with fade-in */
     footer {
       position: fixed;
       bottom: 0;
@@ -123,6 +139,8 @@
       from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
+
+    /* Falling cans */
     #falling-items {
       position: fixed;
       top: 0;
@@ -131,7 +149,7 @@
       height: 100vh;
       pointer-events: none;
       overflow: visible;
-      z-index: 0;
+      z-index: 0; /* behind content */
     }
     .falling-can {
       position: absolute;
@@ -154,6 +172,7 @@
 </head>
 <body>
 
+  <!-- Falling cans container -->
   <div id="falling-items" aria-hidden="true"></div>
 
   <nav>
@@ -218,9 +237,37 @@
       </div>
     </article>
 
+    <!-- New Projects -->
     <article class="card">
       <div class="card-header">Swap</div>
       <div class="content">
         <p class="meta">JavaScript, CodeHS Sandbox</p>
         <p>A project demonstrating variable swapping techniques in JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/swap/run" target="_blank">View Project</a
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/swap/run" target="_blank">View Project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-header">RGB to YIQ</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>Converts RGB color values to YIQ color space using JavaScript.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/rgb-to-yiq/run" target="_blank">View Project</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    © 2025 DoDo
+  </footer>
+
+  <!-- Falling-can JS -->
+  <script>
+    const spawnIntervalMs = 700;
+    const minDuration = 8.0;
+    const maxDuration = 14.0;
+    const baseWidth = 44;
+    const minScale = 0.65;
+    const maxScale = 0.90
+::contentReference[oaicite:0]{index=0}
+ 
