@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #000; /* black wallpaper */
+      --bg: #000;
       --card: #fff;
       --text: #0f172a;
       --muted: #64748b;
@@ -149,7 +149,7 @@
       height: 100vh;
       pointer-events: none;
       overflow: visible;
-      z-index: 0; /* behind content */
+      z-index: 0;
     }
     .falling-can {
       position: absolute;
@@ -236,6 +236,16 @@
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
       </div>
     </article>
+
+    <!-- 🆕 New Project: Swap -->
+    <article class="card">
+      <div class="card-header">Swap</div>
+      <div class="content">
+        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p>A simple JavaScript project that swaps the values of two numbers entered by the user.</p>
+        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/swap/run" target="_blank">View Project</a>
+      </div>
+    </article>
   </main>
 
   <footer>
@@ -256,13 +266,9 @@
     function makeCanSVG() {
       return `
       <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- Can body -->
         <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
-        <!-- DoDo text rotated like PRIME logo -->
         <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
-          transform="rotate(-90 20,50)">
-          DoDo
-        </text>
+          transform="rotate(-90 20,50)">DoDo</text>
       </svg>`;
     }
 
