@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doruk Kılıç — Big Ideas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #000; /* black wallpaper */
@@ -15,7 +15,7 @@
       --maxw: 1100px;
     }
     body {
-      margin: 0;
+      margin:0;
       font-family: Poppins, sans-serif;
       background: var(--bg);
       color: var(--text);
@@ -44,17 +44,9 @@
       border-radius: 12px;
       font-weight: 600;
     }
-    .navlinks a:hover {
-      background: #a60000;
-    }
-    .navlinks a.active {
-      background: #5a0000;
-    }
-    .notes {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+    .navlinks a:hover { background: #a60000; }
+    .navlinks a.active { background: #5a0000; }
+    .notes { display: flex; flex-direction: column; gap: 24px; }
     .cube {
       background: var(--accent);
       padding: 24px;
@@ -62,17 +54,21 @@
       box-shadow: var(--shadow);
       width: 100%;
     }
-    .cube ul {
-      padding-left: 20px;
-    }
-    .cube li {
-      margin-bottom: 8px;
-    }
+    .cube ul { padding-left: 20px; }
+    .cube li { margin-bottom: 8px; }
     .cube code {
       background: #5a0000;
       padding: 2px 6px;
       border-radius: 4px;
       font-family: monospace;
+    }
+    pre {
+      background: #5a0000;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      color: #fff;
     }
     footer {
       position: fixed;
@@ -110,41 +106,8 @@
       display: block;
     }
     @keyframes fall {
-      0% {
-        transform: translateY(-140px) rotate(0deg);
-        opacity: 0.95;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0.95;
-      }
-    }
-
-    /* New notes container styles */
-    .new-notes {
-      background: #5a0000;
-      padding: 24px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      font-size: 16px;
-      line-height: 1.5;
-      white-space: pre-wrap;
-      font-family: 'Courier New', Courier, monospace;
-      color: #fff;
-      max-width: 100%;
-      overflow-x: auto;
-    }
-    .new-notes h2 {
-      margin-top: 0;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .new-notes code {
-      background: #8B0000;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-      color: #fff;
+      0% { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
     }
   </style>
 </head>
@@ -240,9 +203,7 @@
             </ul>
           </li>
           <li><strong>1.4 Assignment and Input</strong>
-            <ul>
-              <li><code>Scanner</code> = Reads user input.</li>
-            </ul>
+            <ul><li><code>Scanner</code> = Reads user input.</li></ul>
           </li>
           <li><strong>1.5 Casting and Limits</strong>
             <ul>
@@ -256,62 +217,269 @@
           </li>
           <li><strong>1.6 Shortcuts</strong>
             <ul>
-              <li><code>++</code> = Increase by 1.</li>
-              <li><code>+=</code> = Add to variable.</li>
+              <li>x++ = Add 1.</li>
+              <li>x *= y = Same as x = x * y.</li>
             </ul>
           </li>
-          <li><strong>1.7 Methods</strong>
+          <li><strong>1.7 Libraries</strong>
             <ul>
-              <li>Method = Function with name.</li>
-              <li>Parameters = Input to method.</li>
-              <li>Return = Output from method.</li>
+              <li>Library = Prebuilt classes.</li>
+              <li>API = Methods and fields.</li>
+              <li>Package = Class group.</li>
             </ul>
           </li>
+          <li><strong>1.8 Docs and Conditions</strong>
+            <ul>
+              <li>Comments = // or /* */.</li>
+              <li>Precondition = Must be true before.</li>
+              <li>Postcondition = True after.</li>
+            </ul>
+          </li>
+          <li><strong>1.9 Methods</strong>
+            <ul>
+              <li>Method = Named code block.</li>
+              <li>Parameters = In header.</li>
+              <li>Arguments = Values passed.</li>
+              <li>Call by value = Copy sent.</li>
+              <li>Overload = Same name, different params.</li>
+            </ul>
+          </li>
+          <li><strong>1.10 Static Methods</strong>
+            <ul>
+              <li>Static = Class level.</li>
+              <li>Syntax = ClassName.method().</li>
+              <li>Void = No return.</li>
+            </ul>
+          </li>
+          <li><strong>1.11 Math Class</strong>
+            <ul>
+              <li>Math.abs() = Absolute value.</li>
+              <li>Math.pow(x, y) = Power.</li>
+              <li>Math.sqrt() = Square root.</li>
+              <li>Math.random() = 0.0–1.0 random.</li>
+            </ul>
+          </li>
+          <li><strong>1.12 Objects</strong>
+            <ul>
+              <li>Class = Template.</li>
+              <li>Object = Instance.</li>
+              <li>Attributes = Vars + methods.</li>
+              <li>All classes extend Object.</li>
+            </ul>
+          </li>
+          <li><strong>1.13 Constructors</strong>
+            <ul>
+              <li>new = Makes object.</li>
+              <li>Constructor = Same as class name.</li>
+              <li>Overload = Different params.</li>
+            </ul>
+          </li>
+          <li><strong>1.14 Instance Methods</strong>
+            <ul>
+              <li>Syntax = obj.method().</li>
+              <li>Null object → NullPointerException.</li>
+            </ul>
+          </li>
+          <li><strong>1.15 Strings</strong>
+            <ul>
+              <li>String = Object, immutable.</li>
+              <li>+, += = Concatenate.</li>
+              <li>Methods = length(), substring(), indexOf(), equals(), compareTo().</li>
+              <li>Index starts at 0.</li>
+            </ul>
+          </li>
+          <li><strong>1.16 Summary A</strong>
+            <ul>
+              <li>Algorithms, IDE, errors.</li>
+              <li>int, double, boolean.</li>
+              <li>Assignment, printing, operator order.</li>
+              <li>Casting, overflow, rounding.</li>
+              <li>Shortcut ops.</li>
+            </ul>
+          </li>
+          <li><strong>1.20 Summary B</strong>
+            <ul>
+              <li>Objects + classes.</li>
+              <li>Static vs instance methods.</li>
+              <li>Constructors.</li>
+              <li>Math methods.</li>
+              <li>Strings.</li>
+              <li>Wrapper classes.</li>
+            </ul>
+          </li>
+
+          <!-- ===== NEW SECTION STARTS HERE ===== -->
+
+          <li><strong>2.1 Algorithms, Selection, and Iteration</strong>
+            <ul>
+              <li>Algorithm → Instructions designed to accomplish a task.</li>
+              <li>Selection → Picks between options by if, if else statements.</li>
+              <li>Iteration → Looping codes using either for or while.</li>
+            </ul>
+          </li>
+
+          <li><strong>2.2 Building Algorithms Using Selection and Iteration</strong>
+            <ul>
+              <li><pre><code>if(score >= 60) 
+{
+    System.out.println("Pass");
+} 
+else 
+{
+    System.out.println("Fail");
+}
+//Decides whether a student passes or not from their score inputs.</code></pre></li>
+
+              <li><pre><code>for(int i = 1; i <= 5; i++)
+{
+    System.out.println(i);
+}
+//Prints nums from 1–5 individually.</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.3 Applying the Accumulator Pattern</strong>
+            <ul>
+              <li>Declare and value the accumulator variable before the loop.</li>
+              <li>Keep updating the variable in the loop body.</li>
+              <li>Set the new value for the variable after the loop.</li>
+              <li><pre><code>int sum = 0;
+for(int i = 1; i <= 100; i++) 
+{
+    sum += i;
+}
+double average = (double)sum / 100;</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.4 Loops by Input</strong>
+            <ul>
+              <li><pre><code>Scanner scan = new Scanner(System.in);
+int number = scan.nextInt();
+int sum = 0, count = 0;
+while(number != -1)
+{
+    sum += number;
+    count++;
+    number = scan.nextInt();
+}
+double average = (double)sum / count;
+//Loops taking input while the num isn’t -1. Calculates the average after.</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.5 Using if Statements in Loops for Min/Max Detection</strong>
+            <ul>
+              <li><pre><code>int min = Integer.MAX_VALUE;
+int max = Integer.MIN_VALUE;
+for(int i = 0; i < n; i++)
+{
+    int num = (int)(Math.random() * 100);
+    if(num < min) min = num;
+    if(num > max) max = num;
+}
+//Generates random nums and saves the smallest and the largest values.</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.6 Checking for Divisibility</strong>
+            <ul>
+              <li><pre><code>if(num % 2 == 0) { ... }  // num is even
+if(num % divisor == 0) { ... }  // num is divisible by the divisor
+//% is to see if the num is even</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.7 Extracting and Matching Digits</strong>
+            <ul>
+              <li><pre><code>while(number > 0) 
+{
+    int lastDigit = number % 10;
+    if(lastDigit == digit) return true;
+    number /= 10;
+}
+return false;
+//Checks each digit in a num to see if it matches a given digit.</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.8 Counting Frequency</strong>
+            <ul>
+              <li><pre><code>int count = 0;
+for(int i = 1; i <= 100; i++) 
+{
+    if(isPrime(i)) count++;
+}
+//Counts num of prime numbers between 1 and 100.</code></pre></li>
+            </ul>
+          </li>
+
+          <li><strong>2.9 Writing Algorithms Using Selection and Repetition</strong>
+            <ul>
+              <li>Includes patterns like:</li>
+              <li>Input-controlled loops.</li>
+              <li>Divisibility.</li>
+              <li>Max/Min.</li>
+              <li>Finding Digits.</li>
+              <li>Frequency Counting.</li>
+              <li>Accumulator pattern.</li>
+            </ul>
+          </li>
+
+          <li><strong>2.10 Working with Strings in Algorithms</strong>
+            <ul>
+              <li><strong>2.10.1 Search and Replace Characters</strong>
+                <pre><code>int index;
+while(message.indexOf("1") >= 0) 
+{
+    index = message.indexOf("1");
+    message = message.substring(0, index) + "x" + message.substring(index + 1);
+}
+//Replaces every "1" with "x" in a string.</code></pre>
+              </li>
+
+              <li><strong>2.10.2 Traversing a String Using a for Loop</strong>
+                <pre><code>for(int i = 0; i < s.length(); i++) 
+{
+    String ch = s.substring(i, i + 1);
+}
+//Loops through each character in the str individually.</code></pre>
+              </li>
+
+              <li><strong>2.10.3 Counting Specific Characters</strong>
+                <pre><code>int count = 0;
+for(int i = 0; i < s.length(); i++) 
+{
+    if(s.substring(i, i + 1).equals("e")) count++;
+}
+//Counts how many “e” s are there.</code></pre>
+              </li>
+
+              <li><strong>2.10.4 Reversing a String</strong>
+                <pre><code>String sReversed = "";
+for(int i = 0; i < s.length(); i++) 
+{
+    sReversed = s.substring(i, i + 1) + sReversed;
+}
+//Creates the reverse version of a given string.</code></pre>
+              </li>
+
+              <li><strong>2.10.5 Replacing a Word in a String</strong>
+                <pre><code>while(message.indexOf("Ilgaz") >= 0) 
+{
+    index = message.indexOf("Ilgaz");
+    message = message.substring(0, index) + "Rüzgar" + message.substring(index + 3);
+}
+//Changes every "Ilgaz" to "Rüzgar".</code></pre>
+              </li>
+            </ul>
+          </li>
+
+          <!-- ===== NEW SECTION ENDS HERE ===== -->
         </ul>
       </div>
-
-      <!-- New notes section with different style, no cube class -->
-      <section class="new-notes" aria-label="Additional Java notes">
-        <h2>Additional Java Notes</h2>
-        <p>
-          <strong>Java Keywords:</strong> <code>public</code>, <code>class</code>, <code>static</code>, <code>void</code>, <code>main</code><br>
-          <strong>Comments:</strong> Use <code>//</code> for single-line, <code>/* ... */</code> for multi-line comments.<br>
-          <strong>Variables:</strong> Declared as <code>type name;</code> and initialized as <code>name = value;</code>.<br>
-          <strong>Data types:</strong> <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>.<br>
-          <strong>Printing:</strong> Use <code>System.out.println()</code> to print with newline.<br>
-          <strong>Input:</strong> Use <code>Scanner</code> for user input.<br>
-          <strong>Increment:</strong> <code>a++</code>, <code>a += 1;</code>, or <code>a = a + 1;</code>.<br>
-          <strong>API Documentation:</strong> Explains how to use libraries and classes.<br>
-          <strong>Common errors:</strong> Syntax errors (compile-time), logic errors, runtime errors.<br>
-        </p>
-      </section>
     </section>
   </main>
-  <footer>
-    &copy; 2025 Doruk Kılıç
-  </footer>
-  <script>
-    // JavaScript to generate falling cans (if you want to keep this effect)
-    const fallingItemsContainer = document.getElementById('falling-items');
-    const maxItems = 30;
-
-    function createFallingCan() {
-      const img = document.createElement('img');
-      img.src = 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Coca-Cola_can_355ml.jpg';
-      img.className = 'falling-can';
-      img.style.left = Math.random() * window.innerWidth + 'px';
-      img.style.animationDuration = (5 + Math.random() * 5) + 's';
-      img.style.animationDelay = (Math.random() * 10) + 's';
-      fallingItemsContainer.appendChild(img);
-
-      setTimeout(() => {
-        fallingItemsContainer.removeChild(img);
-      }, 10000);
-    }
-
-    for (let i = 0; i < maxItems; i++) {
-      setTimeout(createFallingCan, i * 500);
-    }
-  </script>
+  <footer>© Doruk Kılıç — Big Ideas</footer>
 </body>
 </html>
