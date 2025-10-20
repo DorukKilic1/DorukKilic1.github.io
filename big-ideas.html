@@ -62,14 +62,6 @@
       border-radius: 4px;
       font-family: monospace;
     }
-    pre {
-      background: #5a0000;
-      padding: 10px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: monospace;
-      color: #fff;
-    }
     footer {
       position: fixed;
       bottom: 0;
@@ -307,179 +299,18 @@
               <li>Wrapper classes.</li>
             </ul>
           </li>
-
-          <!-- ===== NEW SECTION STARTS HERE ===== -->
-
-          <li><strong>2.1 Algorithms, Selection, and Iteration</strong>
-            <ul>
-              <li>Algorithm → Instructions designed to accomplish a task.</li>
-              <li>Selection → Picks between options by if, if else statements.</li>
-              <li>Iteration → Looping codes using either for or while.</li>
-            </ul>
-          </li>
-
-          <li><strong>2.2 Building Algorithms Using Selection and Iteration</strong>
-            <ul>
-              <li><pre><code>if(score >= 60) 
-{
-    System.out.println("Pass");
-} 
-else 
-{
-    System.out.println("Fail");
-}
-//Decides whether a student passes or not from their score inputs.</code></pre></li>
-
-              <li><pre><code>for(int i = 1; i <= 5; i++)
-{
-    System.out.println(i);
-}
-//Prints nums from 1–5 individually.</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.3 Applying the Accumulator Pattern</strong>
-            <ul>
-              <li>Declare and value the accumulator variable before the loop.</li>
-              <li>Keep updating the variable in the loop body.</li>
-              <li>Set the new value for the variable after the loop.</li>
-              <li><pre><code>int sum = 0;
-for(int i = 1; i <= 100; i++) 
-{
-    sum += i;
-}
-double average = (double)sum / 100;</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.4 Loops by Input</strong>
-            <ul>
-              <li><pre><code>Scanner scan = new Scanner(System.in);
-int number = scan.nextInt();
-int sum = 0, count = 0;
-while(number != -1)
-{
-    sum += number;
-    count++;
-    number = scan.nextInt();
-}
-double average = (double)sum / count;
-//Loops taking input while the num isn’t -1. Calculates the average after.</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.5 Using if Statements in Loops for Min/Max Detection</strong>
-            <ul>
-              <li><pre><code>int min = Integer.MAX_VALUE;
-int max = Integer.MIN_VALUE;
-for(int i = 0; i < n; i++)
-{
-    int num = (int)(Math.random() * 100);
-    if(num < min) min = num;
-    if(num > max) max = num;
-}
-//Generates random nums and saves the smallest and the largest values.</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.6 Checking for Divisibility</strong>
-            <ul>
-              <li><pre><code>if(num % 2 == 0) { ... }  // num is even
-if(num % divisor == 0) { ... }  // num is divisible by the divisor
-//% is to see if the num is even</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.7 Extracting and Matching Digits</strong>
-            <ul>
-              <li><pre><code>while(number > 0) 
-{
-    int lastDigit = number % 10;
-    if(lastDigit == digit) return true;
-    number /= 10;
-}
-return false;
-//Checks each digit in a num to see if it matches a given digit.</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.8 Counting Frequency</strong>
-            <ul>
-              <li><pre><code>int count = 0;
-for(int i = 1; i <= 100; i++) 
-{
-    if(isPrime(i)) count++;
-}
-//Counts num of prime numbers between 1 and 100.</code></pre></li>
-            </ul>
-          </li>
-
-          <li><strong>2.9 Writing Algorithms Using Selection and Repetition</strong>
-            <ul>
-              <li>Includes patterns like:</li>
-              <li>Input-controlled loops.</li>
-              <li>Divisibility.</li>
-              <li>Max/Min.</li>
-              <li>Finding Digits.</li>
-              <li>Frequency Counting.</li>
-              <li>Accumulator pattern.</li>
-            </ul>
-          </li>
-
-          <li><strong>2.10 Working with Strings in Algorithms</strong>
-            <ul>
-              <li><strong>2.10.1 Search and Replace Characters</strong>
-                <pre><code>int index;
-while(message.indexOf("1") >= 0) 
-{
-    index = message.indexOf("1");
-    message = message.substring(0, index) + "x" + message.substring(index + 1);
-}
-//Replaces every "1" with "x" in a string.</code></pre>
-              </li>
-
-              <li><strong>2.10.2 Traversing a String Using a for Loop</strong>
-                <pre><code>for(int i = 0; i < s.length(); i++) 
-{
-    String ch = s.substring(i, i + 1);
-}
-//Loops through each character in the str individually.</code></pre>
-              </li>
-
-              <li><strong>2.10.3 Counting Specific Characters</strong>
-                <pre><code>int count = 0;
-for(int i = 0; i < s.length(); i++) 
-{
-    if(s.substring(i, i + 1).equals("e")) count++;
-}
-//Counts how many “e” s are there.</code></pre>
-              </li>
-
-              <li><strong>2.10.4 Reversing a String</strong>
-                <pre><code>String sReversed = "";
-for(int i = 0; i < s.length(); i++) 
-{
-    sReversed = s.substring(i, i + 1) + sReversed;
-}
-//Creates the reverse version of a given string.</code></pre>
-              </li>
-
-              <li><strong>2.10.5 Replacing a Word in a String</strong>
-                <pre><code>while(message.indexOf("Ilgaz") >= 0) 
-{
-    index = message.indexOf("Ilgaz");
-    message = message.substring(0, index) + "Rüzgar" + message.substring(index + 3);
-}
-//Changes every "Ilgaz" to "Rüzgar".</code></pre>
-              </li>
-            </ul>
-          </li>
-
-          <!-- ===== NEW SECTION ENDS HERE ===== -->
         </ul>
       </div>
     </section>
   </main>
-  <footer>© Doruk Kılıç — Big Ideas</footer>
+  <footer> © 2025 DoDo </footer>
+  <script>
+    const spawnIntervalMs = 700;
+    const minDuration = 8.0;
+    const maxDuration = 14.0;
+    const baseWidth = 44;
+    const minScale = 0.65;
+    const maxScale = 0.90;
+  </script>
 </body>
 </html>
