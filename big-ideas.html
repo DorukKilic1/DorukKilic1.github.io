@@ -299,18 +299,100 @@
               <li>Wrapper classes.</li>
             </ul>
           </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <footer> © 2025 DoDo </footer>
-  <script>
-    const spawnIntervalMs = 700;
-    const minDuration = 8.0;
-    const maxDuration = 14.0;
-    const baseWidth = 44;
-    const minScale = 0.65;
-    const maxScale = 0.90;
-  </script>
-</body>
-</html>
+          <li><strong>2.1 Algorithms, Selection, and Iteration</strong>
+            <ul>
+              <li>Algorithm → Instructions designed to accomplish a task.</li>
+              <li>Selection → Picks between options by if, if else statements.</li>
+              <li>Iteration → Looping codes using either for or while.</li>
+            </ul>
+          </li>
+          <li><strong>2.2 Building Algorithms Using Selection and Iteration</strong>
+            <ul>
+              <li><code>if(score >= 60) { System.out.println("Pass"); } else { System.out.println("Fail"); }</code> - Decides pass/fail from score input.</li>
+              <li><code>for(int i = 1; i <= 5; i++) { System.out.println(i); }</code> - Prints numbers 1 to 5 individually.</li>
+            </ul>
+          </li>
+          <li><strong>2.3 Applying the Accumulator Pattern</strong>
+            <ul>
+              <li>Declare and initialize accumulator variable before loop.</li>
+              <li>Update accumulator inside loop.</li>
+              <li>Use final value after loop.</li>
+              <li><code>int sum = 0; for(int i = 1; i <= 100; i++) { sum += i; } double average = (double)sum / 100;</code></li>
+            </ul>
+          </li>
+          <li><strong>2.4 Loops by Input</strong>
+            <ul>
+              <li><code>Scanner scan = new Scanner(System.in); int number = scan.nextInt(); int sum = 0, count = 0; while(number != -1) { sum += number; count++; number = scan.nextInt(); } double average = (double)sum / count;</code></li>
+              <li>Loops taking input while number isn’t -1, then calculates average.</li>
+            </ul>
+          </li>
+          <li><strong>2.5 Using if Statements in Loops for Min/Max Detection</strong>
+            <ul>
+              <li><code>int min = Integer.MAX_VALUE; int max = Integer.MIN_VALUE; for(int i = 0; i < n; i++) { int num = (int)(Math.random() * 100); if(num < min) min = num; if(num > max) max = num; }</code> - Finds smallest and largest values.</li>
+            </ul>
+          </li>
+          <li><strong>2.6 Checking for Divisibility</strong>
+            <ul>
+              <li><code>if(num % 2 == 0) { ... }</code> - Checks if num is even.</li>
+              <li><code>if(num % divisor == 0) { ... }</code> - Checks if num divisible by divisor.</li>
+            </ul>
+          </li>
+          <li><strong>2.7 Extracting and Matching Digits</strong>
+            <ul>
+              <li><code>while(number > 0) { int lastDigit = number % 10; if(lastDigit == digit) return true; number /= 10; } return false;</code> - Checks if a digit matches a given digit.</li>
+            </ul>
+          </li>
+          <li><strong>2.8 Counting Frequency</strong>
+            <ul>
+              <li><code>int count = 0; for(int i = 1; i <= 100; i++) { if(isPrime(i)) count++; }</code> - Counts prime numbers between 1 and 100.</li>
+            </ul>
+          </li>
+          <li><strong>2.9 Writing Algorithms Using Selection and Repetition</strong>
+            <ul>
+              <li>Patterns include input-controlled loops, divisibility checks, max/min detection, digit finding, frequency counting, and accumulator pattern.</li>
+            </ul>
+          </li>
+          <li><strong>2.10 Working with Strings in Algorithms</strong>
+            <ul>
+              <li><strong>2.10.1 Search and Replace Characters</strong>
+                <ul>
+                  <li><code>while(message.indexOf("1") >= 0) { int index = message.indexOf("1"); message = message.substring(0, index) + "x" + message.substring(index + 1); }</code> - Replaces every "1" with "x".</li>
+                </ul>
+              </li>
+              <li><strong>2.10.2 Traversing a String Using a for Loop</strong>
+                <ul>
+                  <li><code>for(int i = 0; i < s.length(); i++) { String ch = s.substring(i, i + 1); }</code> - Loops through each character.</li>
+                </ul>
+              </li>
+              <li><strong>2.10.3 Counting Specific Characters</strong>
+                <ul>
+                  <li><code>int count = 0; for(int i = 0; i < s.length(); i++) { if(s.substring(i, i + 1).equals("e")) count++; }</code> - Counts how many 'e's are in string.</li>
+                </ul>
+              </li>
+              <li><strong>2.10.4 Reversing a String</strong>
+                <ul>
+                  <li><code>String sReversed = ""; for(int i = 0; i < s.length(); i++) { sReversed = s.substring(i, i + 1) + sReversed; }</code> - Creates reversed string.</li>
+                </ul>
+              </li>
+              <li><strong>2.10.5 Replacing a Word in a String</strong>
+                <ul>
+                  <li><code>while(message.indexOf("Ilgaz") >= 0) { int index = message.indexOf("Ilgaz"); message = message.substring(0, index) + "Rüzgar" + message.substring(index + 5); }</code> - Replaces every "Ilgaz" with "Rüzgar".</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          </ul>
+          </div>
+          </section>
+          </main>
+          <footer> © 2025 DoDo </footer>
+          <script>
+            const spawnIntervalMs = 700;
+            const minDuration = 8.0;
+            const maxDuration = 14.0;
+            const baseWidth = 44;
+            const minScale = 0.65;
+            const maxScale = 0.90;
+          </script>
+          </body>
+          </html>
