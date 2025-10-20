@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doruk Kılıç — Big Ideas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #000;
+      --bg: #000; /* black wallpaper */
       --accent: #8B0000;
       --text: #fff;
       --radius: 16px;
@@ -15,7 +15,7 @@
       --maxw: 1100px;
     }
     body {
-      margin:0;
+      margin: 0;
       font-family: Poppins, sans-serif;
       background: var(--bg);
       color: var(--text);
@@ -44,9 +44,17 @@
       border-radius: 12px;
       font-weight: 600;
     }
-    .navlinks a:hover { background: #a60000; }
-    .navlinks a.active { background: #5a0000; }
-    .notes { display: flex; flex-direction: column; gap: 24px; }
+    .navlinks a:hover {
+      background: #a60000;
+    }
+    .navlinks a.active {
+      background: #5a0000;
+    }
+    .notes {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
     .cube {
       background: var(--accent);
       padding: 24px;
@@ -54,19 +62,17 @@
       box-shadow: var(--shadow);
       width: 100%;
     }
-    .cube ul { padding-left: 20px; }
-    .cube li { margin-bottom: 8px; }
-    .cube code, .cube pre {
+    .cube ul {
+      padding-left: 20px;
+    }
+    .cube li {
+      margin-bottom: 8px;
+    }
+    .cube code {
       background: #5a0000;
       padding: 2px 6px;
       border-radius: 4px;
       font-family: monospace;
-      white-space: pre-wrap;
-      display: inline-block;
-    }
-    .cube pre {
-      display: block;
-      margin: 8px 0;
     }
     footer {
       position: fixed;
@@ -104,8 +110,41 @@
       display: block;
     }
     @keyframes fall {
-      0% { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
-      100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
+      0% {
+        transform: translateY(-140px) rotate(0deg);
+        opacity: 0.95;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.95;
+      }
+    }
+
+    /* New notes container styles */
+    .new-notes {
+      background: #5a0000;
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      font-family: 'Courier New', Courier, monospace;
+      color: #fff;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+    .new-notes h2 {
+      margin-top: 0;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .new-notes code {
+      background: #8B0000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #fff;
     }
   </style>
 </head>
@@ -123,173 +162,156 @@
   </nav>
   <main class="container">
     <section class="notes">
-      
-      <!-- Original Notes -->
       <div class="cube">
         <h1>Big Ideas Notes</h1>
         <p>These notes summarize key Java programming concepts and coding fundamentals.</p>
         <ul>
-          <!-- [Original Notes content remains untouched here] -->
-          <!-- (keeping this section exactly as you posted it) -->
-          <!-- I'm omitting the internal lines here for brevity, assuming you will copy your full original notes back in here exactly as they are already written. -->
+          <li><strong>Java:</strong> A programming language used worldwide to create software.</li>
+          <li><strong>Algorithms:</strong> Step-by-step processes to complete tasks or solve problems.</li>
+          <li><strong>Compiler:</strong> Error checker. Syntax errors are reported when found.</li>
+          <li><strong>Logic errors:</strong> Most likely math errors.</li>
+          <li><strong>Comments:</strong> <code>//</code> for single-line, <code>/* */</code> for multi-line.</li>
+          <li><strong>Variable:</strong> Memory location storing a value that can change during runtime.</li>
+          <li><strong>Code examples:</strong>
+            <ul>
+              <li><code>System.out.println()</code></li>
+              <li>Double example: <code>6.353535</code></li>
+              <li>Int example: <code>4</code></li>
+              <li>Boolean: <code>true</code> or <code>false</code></li>
+              <li>String: Words</li>
+            </ul>
+          </li>
+          <li>To declare a variable: specify type, a space, the name, and end with <code>;</code>.</li>
+          <li><strong>Printing:</strong>
+            <ul>
+              <li><code>System.out.println(value)</code> prints value + new line</li>
+              <li><code>System.out.print(value)</code> prints value without new line</li>
+            </ul>
+          </li>
+          <li><strong>Data Types:</strong> Integers, doubles, booleans.</li>
+          <li><strong>Documentation:</strong> Important to make code clear. Example: instruction manual, API.</li>
+          <li><strong>Java Keywords:</strong>
+            <ul>
+              <li>public → accessible anywhere</li>
+              <li>class → blueprint for objects</li>
+              <li>static → belongs to class, not object</li>
+              <li>void → method that doesn’t return a value</li>
+              <li>main → starting point of program</li>
+            </ul>
+          </li>
+          <li><strong>API:</strong> Documentation that explains what a library can do and how to use it.</li>
+          <li><strong>Incrementing a variable:</strong> <code>a = a + 1;</code>, <code>a += 1;</code>, <code>a++;</code></li>
+          <li><strong>User input:</strong> <code>Scanner in = new Scanner(System.in);</code></li>
         </ul>
       </div>
 
-      <!-- Original CSAwesome Notes -->
       <div class="cube">
         <h2>CSAwesome Notes</h2>
         <ul>
-          <!-- [Your existing CSAwesome notes here] -->
-          <!-- I'm omitting again for brevity, since you've already got them in full above. -->
-        </ul>
-      </div>
-
-      <!-- ✅ NEW NOTES START HERE -->
-      <div class="cube">
-        <h2>Unit 2: Algorithms, Loops, and Strings</h2>
-        <ul>
-          <li><strong>2.1 Algorithms, Selection, and Iteration</strong>
+          <li><strong>1.1 Programs and Errors</strong>
             <ul>
-              <li>Algorithm → Instructions designed to accomplish a task.</li>
-              <li>Selection → Uses <code>if</code>, <code>if else</code> to choose between options.</li>
-              <li>Iteration → Repeats code with <code>for</code> or <code>while</code> loops.</li>
+              <li>Algorithm = Steps to solve.</li>
+              <li>Sequence = Order of steps.</li>
+              <li><code>System.out.println()</code> = Prints text.</li>
+              <li><code>;</code> = Ends a line of code.</li>
+              <li>Compiler = Finds syntax mistakes.</li>
+              <li>Logic error = Wrong result.</li>
+              <li>Runtime error = Error while running.</li>
             </ul>
           </li>
-
-          <li><strong>2.2 Building Algorithms Using Selection and Iteration</strong>
+          <li><strong>1.2 Variables and Types</strong>
             <ul>
-              <li><code>if(score &gt;= 60) { System.out.println("Pass"); } else { System.out.println("Fail"); }</code></li>
-              <li><code>for(int i = 1; i &lt;= 5; i++) { System.out.println(i); }</code></li>
+              <li>Variable = Memory storage.</li>
+              <li>Primitive = int, double, boolean, etc.</li>
+              <li>Reference = Objects (like String).</li>
+              <li>String = Text.</li>
             </ul>
           </li>
-
-          <li><strong>2.3 Applying the Accumulator Pattern</strong>
-            <pre><code>
-int sum = 0;
-for(int i = 1; i <= 100; i++) {
-  sum += i;
-}
-double average = (double)sum / 100;
-            </code></pre>
-          </li>
-
-          <li><strong>2.4 Loops by Input</strong>
-            <pre><code>
-Scanner scan = new Scanner(System.in);
-int number = scan.nextInt();
-int sum = 0, count = 0;
-while(number != -1) {
-  sum += number;
-  count++;
-  number = scan.nextInt();
-}
-double average = (double)sum / count;
-            </code></pre>
-          </li>
-
-          <li><strong>2.5 Using if Statements in Loops for Min/Max Detection</strong>
-            <pre><code>
-int min = Integer.MAX_VALUE;
-int max = Integer.MIN_VALUE;
-for(int i = 0; i < n; i++) {
-  int num = (int)(Math.random() * 100);
-  if(num < min) min = num;
-  if(num > max) max = num;
-}
-            </code></pre>
-          </li>
-
-          <li><strong>2.6 Checking for Divisibility</strong>
-            <pre><code>
-if(num % 2 == 0) { ... } // even
-if(num % divisor == 0) { ... } // divisible
-            </code></pre>
-          </li>
-
-          <li><strong>2.7 Extracting and Matching Digits</strong>
-            <pre><code>
-while(number > 0) {
-  int lastDigit = number % 10;
-  if(lastDigit == digit) return true;
-  number /= 10;
-}
-return false;
-            </code></pre>
-          </li>
-
-          <li><strong>2.8 Counting Frequency</strong>
-            <pre><code>
-int count = 0;
-for(int i = 1; i <= 100; i++) {
-  if(isPrime(i)) count++;
-}
-            </code></pre>
-          </li>
-
-          <li><strong>2.9 Writing Algorithms Using Selection and Repetition</strong>
+          <li><strong>1.3 Printing and Expressions</strong>
             <ul>
-              <li>Input-controlled loops</li>
-              <li>Divisibility checks</li>
-              <li>Min/Max detection</li>
-              <li>Finding digits</li>
-              <li>Frequency counting</li>
-              <li>Accumulator pattern</li>
+              <li><code>println</code> = Prints on new line.</li>
+              <li>Literal = Fixed value.</li>
+              <li><code>\n</code> = New line, <code>\"</code> = Quote, <code>\\</code> = Backslash.</li>
+              <li>Operators = +, -, *, /.</li>
+              <li>int ÷ int = int result unless double involved.</li>
+              <li>% = Remainder.</li>
+              <li>Order → *, /, % before +, -.</li>
+              <li>Divide by 0 = Error.</li>
             </ul>
           </li>
-
-          <li><strong>2.10 Working with Strings in Algorithms</strong>
+          <li><strong>1.4 Assignment and Input</strong>
             <ul>
-              <li><strong>2.10.1 Search and Replace Characters</strong>
-                <pre><code>
-int index;
-while(message.indexOf("1") >= 0) {
-  index = message.indexOf("1");
-  message = message.substring(0, index) + "x" + message.substring(index + 1);
-}
-                </code></pre>
-              </li>
-              <li><strong>2.10.2 Traversing a String</strong>
-                <pre><code>
-for(int i = 0; i < s.length(); i++) {
-  String ch = s.substring(i, i + 1);
-}
-                </code></pre>
-              </li>
-              <li><strong>2.10.3 Counting Specific Characters</strong>
-                <pre><code>
-int count = 0;
-for(int i = 0; i < s.length(); i++) {
-  if(s.substring(i, i + 1).equals("e")) count++;
-}
-                </code></pre>
-              </li>
-              <li><strong>2.10.4 Reversing a String</strong>
-                <pre><code>
-String sReversed = "";
-for(int i = 0; i < s.length(); i++) {
-  sReversed = s.substring(i, i + 1) + sReversed;
-}
-                </code></pre>
-              </li>
-              <li><strong>2.10.5 Replacing a Word in a String</strong>
-                <pre><code>
-while(message.indexOf("Ilgaz") >= 0) {
-  int index = message.indexOf("Ilgaz");
-  message = message.substring(0, index) + "Rüzgar" + message.substring(index + 5);
-}
-                </code></pre>
-              </li>
+              <li><code>Scanner</code> = Reads user input.</li>
+            </ul>
+          </li>
+          <li><strong>1.5 Casting and Limits</strong>
+            <ul>
+              <li>(int), (double) = Convert types.</li>
+              <li>double → int = Cuts decimals.</li>
+              <li>int in double math = Becomes double.</li>
+              <li>Round = (int)(x + 0.5).</li>
+              <li>Integer.MAX/MIN = Biggest, smallest int.</li>
+              <li>Overflow = Wraps around.</li>
+            </ul>
+          </li>
+          <li><strong>1.6 Shortcuts</strong>
+            <ul>
+              <li><code>++</code> = Increase by 1.</li>
+              <li><code>+=</code> = Add to variable.</li>
+            </ul>
+          </li>
+          <li><strong>1.7 Methods</strong>
+            <ul>
+              <li>Method = Function with name.</li>
+              <li>Parameters = Input to method.</li>
+              <li>Return = Output from method.</li>
             </ul>
           </li>
         </ul>
       </div>
-      <!-- ✅ END NEW NOTES -->
 
+      <!-- New notes section with different style, no cube class -->
+      <section class="new-notes" aria-label="Additional Java notes">
+        <h2>Additional Java Notes</h2>
+        <p>
+          <strong>Java Keywords:</strong> <code>public</code>, <code>class</code>, <code>static</code>, <code>void</code>, <code>main</code><br>
+          <strong>Comments:</strong> Use <code>//</code> for single-line, <code>/* ... */</code> for multi-line comments.<br>
+          <strong>Variables:</strong> Declared as <code>type name;</code> and initialized as <code>name = value;</code>.<br>
+          <strong>Data types:</strong> <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>.<br>
+          <strong>Printing:</strong> Use <code>System.out.println()</code> to print with newline.<br>
+          <strong>Input:</strong> Use <code>Scanner</code> for user input.<br>
+          <strong>Increment:</strong> <code>a++</code>, <code>a += 1;</code>, or <code>a = a + 1;</code>.<br>
+          <strong>API Documentation:</strong> Explains how to use libraries and classes.<br>
+          <strong>Common errors:</strong> Syntax errors (compile-time), logic errors, runtime errors.<br>
+        </p>
+      </section>
     </section>
   </main>
-
   <footer>
     &copy; 2025 Doruk Kılıç
   </footer>
+  <script>
+    // JavaScript to generate falling cans (if you want to keep this effect)
+    const fallingItemsContainer = document.getElementById('falling-items');
+    const maxItems = 30;
+
+    function createFallingCan() {
+      const img = document.createElement('img');
+      img.src = 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Coca-Cola_can_355ml.jpg';
+      img.className = 'falling-can';
+      img.style.left = Math.random() * window.innerWidth + 'px';
+      img.style.animationDuration = (5 + Math.random() * 5) + 's';
+      img.style.animationDelay = (Math.random() * 10) + 's';
+      fallingItemsContainer.appendChild(img);
+
+      setTimeout(() => {
+        fallingItemsContainer.removeChild(img);
+      }, 10000);
+    }
+
+    for (let i = 0; i < maxItems; i++) {
+      setTimeout(createFallingCan, i * 500);
+    }
+  </script>
 </body>
 </html>
