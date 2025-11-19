@@ -106,6 +106,7 @@
       text-decoration: none;
       font-weight: 600;
       box-shadow: var(--shadow);
+      cursor: pointer;
     }
     .btn:hover {
       background:#a60000;
@@ -159,6 +160,18 @@
       0%   { transform: translateY(-140px) rotate(0deg); opacity: 0.95; }
       100% { transform: translateY(110vh) rotate(360deg); opacity: 0.95; }
     }
+
+    /* Scrollable answers box */
+    #answers-text {
+      display:none;
+      margin-top:16px;
+      padding:16px;
+      background:#f5f5f5;
+      color:#000;
+      border-radius:12px;
+      max-height:400px;
+      overflow-y:auto;
+    }
   </style>
 </head>
 <body>
@@ -183,11 +196,12 @@
   </header>
 
   <main class="grid container">
+    <!-- Example project cards with Java updated -->
     <article class="card">
       <div class="card-header">Problem Statement Q1</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A visual representation of the "six-seven" problem using JavaScript on CodeHS.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>A visual representation of the "six-seven" problem using Java on CodeHS.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/six-seven" target="_blank">View Project</a>
       </div>
     </article>
@@ -195,8 +209,8 @@
     <article class="card">
       <div class="card-header">Problem Sceneria Q2</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using JavaScript.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Problem Sceneria Q2 using Java.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q2-first-mission" target="_blank">View Project</a>
       </div>
     </article>
@@ -204,8 +218,8 @@
     <article class="card">
       <div class="card-header">Q3</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>First mission project in CodeHS sandbox for Q3 using JavaScript.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>First mission project in CodeHS sandbox for Q3 using Java.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/q3-first-mission" target="_blank">View Project</a>
       </div>
     </article>
@@ -213,7 +227,7 @@
     <article class="card">
       <div class="card-header">19 Question 1</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
         <p>Project named “19 Question 1” from your CodeHS sandbox.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/19-question-1" target="_blank">View Project</a>
       </div>
@@ -222,8 +236,8 @@
     <article class="card">
       <div class="card-header">Triangle Checker</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project that checks if three sides can form a valid triangle using JavaScript.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>A project that checks if three sides can form a valid triangle using Java.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/triangle-checker" target="_blank">View Project</a>
       </div>
     </article>
@@ -231,141 +245,84 @@
     <article class="card">
       <div class="card-header">Swap</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project demonstrating variable swapping techniques in JavaScript.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>A project demonstrating variable swapping techniques in Java.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/swap/run" target="_blank">View Project</a>
       </div>
     </article>
 
-    <article class="card">
-      <div class="card-header">RGB to YIQ</div>
-      <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>Converts RGB color values to YIQ color space using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/rgb-to-yiq/run" target="_blank">View Project</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header">Divide By 0</div>
-      <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project exploring division behavior and error handling when dividing by zero using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/divide-by-0/run" target="_blank">View Project</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header">Fibonacci Word</div>
-      <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>Generates and displays the Fibonacci word sequence using JavaScript.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/fibonacciword/run" target="_blank">View Project</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <div class="card-header">3 Variables Equality</div>
-      <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project that checks if three given variables are equal to each other using JavaScript logic.</p>
-        <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/3-variables-equality/run" target="_blank">View Project</a>
-      </div>
-    </article>
-
-    <!-- New Euclidean Distance Project -->
+    <!-- Euclidean Distance project -->
     <article class="card">
       <div class="card-header">Euclidean Distance</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A project calculating Euclidean distance between two points using JavaScript in CodeHS.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>A project calculating Euclidean distance between two points using Java in CodeHS.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/euclidean-distance/run" target="_blank">View Project</a>
       </div>
     </article>
 
-    <!-- Added Turtle Graphics project here -->
+    <!-- Turtle Graphics project -->
     <article class="card">
       <div class="card-header">Turtle Graphics</div>
       <div class="content">
-        <p class="meta">JavaScript, CodeHS Sandbox</p>
-        <p>A fun project using turtle graphics in CodeHS sandbox to draw shapes and patterns.</p>
+        <p class="meta">Java, CodeHS Sandbox</p>
+        <p>A fun project using turtle graphics in CodeHS sandbox to draw shapes and patterns with Java.</p>
         <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/turtle/run" target="_blank">View Project</a>
       </div>
     </article>
 
-    
-    <article class="card">
-  <div class="card-header">3 Numbers in an Order</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A program that checks if three numbers are in ascending or descending order.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/3-numbers-in-an-order/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">Divisibility by 7</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A project that checks if two input numbers are divisible by 7 using JavaScript logic.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/divisibility-7/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">Area of a Triangle</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A project that calculates the area of a triangle using Heron's formula, implemented in JavaScript.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/area-of-a-triangle/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">BMI Calculator</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A BMI Calculator project that calculates body mass index based on user input.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/bmi-calc/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">Car Loan</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A project that calculates car loan payments based on principal, years, and interest rate.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/car-loan/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">Trig Java Math Library</div>
-  <div class="content">
-    <p class="meta">Java, CodeHS Sandbox</p>
-    <p>A basic Java project illustrating Math.sin(), Math.cos(), and Math.toRadians().</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/trigjava-math-library/run" target="_blank">View Project</a>
-  </div>
-</article>
-<article class="card">
-  <div class="card-header">Scrabble</div>
-  <div class="content">
-    <p class="meta">JavaScript, CodeHS Sandbox</p>
-    <p>A project simulating a basic Scrabble-like experience using JavaScript logic in CodeHS.</p>
-    <a class="btn" href="https://codehs.com/sandbox/aquaibex4724/scrabble/run" target="_blank">View Project</a>
-  </div>
-</article>
+    <!-- Toggle button for detailed answers -->
+    <div class="card">
+      <div class="card-header">Conditionals and Loops Princeton – Detailed Answers</div>
+      <div class="content">
+        <button id="toggle-answers" class="btn">Show Detailed Answers</button>
+        <div id="answers-text">
+          <p>Q34: Loaded dice <strong>Answer:</strong> Second. Explanation: Because each die has an advantage over another in a cycle (A > B, B > C, C > A with probability 5/9), going second lets you always pick the die that statistically outperforms the one your opponent chose.</p>
+          <p>Q35: Code fragment digits <strong>Answer:</strong> Finds how many digits n has. Explanation: Keeps dividing the number by 10 until it becomes zero, counting how many steps that takes.</p>
+          <p>Q38: Probability triangle condition <strong>Answer:</strong> 1/4. Explanation: Three random values between 0 and 1 form a triangle only when each is smaller than the sum of the other two, which happens 25% of the time.</p>
+          <p>Q39: Probability obtuse triangle <strong>Answer:</strong> About 0.52. Explanation: When a valid triangle is formed from random (0,1) sides, there’s a slightly higher than 50% chance the triangle contains an obtuse angle.</p>
+          <p>Q40: Value of s (reverse digits) <strong>Answer:</strong> "123456789" Explanation: Since each extracted digit is added to the front of the string, the number ends up reversed when the loop finishes.</p>
+          <p>Q41: Value of i (increment confusion) <strong>Answer:</strong> 24 Explanation: The expression mixes pre- and post-increments, so one part uses the old value while the other uses the updated value, and together they sum to 24.</p>
+          <p>Q42: NPerLine simple <strong>Answer:</strong> Prints numbers from 10 to 99 with n values on each row. Explanation: A loop goes through the numbers and drops a newline every time it has printed n items.</p>
+          <p>Q43: NPerLine formatted <strong>Answer:</strong> Displays numbers 1–1000 in lined-up columns. Explanation: Adjusts the spacing depending on whether the number has 1, 2, or 3 digits so everything aligns vertically.</p>
+          <p>Q52: Circle.java output <strong>Answer:</strong> Draws a filled circle of radius N using * inside and . outside. Explanation: Uses the equation i² + j² ≤ N² to determine which grid points fall inside the circle.</p>
+          <p>Q53: Season program <strong>Answer:</strong> Outputs which season a given date falls in. Explanation: Checks the month and day against the cutoff dates for each season.</p>
+          <p>Q54: Zodiac program <strong>Answer:</strong> Prints the Zodiac sign that matches the input birthday. Explanation: Compares the given date to the standard date ranges of the 12 signs.</p>
+          <p>Q55: Muay Thai weight class <strong>Answer:</strong> Shows which class the weight belongs to. Explanation: Uses simple conditional ranges to decide the correct category.</p>
+          <p>Q66: Gotcha 1 <strong>Answer:</strong> Prints "yes". Explanation: Because the condition uses assignment rather than comparison, it forces the value to true, so the if-statement always runs.</p>
+          <p>Q67: Gotcha 2 <strong>Answer:</strong> Always prints 13. Explanation: The dangling semicolon ends the if-statement early, so the code block that follows always executes.</p>
+          <p>Q72: s after palindrome loop <strong>Answer:</strong> Produces a palindrome string that depends on N. Explanation: The code builds the result symmetrically, so the final string reads identically forward and backward.</p>
+          <p>Q73: BMI category <strong>Answer:</strong> Prints the BMI classification such as Ideal, Underweight, etc. Explanation: Compares the computed BMI against a set of ranges to pick the right category.</p>
+          <p>Q74: Reynolds number <strong>Answer:</strong> Tells whether the flow is laminar, transitional, or turbulent. Explanation: Computes the Reynolds number and checks which interval it falls in.</p>
+          <p>Q75: Wind chill valid range <strong>Answer:</strong> Shows an error message if inputs fall outside the valid limits. Explanation: The formula only works for certain temperatures and wind speeds, so the program guards against invalid cases.</p>
+          <p>Q76: Powers of K <strong>Answer:</strong> Prints successive powers of K until the value can’t fit in a long. Explanation: Multiplies by K repeatedly and stops when overflow would occur.</p>
+          <p>Q77: Palindrome.java (s-loop) <strong>Answer:</strong> Constructs a palindrome. Explanation: Characters are added in a mirrored pattern so the final string is the same forwards and backwards.</p>
+          <p>Q45: Sorting network 4 numbers <strong>Answer:</strong> A fixed set of compare-and-swap steps that sorts four values. Explanation: Each comparison pushes larger values to the right, guaranteeing sorted order by the end.</p>
+          <p>Q46: Optimal 5-element sorting network <strong>Answer:</strong> A nine-comparison sorting network that orders five items. Explanation: Follows a specific swapping sequence that ensures the list ends up sorted no matter the input.</p>
+        </div>
+      </div>
+    </div>
 
-</main>
+  </main>
 
   <footer>
     © 2025 DoDo
   </footer>
 
-  <!-- Falling-can JS -->
   <script>
-    const spawnIntervalMs = 700;
-    const minDuration = 8.0;
-    const maxDuration = 14.0;
-    const baseWidth = 44;
-    const minScale = 0.65;
-    const maxScale = 0.90;
-    // Add your falling items JS here if needed
+    // Toggle answers button
+    const toggleBtn = document.getElementById('toggle-answers');
+    const answersDiv = document.getElementById('answers-text');
+
+    toggleBtn.addEventListener('click', () => {
+      if (answersDiv.style.display === 'none') {
+        answersDiv.style.display = 'block';
+        toggleBtn.textContent = 'Hide Detailed Answers';
+      } else {
+        answersDiv.style.display = 'none';
+        toggleBtn.textContent = 'Show Detailed Answers';
+      }
+    });
   </script>
 </body>
 </html>
