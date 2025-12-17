@@ -471,6 +471,181 @@
         </ul>
       </div>
 
+            <!-- UNIT 3: ABSTRACTION & OOP -->
+      <div class="cube">
+        <h2>Unit 3 — Abstraction and Object-Oriented Programming</h2>
+
+        <ul>
+          <li><strong>3.1 Abstraction and Program Design</strong>
+            <ul>
+              <li>Abstraction → show only what is needed.</li>
+              <li>Example: <code>Scanner</code> hides how input is read.</li>
+              <li>Identifying classes, attributes, and methods.</li>
+              <li>Nouns often become class names.</li>
+              <li><strong>Top-down design (decomposition):</strong>
+                <ul>
+                  <li>Break large problems into smaller methods.</li>
+                </ul>
+              </li>
+              <li><strong>Data abstraction:</strong>
+                <ul>
+                  <li>Separates properties from implementation.</li>
+                </ul>
+              </li>
+              <li><strong>UML basics:</strong>
+                <ul>
+                  <li>+ public</li>
+                  <li>- private</li>
+                </ul>
+              </li>
+              <li>Instance variable → unique per object.</li>
+              <li>Static (class) variable → shared by all objects.</li>
+              <li><strong>Why abstraction matters:</strong>
+                <ul>
+                  <li>Reusability</li>
+                  <li>Maintainability</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><strong>3.2 Impact of Program Design</strong>
+            <ul>
+              <li>Clear names make code easier to understand.</li>
+              <li>Organized code is easier to update and fix.</li>
+              <li>Generic methods and classes can be reused.</li>
+              <li>Small methods are easier to test.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.3 Anatomy of a Class</strong>
+            <ul>
+              <li>A class is a blueprint for creating objects.</li>
+              <li>A class typically includes:
+                <ul>
+                  <li>Instance variables</li>
+                  <li>Constructors</li>
+                  <li>Methods</li>
+                </ul>
+              </li>
+              <li>Instance variables are usually <code>private</code>.</li>
+              <li>Access is provided through <code>public</code> methods.</li>
+              <li><code>public</code> → accessible outside the class.</li>
+              <li><code>private</code> → accessible only inside the class.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.4 Constructors</strong>
+            <ul>
+              <li>Constructors initialize object state.</li>
+              <li><strong>Rules:</strong>
+                <ul>
+                  <li>Same name as the class.</li>
+                  <li>No return type.</li>
+                </ul>
+              </li>
+              <li>Default constructor exists if no constructor is written.</li>
+              <li><strong>Overloading:</strong>
+                <ul>
+                  <li>Multiple constructors with different parameters.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li><strong>3.5 Methods</strong>
+            <ul>
+              <li>Method structure:
+                <ul>
+                  <li><code>accessModifier returnType methodName(parameters)</code></li>
+                </ul>
+              </li>
+              <li><strong>Return types:</strong>
+                <ul>
+                  <li><code>void</code> → no return value.</li>
+                  <li>Non-void → must return a value.</li>
+                </ul>
+              </li>
+              <li><strong>Accessors (getters):</strong>
+                <ul>
+                  <li>Return data without changing it.</li>
+                </ul>
+              </li>
+              <li><strong>Mutators (setters):</strong>
+                <ul>
+                  <li>Modify object state.</li>
+                </ul>
+              </li>
+              <li>Parameters allow generalization and reuse.</li>
+              <li><code>toString()</code> returns a String representation of an object.</li>
+              <li>Preconditions → must be true before the call.</li>
+              <li>Postconditions → guaranteed after execution.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.6 Passing and Returning Objects</strong>
+            <ul>
+              <li>Objects are passed by reference copy.</li>
+              <li>Changes to a mutable object affect the original.</li>
+              <li><strong>Defensive copying:</strong>
+                <ul>
+                  <li>Prevents unintended changes.</li>
+                </ul>
+              </li>
+              <li>Returning an object returns a reference, not a copy.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.7 Static</strong>
+            <ul>
+              <li>Belong to the class, not objects.</li>
+              <li>Called using <code>ClassName.methodName()</code>.</li>
+              <li>Only one copy exists.</li>
+              <li><strong>main method:</strong>
+                <ul>
+                  <li>Always static.</li>
+                  <li>One per class.</li>
+                </ul>
+              </li>
+              <li><strong>Static methods:</strong>
+                <ul>
+                  <li>Cannot access instance variables unless given an object.</li>
+                  <li>Can call other static methods directly.</li>
+                </ul>
+              </li>
+              <li><strong>Static variables:</strong>
+                <ul>
+                  <li>Shared across all objects.</li>
+                  <li>Useful for counters or shared values.</li>
+                </ul>
+              </li>
+              <li><code>final</code> keyword → makes a variable unchangeable.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.8 Scope</strong>
+            <ul>
+              <li>Scope → where a variable can be accessed.</li>
+              <li>Class scope → instance variables usable throughout the class.</li>
+              <li>Method scope → local variables exist only inside the method.</li>
+              <li>Block scope → variables inside loops or if-statements exist only there.</li>
+              <li>Local variables cannot be public or private.</li>
+              <li>Parameters are local variables.</li>
+              <li>Local variables can shadow instance variables.</li>
+              <li>Variables cannot be used outside their scope.</li>
+            </ul>
+          </li>
+
+          <li><strong>3.9 this Keyword</strong>
+            <ul>
+              <li>Refers to the current object.</li>
+              <li>Used when parameters shadow instance variables.</li>
+              <li>Required to access instance variables in that case.</li>
+              <li>Not allowed in static methods.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <!-- ⭐ NEW MAGPIE SECTION ⭐ -->
       <div class="cube">
         <h2>Magpie Chatbot Project</h2>
