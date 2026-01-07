@@ -661,12 +661,66 @@
   <footer> © 2025 DoDo </footer>
 
   <script>
-    const spawnIntervalMs = 700;
-    const minDuration = 8.0;
-    const maxDuration = 14.0;
-    const baseWidth = 44;
-    const minScale = 0.65;
-    const maxScale = 0.90;
+  const spawnIntervalMs = 700;
+  const minDuration = 8.0;
+  const maxDuration = 14.0;
+  const baseWidth = 44;
+  const minScale = 0.65;
+  const maxScale = 0.90;
+
+  const container = document.getElementById('falling-items');
+
+  function makeCanSVG() {
+    return `
+    <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="5" y="6" width="30" height="84" rx="5" fill="#ffffff" stroke="#ccc" stroke-width="1"/>
+      <text x="20" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#000000"
+        transform="rotate(-90 20,50)">DoDo</text>
+    </svg>`;
+  }
+
+  function spawnCan() {
+    if (!container) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'falling-can';
+    wrapper.innerHTML = makeCanSVG();
+
+    const scale = minScale + Math.random() * (maxScale - minScale);
+    const width = Math.round(baseWidth * scale);
+    wrapper.style.width = width + 'px';
+
+    const startX = Math.random() * (window.innerWidth - width);
+    wrapper.style.left = startX + 'px';
+    wrapper.style.top = '-220px';
+
+    const startRot = Math.random() * 30 - 15;
+    wrapper.style.transform = `rotate(${startRot}deg)`;
+
+    const dur = (minDuration + Math.random() * (maxDuration - minDuration)).toFixed(2);
+    wrapper.style.animationDuration = dur + 's';
+
+    container.appendChild(wrapper);
+
+    const drift = Math.random() * 120 - 60;
+    requestAnimationFrame(() => {
+      wrapper.style.transition = `left ${dur}s linear`;
+      wrapper.style.left = (startX + drift) + 'px';
+    });
+
+    wrapper.addEventListener('animationend', () => wrapper.remove());
+    setTimeout(() => wrapper.remove(), (parseFloat(dur) + 0.5) * 1000);
+  }
+
+  let spawner = setInterval(spawnCan, spawnIntervalMs);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearInterval(spawner);
+      spawner = null;
+    } else if (!spawner) {
+      spawner = setInterval(spawnCan, spawnIntervalMs);
+    }
+  });
   </script>
 </body>
 </html>
