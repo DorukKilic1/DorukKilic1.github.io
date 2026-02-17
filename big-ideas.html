@@ -637,6 +637,98 @@
               <li>Not allowed in static methods.</li>
             </ul>
           </li>
+
+          <li><strong>4.1 Ethical and Social Issues Around Data Collection</strong>
+            <ul>
+              <li>Data includes personal info like location, name, age and etc. Should always be secure.</li>
+              <li><strong>Privacy</strong> → Users should know which datas are used,shared and stored or not.</li>
+              <li>Bias in data can cause bad program results.</li>
+              <li>Programmers must ensure fairness and avoid discriminatory algorithms.</li>
+              <li><strong>Data security</strong> protects against breaches and hacking.</li>
+              <li>Programmers Should → Collect only necessary data and protect it securely.</li>
+              <li>Programs can have enormous impacts because of their data (Both Good or Bad).</li>
+            </ul>
+          </li>
+
+          <li><strong>4.2 Introduction to Using Data Sets</strong>
+            <ul>
+              <li>Data set → Collection of same type values.</li>
+              <li>In Java data sets are usually stored in arrays.</li>
+              <li>Programs can analyze data to work better.</li>
+              <li>Data sets allow efficient memory usage and better code.</li>
+              <li>Examples: scores, names, probability, surveys.</li>
+            </ul>
+          </li>
+
+          <li><strong>4.3 Array Creation and Access</strong>
+            <ul>
+              <li>Array → Collection of same type data with a fixed length.</li>
+              <li>Arrays are <strong>0-indexed</strong> (first element is index 0).</li>
+              <li>Declaration: <code>int[] numbers;</code></li>
+              <li>Creation: <code>numbers = new int[5];</code></li>
+              <li>Combined: <code>int[] numbers = new int[5];</code></li>
+              <li>Initialize with values: <code>int[] numbers = {1, 2, 3, 4};</code></li>
+              <li>Access element → <code>numbers[index]</code></li>
+              <li>Length → <code>numbers.length</code> (no parentheses).</li>
+              <li>Invalid index causes <code>ArrayIndexOutOfBoundsException</code>.</li>
+            </ul>
+          </li>
+
+          <li><strong>4.4 Array Traversals</strong>
+            <ul>
+              <li>Traversal → Going through every var in an array.</li>
+              <li> For loop:</li>
+              <li><code>
+          for(int i = 0; i &lt; arr.length; i++) {<br>
+          &nbsp;&nbsp;System.out.println(arr[i]);<br>
+          }
+              </code></li>
+              <li>Enhanced for loop (for-each):</li>
+              <li><code>
+          for(int value : arr) {<br>
+          &nbsp;&nbsp;System.out.println(value);<br>
+          }
+              </code></li>
+              <li>Common patterns:</li>
+              <li>• Sum</li>
+              <li>• Find max/min</li>
+              <li>• Count values of a condition</li>
+              <li>Off-by-one errors happen when using ≤ instead of &lt;.</li>
+            </ul>
+          </li>
+
+          <li><strong>4.5 Implementing Array Algorithms</strong>
+            <ul>
+              <li>Algorithm → Step by step solution to a problem.</li>
+              <li><strong>Linear search</strong> scans from index 0 to end.</li>
+              <li><code>
+          public static int find(int[] arr, int target) {<br>
+          &nbsp;&nbsp;for(int i = 0; i &lt; arr.length; i++) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if(arr[i] == target) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+          &nbsp;&nbsp;}<br>
+          &nbsp;&nbsp;return -1;<br>
+          }
+              </code></li>
+              <li>Modify elements:</li>
+              <li><code>
+          for(int i = 0; i &lt; arr.length; i++) {<br>
+          &nbsp;&nbsp;arr[i] *= 2;<br>
+          }
+              </code></li>
+              <li>Replace conditionally:</li>
+              <li><code>
+          for(int i = 0; i &lt; arr.length; i++) {<br>
+          &nbsp;&nbsp;if(arr[i] &lt; 0) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;arr[i] = 0;<br>
+          &nbsp;&nbsp;}<br>
+          }
+              </code></li>
+              <li>Efficiency → Linear search is <strong>O(n)</strong>.</li>
+              <li>Be able to trace code and predict final array values on the AP exam.</li>
+            </ul>
+          </li>
         </ul>
       </div>
       <!-- ⭐ NEW MAGPIE SECTION ⭐ -->
